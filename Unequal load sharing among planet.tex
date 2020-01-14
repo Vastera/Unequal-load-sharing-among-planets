@@ -1,24 +1,24 @@
 \documentclass[a4paper,fleqn]{cas-sc}
 %%%%%%%%%%%%%%% Declare Package: %%%%%%%%%%%%%
-% \usepackage{ragged2e}% Align macro package
-% \usepackage{amsmath}%math equation IMPORTANT!!!
-% \usepackage{amssymb}
-% \usepackage{nomencl}% use nomenclature package
-% \usepackage{graphicx}% to insert graph
-% \graphicspath{{Figures/}}% the path of graphs1
-% \usepackage{bm}% bold font special for math formulas
-% \usepackage{caption}
-% \usepackage[raggedright,nooneline,FIGTOPCAP]{subfigure}% need to call both packages: subcaption and caption at the same time
-% \captionsetup{labelsep=period,figurename=Fig.,font={bf,footnotesize},justification=raggedright}
-% \usepackage{ifthen}% use condition judgement
-% \usepackage{setspace}
-% \DeclareMathOperator\dif{d\!}% the derivative operator d
-% \usepackage{xfrac}% small fraction, for example 1/2
-% \usepackage{multirow,booktabs} %three-line table
-% \usepackage{array} % fixed width and auto newline(wrap) as well centering
-% \usepackage{float}
-% \usepackage{microtype}% improve the intervals between words to make typing more beautiful
-% \usepackage{lineno,hyperref}% display line number, use hyper reference
+\usepackage{ragged2e}% Align macro package
+\usepackage{amsmath}%math equation IMPORTANT!!!
+\usepackage{amssymb}
+\usepackage{nomencl}% use nomenclature package
+\usepackage{graphicx}% to insert graph
+\graphicspath{{Figures/}}% the path of graphs1
+\usepackage{bm}% bold font special for math formulas
+\usepackage{caption}
+\usepackage[raggedright,nooneline,FIGTOPCAP]{subfigure}% need to call both packages: subcaption and caption at the same time
+\captionsetup{labelsep=period,figurename=Fig.,font={bf,footnotesize},justification=raggedright}
+\usepackage{ifthen}% use condition judgement
+\usepackage{setspace}
+\DeclareMathOperator\dif{d\!}% the derivative operator d
+\usepackage{xfrac}% small fraction, for example 1/2
+\usepackage{multirow,booktabs} %three-line table
+\usepackage{array} % fixed width and auto newline(wrap) as well centering
+\usepackage{float}
+\usepackage{microtype}% improve the intervals between words to make typing more beautiful
+\usepackage{lineno,hyperref}% display line number, use hyper reference
 \usepackage[authoryear,longnamesfirst]{natbib}
 %%%%%%%%%%%%%% Title and author: %%%%%%%%%%%%%
 \begin{document}
@@ -60,6 +60,22 @@ The Elsevier cas-sc class is based on the
 standard article class and supports almost all of the functionality of
 that class. In addition, it features commands and options to format the
 %%%%%%%%%%%%%%% References %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% Principle %%%%%%%%%%%%%%%%
+\section{Signal model}
+\begin{enumerate}[1.]
+    \item Planetary gearboxes have different configuration with similar layouts.
+    \item In this paper, we only consider the case when ring gear is fixed. (refer to the paper mentioning the sun or carrier as the fixed central part)
+    \item The vibration sensor is mounted on the stationary ring gear.
+    \item The vibration mainly origins the the time-varying stiffness gear meshing. When the planet gears engage with the ring gear or sun gear, the number of the involved tooth varies with the relative rotation between gear. Thus, their contact stiffness changes at the time. If the transmission load proximately remain constant, this system is pure parametric excited. (Add a reference about instability) 
+    \item Specially, the torque load transferred from the central components in planetary gearboxes is split into parallel path formed by the planets. Because of the inevitable manufacturing and assembling errors of pinholes or bearings, there are usually differences in the position of pinholes and the shape of planets. The load sharing among planets is non-uniform(collect other reasons from the Sigh's paper).
+    \item Another common phenomenon in planetary gearboxes is the difference in meshing phases between ring-planets and sun-planets. When this situation coincides with the load sharing inequality, a complex couple-mechanism of time-varying load sharing emerges, rising an extra vibrational source.
+    \item For an individual planet, the vibration signal model can be written as
+    \begin{equation}
+        J \cdot \ddot{\theta}(t) + k(t) \cdot \theta(t) = L(t) 
+    \end{equation}
+    
+\end{enumerate}
+
 \section*{References}
 %% `Elsevier LaTeX' style
 \bibliographystyle{elsarticle-num}
