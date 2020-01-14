@@ -1,0 +1,68 @@
+\documentclass[a4paper,fleqn]{cas-sc}
+%%%%%%%%%%%%%%% Declare Package: %%%%%%%%%%%%%
+% \usepackage{ragged2e}% Align macro package
+% \usepackage{amsmath}%math equation IMPORTANT!!!
+% \usepackage{amssymb}
+% \usepackage{nomencl}% use nomenclature package
+% \usepackage{graphicx}% to insert graph
+% \graphicspath{{Figures/}}% the path of graphs1
+% \usepackage{bm}% bold font special for math formulas
+% \usepackage{caption}
+% \usepackage[raggedright,nooneline,FIGTOPCAP]{subfigure}% need to call both packages: subcaption and caption at the same time
+% \captionsetup{labelsep=period,figurename=Fig.,font={bf,footnotesize},justification=raggedright}
+% \usepackage{ifthen}% use condition judgement
+% \usepackage{setspace}
+% \DeclareMathOperator\dif{d\!}% the derivative operator d
+% \usepackage{xfrac}% small fraction, for example 1/2
+% \usepackage{multirow,booktabs} %three-line table
+% \usepackage{array} % fixed width and auto newline(wrap) as well centering
+% \usepackage{float}
+% \usepackage{microtype}% improve the intervals between words to make typing more beautiful
+% \usepackage{lineno,hyperref}% display line number, use hyper reference
+\usepackage[authoryear,longnamesfirst]{natbib}
+%%%%%%%%%%%%%% Title and author: %%%%%%%%%%%%%
+\begin{document}
+\let\WriteBookmarks\relax
+\def\floatpagepagefraction{1}
+\def\textpagefraction{.001}
+\shorttitle{Unequal planet load sharing}
+\shortauthors{Feng et al.}
+
+\title[mode = title]{A vibration signal model of planetary gearboxes with unequal load sharing among planets}
+\author[1]{Haoqun Ma}[type=editor]
+\address[1]{University of Science and Technology Beijing, No.30, Xueyuan Road, Haidian District, Beijing.}
+\author[1]{Zhipeng Feng}[type=co-ordinator,orcid=0000-0002-3403-4386]
+\cormark[1]
+\ead{fengzp@ustb.edu.cn}
+\cortext[cor1]{Corresponding author}
+%%%%%%%%%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+    This template helps you to create a properly formatted \LaTeX\ manuscript.
+\end{abstract}
+%%%%%%%%%%%%%%%%% Highlights %%%%%%%%%%%%%%%%%%%%%%
+\begin{highlights}
+    \item Research highlights item 1
+    \item Research highlights item 2
+    \item Research highlights item 3
+\end{highlights}
+%%%%%%%%%%%%%%%% keywords %%%%%%%%%%%%%%%%%%
+\begin{keywords}
+    quadrupole exciton \sep polariton
+\end{keywords}
+    
+%%%%%%%%%%%%%% Begin document: %%%%%%%%%%%%%%%
+\maketitle
+%%%%%%%%%%%%%%% Custom commands: %%%%%%%%%%%%
+%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%
+\section{Introduction}
+
+The Elsevier cas-sc class is based on the
+standard article class and supports almost all of the functionality of
+that class. In addition, it features commands and options to format the
+%%%%%%%%%%%%%%% References %%%%%%%%%%%%%%%%%
+\section*{References}
+%% `Elsevier LaTeX' style
+\bibliographystyle{elsarticle-num}
+\bibliography{My_EndNote_Lib.bib}
+
+\end{document}
