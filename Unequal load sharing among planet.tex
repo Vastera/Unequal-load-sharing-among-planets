@@ -1,25 +1,29 @@
 \documentclass[a4paper,fleqn]{cas-sc}
 %%%%%%%%%%%%%%% Declare Package: %%%%%%%%%%%%%
+\usepackage[authoryear,longnamesfirst]{natbib}
 \usepackage{ragged2e}% Align macro package
 \usepackage{amsmath}%math equation IMPORTANT!!!
 \usepackage{amssymb}
 \usepackage{nomencl}% use nomenclature package
 \usepackage{graphicx}% to insert graph
 \graphicspath{{Figures/}}% the path of graphs1
-\usepackage{bm}% bold font special for math formulas
+% \usepackage{bm}% bold font special for math formulas
 \usepackage{caption}
 \usepackage[raggedright,nooneline,FIGTOPCAP]{subfigure}% need to call both packages: subcaption and caption at the same time
-\captionsetup{labelsep=period,figurename=Fig.,font={bf,footnotesize},justification=raggedright}
-\usepackage{ifthen}% use condition judgement
+\captionsetup{figurename=Fig.,
+labelsep=period,
+font={bf,footnotesize},
+center}% \usepackage{ifthen}% use condition judgement
 \usepackage{setspace}
 \DeclareMathOperator\dif{d\!}% the derivative operator d
 \usepackage{xfrac}% small fraction, for example 1/2
 \usepackage{multirow,booktabs} %three-line table
 \usepackage{array} % fixed width and auto newline(wrap) as well centering
 \usepackage{float}
+\usepackage{callouts}
 \usepackage{microtype}% improve the intervals between words to make typing more beautiful
 \usepackage{lineno,hyperref}% display line number, use hyper reference
-\usepackage[authoryear,longnamesfirst]{natbib}
+
 %%%%%%%%%%%%%% Title and author: %%%%%%%%%%%%%
 \begin{document}
 \let\WriteBookmarks\relax
@@ -47,7 +51,7 @@
 \end{highlights}
 %%%%%%%%%%%%%%%% keywords %%%%%%%%%%%%%%%%%%
 \begin{keywords}
-    quadrupole exciton \sep polariton
+    Unequal load sharing \sep\ planetary gearbox \sep\ Signal model
 \end{keywords}
     
 %%%%%%%%%%%%%% Begin document: %%%%%%%%%%%%%%%
@@ -56,9 +60,7 @@
 %%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%
 \section{Introduction}
 
-The Elsevier cas-sc class is based on the
-standard article class and supports almost all of the functionality of
-that class. In addition, it features commands and options to format the
+The Elsevier cas-sc class is based on the standard article class and supports almost all of the functionality of that class. In addition, it features commands and options to format the
 %%%%%%%%%%%%%%% References %%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%% Principle %%%%%%%%%%%%%%%%
 \section{Signal model}
@@ -66,16 +68,50 @@ that class. In addition, it features commands and options to format the
     \item Planetary gearboxes have different configuration with similar layouts.
     \item In this paper, we only consider the case when ring gear is fixed. (refer to the paper mentioning the sun or carrier as the fixed central part)
     \item The vibration sensor is mounted on the stationary ring gear.
-    \item The vibration mainly origins the the time-varying stiffness gear meshing. When the planet gears engage with the ring gear or sun gear, the number of the involved tooth varies with the relative rotation between gear. Thus, their contact stiffness changes at the time. If the transmission load proximately remain constant, this system is pure parametric excited. (Add a reference about instability) 
-    \item Specially, the torque load transferred from the central components in planetary gearboxes is split into parallel path formed by the planets. Because of the inevitable manufacturing and assembling errors of pinholes or bearings, there are usually differences in the position of pinholes and the shape of planets. The load sharing among planets is non-uniform(collect other reasons from the Sigh's paper).
-    \item Another common phenomenon in planetary gearboxes is the difference in meshing phases between ring-planets and sun-planets. When this situation coincides with the load sharing inequality, a complex couple-mechanism of time-varying load sharing emerges, rising an extra vibrational source.
+    \item The vibration mainly origins the the time-varying stiffness gear meshing. When the planet gears engage with the ring gear or sun gear, the number of the involved tooth varies with the relative rotation between gears. Thus, their contact stiffness changes at the time. If the transmission load proximately remain constant, this system is pure parametric excited. (Add a reference about instability) 
+    \item Specially, the torque load transferred from the central components in planetary gearboxes is split into parallel paths formed by the planets. Because of the inevitable manufacturing and assembling errors of pinholes or bearings, there are usually differences in the position of pinholes and the shape of planets. The load sharing among planets is non-uniform (collect other reasons from the Sigh's paper).
+    \item Another common phenomenon in planetary gearboxes is the difference in meshing phases between ring-planet and sun-planet. When this situation coincides with the load sharing inequality, a complex couple mechanism of time-varying load sharing emerges, rising extra vibrations.
     \item For an individual planet, the vibration signal model can be written as
     \begin{equation}
-        J \cdot \ddot{\theta}(t) + k(t) \cdot \theta(t) = L(t) 
+        J \cdot \ddot{\theta}(t) + k(t) \cdot \left[\theta(t)-L(t) \right] = 0,
     \end{equation}
-    
+    where \(J\) is rotational inertia of the machine, \(\theta(t)\) is the shaft angular, \(\ddot{\theta}(t)\) is the rotational acceleration, \(k(t)\) is time-varying meshing stiffness, \(L(t)\) is the external load.
+    \item Taking all planets into account, the above vibration model can be revised as
+    \begin{equation}
+        J \cdot \ddot{\theta}(t) + \sum^{M}_{i=1} \left\{ k_i(t) \cdot \left[\theta(t)-L(t)+\epsilon_i \right] \right\} = 0,
+    \end{equation}
+    where \(M\) is the number of planets, \(k_i(t)\) is the meshing stiffness of \(i\)-th planet, \(\epsilon_i\) is the angular shift away from its normal position of \(i\)-th planet (here we assume \(\epsilon_2\neq 0\)). A translational spring-mass system illustrate the above vibration model in Fig. \ref{fig:vibration_system_of_spring_mass}.
+    \begin{figure*}
+        \centering
+        \includegraphics[scale=0.6,width=0.8\textwidth,height=1.6in]{spring_mass.pdf}
+        \caption{Vibration system of unequal load sharing among four planets}
+        \label{fig:vibration_system_of_spring_mass}
+    \end{figure*}
 \end{enumerate}
-
+A typical layout of planetary gearboxes consists of three kinds of gears mounted so that the centers of planet gears revolves around the center of sun and ring gears, as shown in Fig. \ref{fig:planetary_gearbox_layout}.
+\begin{figure}[pos=htbp]
+    \centering
+    \begin{annotate}{\includegraphics[width=0.3\textwidth]{Planetary_Gearbox.PNG}}{0.3}
+        \callout{-8,-7}{Ring gear}{-5,-5.8}
+        \callout{8,-7}{Planet gear}{4,-5.5}
+        \callout{-8,7}{Sun gear}{-0.8,1.2}
+        \callout{8,7}{Carrier}{4.5,1}
+    \end{annotate}
+    \caption{Configuration of planetary gearboxes}
+    \label{fig:planetary_gearbox_layout}
+\end{figure}
+\subsection{}
+\section{Factors considered in the signal model}
+\begin{enumerate}
+    \item Mechanism of time-varying gear meshing stiffness and risen impulses. (Including sun-planet and ring-planet)
+    \item Transfer path effect led by the carrier rotation.
+    \item Unequal load sharing risen by the planet angular position error.
+    \item Differences in the impulsive intensity of planets with sun and ring gears arisen from the position errors of planet. (Amplitude modulation of angular position error)
+    \item Phase shifts of transfer path effect of planet position error. (Frequency modulation of angular position error)
+    \item Effects of asyncrhonous meshing between sun-planet and ring-planet.
+    \item Effects of asyncrhonous meshing among sun-planets or ring-planets.
+    \item Natural vibration influence on spectral structure.
+\end{enumerate}
 \section*{References}
 %% `Elsevier LaTeX' style
 \bibliographystyle{elsarticle-num}

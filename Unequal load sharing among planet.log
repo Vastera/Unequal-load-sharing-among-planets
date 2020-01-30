@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.21)  14 JAN 2020 22:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.21)  30 JAN 2020 15:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -10,7 +10,9 @@ equal load sharing among planet.tex"
 ual load sharing among planet.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
-(./cas-sc.cls
+
+(c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets/cas-
+sc.cls
 Document Class: cas-sc 2018/09/22, 1.0: Formatting class for CAS single column 
 articles
 \c@blind=\count80
@@ -528,7 +530,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip57
 )
-(./cas-common.sty
+(c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets/cas-
+common.sty
 \l_stm_title_before_dim=\dimen169
 \l_stm_title_after_dim=\dimen170
 .................................................
@@ -1470,38 +1473,39 @@ Package: geometry 2018/03/24 v5.7 Page Geometry
 \Gm@layoutvoffset=\dimen256
 \Gm@dimlist=\toks29
 ))
+(c:/texlive/2018/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip68
+\bibsep=\skip69
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count307
+)
 (c:/texlive/2018/texmf-dist/tex/latex/ms/ragged2e.sty
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 
 (c:/texlive/2018/texmf-dist/tex/latex/ms/everysel.sty
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
-\CenteringLeftskip=\skip68
-\RaggedLeftLeftskip=\skip69
-\RaggedRightLeftskip=\skip70
-\CenteringRightskip=\skip71
-\RaggedLeftRightskip=\skip72
-\RaggedRightRightskip=\skip73
-\CenteringParfillskip=\skip74
-\RaggedLeftParfillskip=\skip75
-\RaggedRightParfillskip=\skip76
-\JustifyingParfillskip=\skip77
-\CenteringParindent=\skip78
-\RaggedLeftParindent=\skip79
-\RaggedRightParindent=\skip80
-\JustifyingParindent=\skip81
+\CenteringLeftskip=\skip70
+\RaggedLeftLeftskip=\skip71
+\RaggedRightLeftskip=\skip72
+\CenteringRightskip=\skip73
+\RaggedLeftRightskip=\skip74
+\RaggedRightRightskip=\skip75
+\CenteringParfillskip=\skip76
+\RaggedLeftParfillskip=\skip77
+\RaggedRightParfillskip=\skip78
+\JustifyingParfillskip=\skip79
+\CenteringParindent=\skip80
+\RaggedLeftParindent=\skip81
+\RaggedRightParindent=\skip82
+\JustifyingParindent=\skip83
 )
 (c:/texlive/2018/texmf-dist/tex/latex/nomencl/nomencl.sty
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \nomlabelwidth=\dimen257
 \nom@tempdim=\dimen258
-\nomitemsep=\skip82
-)
-(c:/texlive/2018/texmf-dist/tex/latex/tools/bm.sty
-Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
-\symboldoperators=\mathgroup14
-\symboldletters=\mathgroup15
-LaTeX Info: Redefining \bm on input line 207.
+\nomitemsep=\skip84
 )
 (c:/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
@@ -1517,38 +1521,51 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen264
 \caption@hangindent=\dimen265
 )
-\c@ContinuedFloat=\count307
+\c@ContinuedFloat=\count308
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 )
 (c:/texlive/2018/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
-\subfigtopskip=\skip83
-\subfigcapskip=\skip84
+\subfigtopskip=\skip85
+\subfigcapskip=\skip86
 \subfigcaptopadj=\dimen266
-\subfigbottomskip=\skip85
+\subfigbottomskip=\skip87
 \subfigcapmargin=\dimen267
-\subfiglabelskip=\skip86
-\c@subfigure=\count308
-\c@lofdepth=\count309
-\c@subtable=\count310
-\c@lotdepth=\count311
+\subfiglabelskip=\skip88
+\c@subfigure=\count309
+\c@lofdepth=\count310
+\c@subtable=\count311
+\c@lotdepth=\count312
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
 (c:/texlive/2018/texmf-dist/tex/latex/subfigure/subfigure.cfg)
-\subfig@top=\skip87
-\subfig@bottom=\skip88
+\subfig@top=\skip89
+\subfig@bottom=\skip90
 )
-Package caption Info: We need package `newfloat' on input line 12.
+Package caption Info: We need package `newfloat' on input line 16.
 
 (c:/texlive/2018/texmf-dist/tex/latex/caption/newfloat.sty
 Package: newfloat 2015/09/17 v1.1-109 Defining new floating environments (AR)
 )
-(c:/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
+
+c:/Users/Lenovo/Documents/LaTeX_Papers/Unequal load sharing among planets/Unequ
+al load sharing among planet.tex:16: Package caption Error: center undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 center}
+            % \usepackage{ifthen}% use condition judgement
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 (c:/texlive/2018/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
@@ -1559,9 +1576,9 @@ Package: l3keys2e 2018/02/21 LaTeX2e option processing using LaTeX3 keys
 (c:/texlive/2018/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
 Package: xtemplate 2018/02/21 L3 Experimental prototype document functions
 \l__xtemplate_tmp_dim=\dimen268
-\l__xtemplate_tmp_int=\count312
+\l__xtemplate_tmp_int=\count313
 \l__xtemplate_tmp_muskip=\muskip18
-\l__xtemplate_tmp_skip=\skip89
+\l__xtemplate_tmp_skip=\skip91
 )
 Package: xfrac 2018/02/21 L3 Experimental split-level fractions
 \l__xfrac_slash_box=\box53
@@ -1586,27 +1603,306 @@ Package: xfrac 2018/02/21 L3 Experimental split-level fractions
 )
 (c:/texlive/2018/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count313
+\c@float@type=\count314
 \float@exts=\toks30
 \float@box=\box55
 \@float@everytoks=\toks31
 \@floatcapt=\box56
 )
+(c:/texlive/2018/texmf-dist/tex/latex/callouts/callouts.sty
+Package: callouts 2017/07/27 Callouts
+
+(c:/texlive/2018/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(c:/texlive/2018/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(c:/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks32
+\pgfutil@tempdima=\dimen274
+\pgfutil@tempdimb=\dimen275
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)
+) (c:/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box57
+
+(c:/texlive/2018/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+))
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+(c:/texlive/2018/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(c:/texlive/2018/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks33
+\pgfkeys@temptoks=\toks34
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks35
+))
+\pgf@x=\dimen276
+\pgf@y=\dimen277
+\pgf@xa=\dimen278
+\pgf@ya=\dimen279
+\pgf@xb=\dimen280
+\pgf@yb=\dimen281
+\pgf@xc=\dimen282
+\pgf@yc=\dimen283
+\w@pgf@writea=\write4
+\r@pgf@reada=\read3
+\c@pgf@counta=\count315
+\c@pgf@countb=\count316
+\c@pgf@countc=\count317
+\c@pgf@countd=\count318
+\t@pgf@toka=\toks36
+\t@pgf@tokb=\toks37
+\t@pgf@tokc=\toks38
+ (c:/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count319
+\pgfsyssoftpath@bigbuffer@items=\count320
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+)) (c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen284
+\pgfmath@count=\count321
+\pgfmath@box=\box58
+\pgfmath@toks=\toks39
+\pgfmath@stack@operand=\toks40
+\pgfmath@stack@operation=\toks41
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
+x)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
+.code.tex)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
+ex)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
+de.tex)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
+x)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
+etics.code.tex)))
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count322
+))
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen285
+\pgf@picmaxx=\dimen286
+\pgf@picminy=\dimen287
+\pgf@picmaxy=\dimen288
+\pgf@pathminx=\dimen289
+\pgf@pathmaxx=\dimen290
+\pgf@pathminy=\dimen291
+\pgf@pathmaxy=\dimen292
+\pgf@xx=\dimen293
+\pgf@xy=\dimen294
+\pgf@yx=\dimen295
+\pgf@yy=\dimen296
+\pgf@zx=\dimen297
+\pgf@zy=\dimen298
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
+e.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen299
+\pgf@path@lasty=\dimen300
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
+x
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
+\pgf@shorten@end@additional=\dimen301
+\pgf@shorten@start@additional=\dimen302
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+\pgfpic=\box59
+\pgf@hbox=\box60
+\pgf@layerbox@main=\box61
+\pgf@picture@serial@count=\count323
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
+.tex
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+\pgflinewidth=\dimen303
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
+ode.tex
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
+\pgf@pt@x=\dimen304
+\pgf@pt@y=\dimen305
+\pgf@pt@temp=\dimen306
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.co
+de.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+\pgfarrowsep=\dimen307
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen308
+\pgf@sys@shading@range@num=\count324
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box62
+))
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code
+.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box63
+)
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+(c:/texlive/2018/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
+y
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen309
+\pgf@nodesepend=\dimen310
+)
+(c:/texlive/2018/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
+y
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+)) (c:/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(c:/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(c:/texlive/2018/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen311
+\pgffor@skip=\dimen312
+\pgffor@stack=\toks42
+\pgffor@toks=\toks43
+))
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
+de.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count325
+\pgfplotmarksize=\dimen313
+)
+\tikz@lastx=\dimen314
+\tikz@lasty=\dimen315
+\tikz@lastxsaved=\dimen316
+\tikz@lastysaved=\dimen317
+\tikzleveldistance=\dimen318
+\tikzsiblingdistance=\dimen319
+\tikz@figbox=\box64
+\tikz@figbox@bg=\box65
+\tikz@tempbox=\box66
+\tikz@tempbox@bg=\box67
+\tikztreelevel=\count326
+\tikznumberofchildren=\count327
+\tikznumberofcurrentchild=\count328
+\tikz@fig@count=\count329
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count330
+\pgfmatrixcurrentcolumn=\count331
+\pgf@matrix@numberofcolumns=\count332
+)
+\tikz@expandcount=\count333
+
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+(c:/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
+) (c:/texlive/2018/texmf-dist/tex/latex/xifthen/xifthen.sty
+Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
+
+(c:/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count334
+\calc@Bcount=\count335
+\calc@Adimen=\dimen320
+\calc@Bdimen=\dimen321
+\calc@Askip=\skip92
+\calc@Bskip=\skip93
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count336
+\calc@Cskip=\skip94
+)
+(c:/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(c:/texlive/2018/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
+Package: ifmtarg 2009/09/02 v1.2a check for an empty argument
+)))
 (c:/texlive/2018/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
-\MT@toks=\toks32
-\MT@count=\count314
+\MT@toks=\toks44
+\MT@count=\count337
 LaTeX Info: Redefining \textls on input line 793.
-\MT@outer@kern=\dimen274
+\MT@outer@kern=\dimen322
 LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
-\MT@listname@count=\count315
+\MT@listname@count=\count338
 
 (c:/texlive/2018/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 913.
 LaTeX Info: Redefining \lslig on input line 913.
-\MT@outer@space=\skip90
+\MT@outer@space=\skip95
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
@@ -1615,87 +1911,81 @@ File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
 ))
 (c:/texlive/2018/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count316
-\output=\toks33
-\linenoprevgraf=\count317
-\linenumbersep=\dimen275
-\linenumberwidth=\dimen276
-\c@linenumber=\count318
-\c@pagewiselinenumber=\count319
-\c@LN@truepage=\count320
-\c@internallinenumber=\count321
-\c@internallinenumbers=\count322
-\quotelinenumbersep=\dimen277
-\bframerule=\dimen278
-\bframesep=\dimen279
-\bframebox=\box57
+\linenopenalty=\count339
+\output=\toks45
+\linenoprevgraf=\count340
+\linenumbersep=\dimen323
+\linenumberwidth=\dimen324
+\c@linenumber=\count341
+\c@pagewiselinenumber=\count342
+\c@LN@truepage=\count343
+\c@internallinenumber=\count344
+\c@internallinenumbers=\count345
+\quotelinenumbersep=\dimen325
+\bframerule=\dimen326
+\bframesep=\dimen327
+\bframebox=\box68
 LaTeX Info: Redefining \\ on input line 3056.
 )
-(c:/texlive/2018/texmf-dist/tex/latex/natbib/natbib.sty
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip91
-\bibsep=\skip92
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count323
-)
-(./Unequal load sharing among planet.aux)
+(c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets/Uneq
+ual load sharing among planet.aux)
 \openout1 = `"Unequal load sharing among planet.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 28.
 
 (c:/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 24.
-LaTeX Font Info:    Try loading font information for LS1+stix on input line 24.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for LS1+stix on input line 28.
 
 
 (c:/texlive/2018/texmf-dist/tex/latex/stix/ls1stix.fd
 File: ls1stix.fd 2015/04/17 v1.1.2-latex STIX LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 24.
-LaTeX Font Info:    Try loading font information for LS2+stix on input line 24.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for LS2+stix on input line 28.
 
 
 (c:/texlive/2018/texmf-dist/tex/latex/stix/ls2stix.fd
 File: ls2stix.fd 2015/04/17 v1.1.2-latex STIX LS2 font definitions
 )
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Try loading font information for T1+stix on input line 24.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Try loading font information for T1+stix on input line 28.
 
 (c:/texlive/2018/texmf-dist/tex/latex/stix/t1stix.fd
 File: t1stix.fd 2015/04/17 v1.1.2-latex STIX T1 font definitions
 )
 (c:/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count324
-\scratchdimen=\dimen280
-\scratchbox=\box58
-\nofMPsegments=\count325
-\nofMParguments=\count326
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count327
-\MPscratchDim=\dimen281
-\MPnumerator=\count328
-\makeMPintoPDFobject=\count329
-\everyMPtoPDFconversion=\toks35
+\scratchcounter=\count346
+\scratchdimen=\dimen328
+\scratchbox=\box69
+\nofMPsegments=\count347
+\nofMParguments=\count348
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count349
+\MPscratchDim=\dimen329
+\MPnumerator=\count350
+\makeMPintoPDFobject=\count351
+\everyMPtoPDFconversion=\toks47
 ) (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1713,8 +2003,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box59
-Package hyperref Info: Link coloring ON on input line 24.
+\AtBeginShipoutBox=\box70
+Package hyperref Info: Link coloring ON on input line 28.
 
 (c:/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1722,16 +2012,18 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count330
+\c@section@level=\count352
 )
-LaTeX Info: Redefining \ref on input line 24.
-LaTeX Info: Redefining \pageref on input line 24.
-LaTeX Info: Redefining \nameref on input line 24.
+LaTeX Info: Redefining \ref on input line 28.
+LaTeX Info: Redefining \pageref on input line 28.
+LaTeX Info: Redefining \nameref on input line 28.
 
-(./Unequal load sharing among planet.out)
-(./Unequal load sharing among planet.out)
-\@outlinefile=\write4
-\openout4 = `"Unequal load sharing among planet.out"'.
+(c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets/Uneq
+ual load sharing among planet.out)
+(c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets/Uneq
+ual load sharing among planet.out)
+\@outlinefile=\write5
+\openout5 = `"Unequal load sharing among planet.out"'.
 
 
 *geometry* driver: auto-detecting
@@ -1769,12 +2061,13 @@ LaTeX Info: Redefining \nameref on input line 24.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 24.
+LaTeX Info: Redefining \selectfont on input line 28.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 24.
+ ABD: EveryShipout initializing macros
+LaTeX Info: Redefining \microtypecontext on input line 28.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1793,7 +2086,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !
 c:/Users/Lenovo/Documents/LaTeX_Papers/Unequal load sharing among planets/Unequ
-al load sharing among planet.tex:34: LaTeX error: "kernel/key-choice-unknown"
+al load sharing among planet.tex:38: LaTeX error: "kernel/key-choice-unknown"
 ! 
 ! Key 'stm/author/type' accepts only a fixed set of choices.
 ! 
@@ -1802,7 +2095,7 @@ al load sharing among planet.tex:34: LaTeX error: "kernel/key-choice-unknown"
 ! For immediate help type H <return>.
 !...............................................  
                                                   
-l.34 ...pe=co-ordinator,orcid=0000-0002-3403-4386]
+l.38 ...pe=co-ordinator,orcid=0000-0002-3403-4386]
                                                   
 |'''''''''''''''''''''''''''''''''''''''''''''''
 | The key 'stm/author/type' only accepts predefined values, and 'co-ordinator'
@@ -1812,12 +2105,12 @@ l.34 ...pe=co-ordinator,orcid=0000-0002-3403-4386]
 *************************************************
 * [COR: alpha]
 *************************************************
-\verbatim@out=\write5
-\openout5 = `"Unequal load sharing among planet.abs"'.
+\verbatim@out=\write6
+\openout6 = `"Unequal load sharing among planet.abs"'.
 
 LaTeX Font Info:    Font shape `T1/stix/bx/n' in size <12> not available
-(Font)              Font shape `T1/stix/b/n' tried instead on input line 43.
-LaTeX Font Info:    Try loading font information for TS1+stix on input line 44.
+(Font)              Font shape `T1/stix/b/n' tried instead on input line 47.
+LaTeX Font Info:    Try loading font information for TS1+stix on input line 48.
 
 (c:/texlive/2018/texmf-dist/tex/latex/stix/ts1stix.fd
 File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
@@ -1830,19 +2123,19 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 {c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for LS1+stixscr on input line 
-54.
+58.
 
 (c:/texlive/2018/texmf-dist/tex/latex/stix/ls1stixscr.fd
 File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
 )
 LaTeX Font Info:    Try loading font information for LS2+stixex on input line 5
-4.
+8.
 
 (c:/texlive/2018/texmf-dist/tex/latex/stix/ls2stixex.fd
 File: ls2stixex.fd 2015/04/17 v1.1.2-latex STIX extentions LS2 font definitions
 
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 54.
+LaTeX Font Info:    Try loading font information for U+msa on input line 58.
 
 (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1850,7 +2143,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (c:/texlive/2018/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 54.
+LaTeX Font Info:    Try loading font information for U+msb on input line 58.
 
 (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1859,34 +2152,34 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Try loading font information for LS1+stixfrak on input line
- 54.
+ 58.
 
 (c:/texlive/2018/texmf-dist/tex/latex/stix/ls1stixfrak.fd
 File: ls1stixfrak.fd 2015/04/17 v1.1.2-latex STIX fraktur LS1 font definitions
 )
 LaTeX Font Info:    Try loading font information for LS1+stixbb on input line 5
-4.
+8.
 
 (c:/texlive/2018/texmf-dist/tex/latex/stix/ls1stixbb.fd
 File: ls1stixbb.fd 2015/04/17 v1.1.2-latex STIX blackboard LS1 font definitions
 
 )
 LaTeX Font Info:    Try loading font information for LS2+stixcal on input line 
-54.
+58.
 
 (c:/texlive/2018/texmf-dist/tex/latex/stix/ls2stixcal.fd
 File: ls2stixcal.fd 2015/04/17 v1.1.2-latex STIX calligraphic LS2 font definiti
 ons
 )
 LaTeX Font Info:    Try loading font information for LS1+stixsf on input line 5
-4.
+8.
 
 (c:/texlive/2018/texmf-dist/tex/latex/stix/ls1stixsf.fd
 File: ls1stixsf.fd 2015/04/17 v1.1.2-latex STIX sans-serif LS1 font definitions
 
 )
 LaTeX Font Info:    Try loading font information for LS2+stixtt on input line 5
-4.
+8.
 
 (c:/texlive/2018/texmf-dist/tex/latex/stix/ls2stixtt.fd
 File: ls2stixtt.fd 2015/04/17 v1.1.2-latex STIX typewriter LS2 font definitions
@@ -1896,7 +2189,7 @@ File: ls2stixtt.fd 2015/04/17 v1.1.2-latex STIX typewriter LS2 font definitions
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !
 c:/Users/Lenovo/Documents/LaTeX_Papers/Unequal load sharing among planets/Unequ
-al load sharing among planet.tex:54: LaTeX error: "kernel/key-choice-unknown"
+al load sharing among planet.tex:58: LaTeX error: "kernel/key-choice-unknown"
 ! 
 ! Key 'stm/author/type' accepts only a fixed set of choices.
 ! 
@@ -1905,7 +2198,7 @@ al load sharing among planet.tex:54: LaTeX error: "kernel/key-choice-unknown"
 ! For immediate help type H <return>.
 !...............................................  
                                                   
-l.54 \maketitle
+l.58 \maketitle
                
 |'''''''''''''''''''''''''''''''''''''''''''''''
 | The key 'stm/author/type' only accepts predefined values, and 'co-ordinator'
@@ -1913,17 +2206,19 @@ l.54 \maketitle
 |...............................................
 
 
-Overfull \hbox (117.0831pt too wide) detected at line 54
+Overfull \hbox (117.0831pt too wide) detected at line 58
 []
  []
 
-(./Unequal load sharing among planet.abs)
-<thumbnails/cas-email.jpeg, id=12, 225.84375pt x 225.84375pt>
+
+(c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets/Uneq
+ual load sharing among planet.abs)
+<thumbnails/cas-email.jpeg, id=15, 225.84375pt x 225.84375pt>
 File: thumbnails/cas-email.jpeg Graphic file (type jpg)
 <use thumbnails/cas-email.jpeg>
-Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 54.
+Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 58.
 (pdftex.def)             Requested size: 7.99838pt x 8.0pt.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 54.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 58.
 
 (c:/texlive/2018/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1932,10 +2227,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 86.
 
-No file "Unequal load sharing among planet".bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 84.
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 84.
 (c:/texlive/2018/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -1943,38 +2236,68 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [1 <./thumbnails/cas-email.jpeg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 84.
- (./Unequal load sharing among planet.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 84.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 84.
+
+
+pdfTeX warning: pdflatex.exe (file ./Figures/spring_mass.pdf): PDF inclusion: f
+ound PDF version <1.6>, but at most version <1.5> allowed
+<Figures/spring_mass.pdf, id=17, 323.73447pt x 130.53868pt>
+File: Figures/spring_mass.pdf Graphic file (type pdf)
+<use Figures/spring_mass.pdf>
+Package pdftex.def Info: Figures/spring_mass.pdf  used on input line 88.
+(pdftex.def)             Requested size: 194.24217pt x 78.3238pt.
+<Figures/Planetary_Gearbox.PNG, id=19, 589.9641pt x 604.8999pt>
+File: Figures/Planetary_Gearbox.PNG Graphic file (type png)
+<use Figures/Planetary_Gearbox.PNG>
+Package pdftex.def Info: Figures/Planetary_Gearbox.PNG  used on input line 96.
+(pdftex.def)             Requested size: 140.50114pt x 144.05287pt.
+\xtic=\dimen330
+\ytic=\dimen331
+[1 <./thumbnails/cas-email.jpeg>]
+LaTeX Font Info:    Font shape `T1/stix/bx/n' in size <11> not available
+(Font)              Font shape `T1/stix/b/n' tried instead on input line 105.
+
+No file "Unequal load sharing among planet".bbl.
+[2 <./Figures/spring_mass.pdf> <./Figures/Planetary_Gearbox.PNG>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
+
+(c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets/Uneq
+ual load sharing among planet.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
 Package rerunfilecheck Info: File `"Unequal load sharing among planet".out' has
  not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 23687 strings out of 492649
- 407551 string characters out of 6133384
- 516136 words of memory out of 5000000
- 27201 multiletter control sequences out of 15000+600000
- 619433 words of font info for 153 fonts, out of 8000000 for 9000
+ 33328 strings out of 492649
+ 618792 string characters out of 6133384
+ 698416 words of memory out of 5000000
+ 36598 multiletter control sequences out of 15000+600000
+ 620986 words of font info for 154 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,57p,10527b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,9n,57p,10531b,810s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texl
 ive/2018/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}{c:/texlive/2018/texmf-dis
 t/fonts/enc/dvips/stix/stix-ts1.enc}<c:/texlive/2018/texmf-dist/fonts/type1/pub
 lic/stix/STIXGeneral-Bold.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/st
 ix/STIXGeneral-Italic.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/stix/S
-TIXGeneral-Regular.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/
-sfss0900.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt0800.p
-fb><c:/texlive/2018/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb><c:/texl
-ive/2018/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb><c:/texlive/2018/te
-xmf-dist/fonts/type1/public/stix/stix-mathscr.pfb>
-Output written on "Unequal load sharing among planet.pdf" (2 pages, 177057 byte
-s).
+TIXGeneral-Regular.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/tex
+live/2018/texmf-dist/fonts/type1/public/cm-super/sfss0700.pfb><c:/texlive/2018/
+texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb><c:/texlive/2018/texmf-dist
+/fonts/type1/public/cm-super/sfsx0900.pfb><c:/texlive/2018/texmf-dist/fonts/typ
+e1/public/cm-super/sftt0800.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/
+stix/stix-mathcal.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/stix/stix-
+mathex.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb>
+<c:/texlive/2018/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb><c:/texlive
+/2018/texmf-dist/fonts/type1/public/stix/stix-mathscr.pfb>
+Output written on "c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing 
+among planets/Unequal load sharing among planet.pdf" (3 pages, 2127665 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 22534 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 132 PDF objects out of 1000 (max. 8388607)
+ 107 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 26140 words of extra memory for PDF output out of 29859 (max. 10000000)
 

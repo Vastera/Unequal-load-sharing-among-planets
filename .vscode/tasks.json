@@ -1,7 +1,7 @@
 {
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
-    "version": "2.0.1",
+    "version": "2.0.0",
     "tasks": [
         {
             "label": "XeLaTeX",
@@ -11,6 +11,7 @@
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
+                "-output-directory=${fileDirname}",
                 "${file}"
             ],
             "problemMatcher": "$tsc-watch"
@@ -18,7 +19,7 @@
         {
             "label": "PDF Preview",
             "type": "shell",
-            "command": "SumatraPDF -reuse-instance \"${fileBasenameNoExtension}\".pdf",
+            "command": "SumatraPDF -reuse-instance \"${fileDirname}/${fileBasenameNoExtension}.pdf\"",
             "problemMatcher": "$tsc-watch"
         },
         {
@@ -29,6 +30,7 @@
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
+                "-output-directory=${fileDirname}",
                 "${file}"
             ],
             "problemMatcher": "$tsc-watch"
@@ -38,7 +40,7 @@
             "type": "shell",
             "command": "bibtex",
             "args": [
-                "${fileBasenameNoExtension}.aux"
+                "${fileDirname}/${fileBasenameNoExtension}"
             ],
             "problemMatcher": "$tsc-watch"
         },
@@ -49,6 +51,7 @@
             "args": [
                 "-synctex=1",
                 "-interaction=nonstopmode",
+                "-output-directory=${fileDirname}",
                 "${file}"
             ],
             "problemMatcher": "$tsc-watch"
@@ -81,17 +84,21 @@
             "problemMatcher": "$tsc-watch"
         },
         {
-           "label": "makeindex",
-           "type": "shell",
-           "command": "makeindex",
-           "args": [
-           "${fileBasenameNoExtension}.nlo",
-           "-s",
-           "nomencl.ist",
-           "-o",
-               "${fileBasenameNoExtension}.nls"
-           ],
-           "problemMatcher": "$tsc-watch"
-       }
+            "label": "makeindex",
+            "type": "shell",
+            "command": "makeindex",
+            "args": [
+                "${fileDirname}/${fileBasenameNoExtension}.nlo",
+                "-s",
+                "nomencl.ist",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.nls"
+            ],
+            "problemMatcher": "$tsc-watch",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
     ]
 }

@@ -1,0 +1,48 @@
+\documentclass[10pt]{article}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{ffxfqq}{rgb}{1,0.4980392156862745,0}
+\definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.1]
+\clip(-20,-30) rectangle (120,20);
+\fill[line width=2pt,color=rvwvcq,fill=rvwvcq,fill opacity=0.8] (-10,10) -- (-10,0) -- (100,0) -- (100,10) -- cycle;
+\fill[line width=2pt,color=ffxfqq,fill=ffxfqq,fill opacity=0.1] (25,-28) -- (35,-28) -- (35,-25.2) -- (25,-25.2) -- cycle;
+\draw [line width=2pt,color=rvwvcq] (-10,10)-- (-10,0);
+\draw [line width=2pt,color=rvwvcq] (-10,0)-- (100,0);
+\draw [line width=2pt,color=rvwvcq] (100,0)-- (100,10);
+\draw [line width=2pt,colUor=rvwvcq] (100,10)-- (-10,10);
+\draw [line width=2pt] (0,-3.5)-- (5,-5)-- (-5,-8)-- (5,-11)-- (-5,-14)-- (5,-17)-- (-5,-20)-- (5,-23)-- (0,-24.5)-- (0,-28);
+\draw [line width=2pt] (-10,-28)-- (100,-28);
+\draw [line width=2pt] (0,-3.5)-- (0,0);
+\draw [line width=2pt] (30,0)-- (30,-3.15)-- (35,-4.05)-- (25,-7.2)-- (35,-9.9)-- (25,-12.6)-- (35,-15.3)-- (25,-18)-- (35,-20.7)-- (30,-22.5)-- (30,-25.2);
+\draw [line width=2pt] (60,0)-- (60,-3.5)-- (65,-5)-- (55,-8)-- (65,-11)-- (55,-14)-- (65,-17)-- (55,-20)-- (65.24603024965349,-22.72117210177894)-- (60,-25)-- (60,-28);
+\draw [line width=2pt] (90,0)-- (90,-3.5)-- (95,-5)-- (85,-7)-- (95,-11)-- (85,-14)-- (95,-17)-- (85,-20)-- (95,-24)-- (90,-25)-- (90,-28);
+\draw [line width=2pt,color=ffxfqq] (25,-28)-- (35,-28);
+\draw [line width=2pt,color=ffxfqq] (35,-28)-- (35,-25.2);
+\draw [line width=2pt,color=ffxfqq] (35,-25.2)-- (25,-25.2);
+\draw [line width=2pt,color=ffxfqq] (25,-25.2)-- (25,-28);
+\draw [color=ffqqqq](45,5) node[anchor=center] {$J$};
+\draw [-> width=0.1,color=orange] (45,10) -- (45,15);
+\draw [color=ffqqqq](50,13) node[anchor=center] {$\theta(t)$};
+\draw [color=ffqqqq](-13.066868140104068,-6.859209040186398) node[anchor=north west] {$k_1(t)$};
+\draw [color=ffqqqq](16.9610151013584,-6.859209040186398) node[anchor=north west] {$k_2(t)$};
+\draw [color=ffqqqq](46.98889834282087,-6.859209040186398) node[anchor=north west] {$k_3(t)$};
+\draw [color=ffqqqq](77.01678158428334,-6.859209040186398) node[anchor=north west] {$k_4(t)$};
+\draw [line width=1pt,color=green] (35,-25.2)-- (40,-25.2);
+\draw [color=ffqqqq](41,-26.5) node[anchor=center] {$\epsilon_2$};
+\draw [-> width=0.1,color=green] (38,-23) -- (38,-25.2);
+\draw [-> width=0.1,color=green] (38,-30) -- (38,-28);
+\draw [line width=1pt,color=green] (35,-28) -- (40,-28);
+\begin{scriptsize}
+\draw [fill=rvwvcq] (100,-28) circle (0.5pt);
+\draw [fill=rvwvcq] (0,0) circle (0.5pt);
+\draw [fill=rvwvcq] (38,-25.2) circle (2.5pt);
+\draw [fill=rvwvcq] (38,-28) circle (2.5pt);
+\end{scriptsize}
+\end{tikzpicture}
+\end{document}
