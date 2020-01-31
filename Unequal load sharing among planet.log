@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.21)  30 JAN 2020 15:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.21)  31 JAN 2020 21:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1473,39 +1473,32 @@ Package: geometry 2018/03/24 v5.7 Page Geometry
 \Gm@layoutvoffset=\dimen256
 \Gm@dimlist=\toks29
 ))
-(c:/texlive/2018/texmf-dist/tex/latex/natbib/natbib.sty
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip68
-\bibsep=\skip69
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count307
-)
 (c:/texlive/2018/texmf-dist/tex/latex/ms/ragged2e.sty
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 
 (c:/texlive/2018/texmf-dist/tex/latex/ms/everysel.sty
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
-\CenteringLeftskip=\skip70
-\RaggedLeftLeftskip=\skip71
-\RaggedRightLeftskip=\skip72
-\CenteringRightskip=\skip73
-\RaggedLeftRightskip=\skip74
-\RaggedRightRightskip=\skip75
-\CenteringParfillskip=\skip76
-\RaggedLeftParfillskip=\skip77
-\RaggedRightParfillskip=\skip78
-\JustifyingParfillskip=\skip79
-\CenteringParindent=\skip80
-\RaggedLeftParindent=\skip81
-\RaggedRightParindent=\skip82
-\JustifyingParindent=\skip83
+\CenteringLeftskip=\skip68
+\RaggedLeftLeftskip=\skip69
+\RaggedRightLeftskip=\skip70
+\CenteringRightskip=\skip71
+\RaggedLeftRightskip=\skip72
+\RaggedRightRightskip=\skip73
+\CenteringParfillskip=\skip74
+\RaggedLeftParfillskip=\skip75
+\RaggedRightParfillskip=\skip76
+\JustifyingParfillskip=\skip77
+\CenteringParindent=\skip78
+\RaggedLeftParindent=\skip79
+\RaggedRightParindent=\skip80
+\JustifyingParindent=\skip81
 )
 (c:/texlive/2018/texmf-dist/tex/latex/nomencl/nomencl.sty
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \nomlabelwidth=\dimen257
 \nom@tempdim=\dimen258
-\nomitemsep=\skip84
+\nomitemsep=\skip82
 )
 (c:/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
@@ -1521,29 +1514,29 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen264
 \caption@hangindent=\dimen265
 )
-\c@ContinuedFloat=\count308
+\c@ContinuedFloat=\count307
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 )
 (c:/texlive/2018/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
-\subfigtopskip=\skip85
-\subfigcapskip=\skip86
+\subfigtopskip=\skip83
+\subfigcapskip=\skip84
 \subfigcaptopadj=\dimen266
-\subfigbottomskip=\skip87
+\subfigbottomskip=\skip85
 \subfigcapmargin=\dimen267
-\subfiglabelskip=\skip88
-\c@subfigure=\count309
-\c@lofdepth=\count310
-\c@subtable=\count311
-\c@lotdepth=\count312
+\subfiglabelskip=\skip86
+\c@subfigure=\count308
+\c@lofdepth=\count309
+\c@subtable=\count310
+\c@lotdepth=\count311
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
 (c:/texlive/2018/texmf-dist/tex/latex/subfigure/subfigure.cfg)
-\subfig@top=\skip89
-\subfig@bottom=\skip90
+\subfig@top=\skip87
+\subfig@bottom=\skip88
 )
 Package caption Info: We need package `newfloat' on input line 16.
 
@@ -1576,9 +1569,9 @@ Package: l3keys2e 2018/02/21 LaTeX2e option processing using LaTeX3 keys
 (c:/texlive/2018/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
 Package: xtemplate 2018/02/21 L3 Experimental prototype document functions
 \l__xtemplate_tmp_dim=\dimen268
-\l__xtemplate_tmp_int=\count313
+\l__xtemplate_tmp_int=\count312
 \l__xtemplate_tmp_muskip=\muskip18
-\l__xtemplate_tmp_skip=\skip91
+\l__xtemplate_tmp_skip=\skip89
 )
 Package: xfrac 2018/02/21 L3 Experimental split-level fractions
 \l__xfrac_slash_box=\box53
@@ -1603,7 +1596,7 @@ Package: xfrac 2018/02/21 L3 Experimental split-level fractions
 )
 (c:/texlive/2018/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count314
+\c@float@type=\count313
 \float@exts=\toks30
 \float@box=\box55
 \@float@everytoks=\toks31
@@ -1654,10 +1647,10 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 \pgf@yc=\dimen283
 \w@pgf@writea=\write4
 \r@pgf@reada=\read3
-\c@pgf@counta=\count315
-\c@pgf@countb=\count316
-\c@pgf@countc=\count317
-\c@pgf@countd=\count318
+\c@pgf@counta=\count314
+\c@pgf@countb=\count315
+\c@pgf@countc=\count316
+\c@pgf@countd=\count317
 \t@pgf@toka=\toks36
 \t@pgf@tokb=\toks37
 \t@pgf@tokc=\toks38
@@ -1674,8 +1667,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count319
-\pgfsyssoftpath@bigbuffer@items=\count320
+\pgfsyssoftpath@smallbuffer@items=\count318
+\pgfsyssoftpath@bigbuffer@items=\count319
 )
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
@@ -1687,7 +1680,7 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen284
-\pgfmath@count=\count321
+\pgfmath@count=\count320
 \pgfmath@box=\box58
 \pgfmath@toks=\toks39
 \pgfmath@stack@operand=\toks40
@@ -1711,7 +1704,7 @@ x)
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
 etics.code.tex)))
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count322
+\c@pgfmathroundto@lastzeros=\count321
 ))
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
@@ -1747,7 +1740,7 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box59
 \pgf@hbox=\box60
 \pgf@layerbox@main=\box61
-\pgf@picture@serial@count=\count323
+\pgf@picture@serial@count=\count322
 )
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
 .tex
@@ -1778,7 +1771,7 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen308
-\pgf@sys@shading@range@num=\count324
+\pgf@sys@shading@range@num=\count323
 )
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -1833,7 +1826,7 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
 de.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count325
+\pgf@plot@mark@count=\count324
 \pgfplotmarksize=\dimen313
 )
 \tikz@lastx=\dimen314
@@ -1846,18 +1839,18 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@figbox@bg=\box65
 \tikz@tempbox=\box66
 \tikz@tempbox@bg=\box67
-\tikztreelevel=\count326
-\tikznumberofchildren=\count327
-\tikznumberofcurrentchild=\count328
-\tikz@fig@count=\count329
+\tikztreelevel=\count325
+\tikznumberofchildren=\count326
+\tikznumberofcurrentchild=\count327
+\tikz@fig@count=\count328
 
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count330
-\pgfmatrixcurrentcolumn=\count331
-\pgf@matrix@numberofcolumns=\count332
+\pgfmatrixcurrentrow=\count329
+\pgfmatrixcurrentcolumn=\count330
+\pgf@matrix@numberofcolumns=\count331
 )
-\tikz@expandcount=\count333
+\tikz@expandcount=\count332
 
 (c:/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 brarytopaths.code.tex
@@ -1871,16 +1864,16 @@ Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
 
 (c:/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count334
-\calc@Bcount=\count335
+\calc@Acount=\count333
+\calc@Bcount=\count334
 \calc@Adimen=\dimen320
 \calc@Bdimen=\dimen321
-\calc@Askip=\skip92
-\calc@Bskip=\skip93
+\calc@Askip=\skip90
+\calc@Bskip=\skip91
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count336
-\calc@Cskip=\skip94
+\calc@Ccount=\count335
+\calc@Cskip=\skip92
 )
 (c:/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
@@ -1891,18 +1884,18 @@ Package: ifmtarg 2009/09/02 v1.2a check for an empty argument
 (c:/texlive/2018/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
 \MT@toks=\toks44
-\MT@count=\count337
+\MT@count=\count336
 LaTeX Info: Redefining \textls on input line 793.
 \MT@outer@kern=\dimen322
 LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
-\MT@listname@count=\count338
+\MT@listname@count=\count337
 
 (c:/texlive/2018/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 913.
 LaTeX Info: Redefining \lslig on input line 913.
-\MT@outer@space=\skip95
+\MT@outer@space=\skip93
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
@@ -1911,16 +1904,16 @@ File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
 ))
 (c:/texlive/2018/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count339
+\linenopenalty=\count338
 \output=\toks45
-\linenoprevgraf=\count340
+\linenoprevgraf=\count339
 \linenumbersep=\dimen323
 \linenumberwidth=\dimen324
-\c@linenumber=\count341
-\c@pagewiselinenumber=\count342
-\c@LN@truepage=\count343
-\c@internallinenumber=\count344
-\c@internallinenumbers=\count345
+\c@linenumber=\count340
+\c@pagewiselinenumber=\count341
+\c@LN@truepage=\count342
+\c@internallinenumber=\count343
+\c@internallinenumbers=\count344
 \quotelinenumbersep=\dimen325
 \bframerule=\dimen326
 \bframesep=\dimen327
@@ -1975,16 +1968,16 @@ File: t1stix.fd 2015/04/17 v1.1.2-latex STIX T1 font definitions
 )
 (c:/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count346
+\scratchcounter=\count345
 \scratchdimen=\dimen328
 \scratchbox=\box69
-\nofMPsegments=\count347
-\nofMParguments=\count348
+\nofMPsegments=\count346
+\nofMParguments=\count347
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count349
+\MPscratchCnt=\count348
 \MPscratchDim=\dimen329
-\MPnumerator=\count350
-\makeMPintoPDFobject=\count351
+\MPnumerator=\count349
+\makeMPintoPDFobject=\count350
 \everyMPtoPDFconversion=\toks47
 ) (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -2012,7 +2005,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count352
+\c@section@level=\count351
 )
 LaTeX Info: Redefining \ref on input line 28.
 LaTeX Info: Redefining \pageref on input line 28.
@@ -2025,6 +2018,18 @@ ual load sharing among planet.out)
 \@outlinefile=\write5
 \openout5 = `"Unequal load sharing among planet.out"'.
 
+
+c:/Users/Lenovo/Documents/LaTeX_Papers/Unequal load sharing among planets/Unequ
+al load sharing among planet.tex:28: Undefined control sequence.
+\@begindocumenthook ...\@afterindentfalse \bibsep 
+                                                  =0pt\gdef \bibfont {\fonts...
+l.28 \begin{document}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -2119,9 +2124,15 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `stix' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [0
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 58.
 
-{c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(c:/texlive/2018/texmf-dist/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Try loading font information for LS1+stixscr on input line 
 58.
 
@@ -2184,7 +2195,9 @@ LaTeX Font Info:    Try loading font information for LS2+stixtt on input line 5
 (c:/texlive/2018/texmf-dist/tex/latex/stix/ls2stixtt.fd
 File: ls2stixtt.fd 2015/04/17 v1.1.2-latex STIX typewriter LS2 font definitions
 
-)
+) [1{c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+] [0]
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !
@@ -2213,7 +2226,7 @@ Overfull \hbox (117.0831pt too wide) detected at line 58
 
 (c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets/Uneq
 ual load sharing among planet.abs)
-<thumbnails/cas-email.jpeg, id=15, 225.84375pt x 225.84375pt>
+<thumbnails/cas-email.jpeg, id=21, 225.84375pt x 225.84375pt>
 File: thumbnails/cas-email.jpeg Graphic file (type jpg)
 <use thumbnails/cas-email.jpeg>
 Package pdftex.def Info: thumbnails/cas-email.jpeg  used on input line 58.
@@ -2227,59 +2240,60 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 86.
-
-(c:/texlive/2018/texmf-dist/tex/latex/base/t1cmss.fd
-File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmss' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
 
 
 pdfTeX warning: pdflatex.exe (file ./Figures/spring_mass.pdf): PDF inclusion: f
 ound PDF version <1.6>, but at most version <1.5> allowed
-<Figures/spring_mass.pdf, id=17, 323.73447pt x 130.53868pt>
+<Figures/spring_mass.pdf, id=23, 323.73447pt x 130.53868pt>
 File: Figures/spring_mass.pdf Graphic file (type pdf)
 <use Figures/spring_mass.pdf>
-Package pdftex.def Info: Figures/spring_mass.pdf  used on input line 88.
+Package pdftex.def Info: Figures/spring_mass.pdf  used on input line 85.
 (pdftex.def)             Requested size: 194.24217pt x 78.3238pt.
-<Figures/Planetary_Gearbox.PNG, id=19, 589.9641pt x 604.8999pt>
+LaTeX Font Info:    Font shape `T1/stix/bx/n' in size <11> not available
+(Font)              Font shape `T1/stix/b/n' tried instead on input line 90.
+<Figures/Planetary_Gearbox.PNG, id=25, 589.9641pt x 604.8999pt>
 File: Figures/Planetary_Gearbox.PNG Graphic file (type png)
 <use Figures/Planetary_Gearbox.PNG>
-Package pdftex.def Info: Figures/Planetary_Gearbox.PNG  used on input line 96.
+Package pdftex.def Info: Figures/Planetary_Gearbox.PNG  used on input line 94.
 (pdftex.def)             Requested size: 140.50114pt x 144.05287pt.
 \xtic=\dimen330
 \ytic=\dimen331
-[1 <./thumbnails/cas-email.jpeg>]
-LaTeX Font Info:    Font shape `T1/stix/bx/n' in size <11> not available
-(Font)              Font shape `T1/stix/b/n' tried instead on input line 105.
-
-No file "Unequal load sharing among planet".bbl.
-[2 <./Figures/spring_mass.pdf> <./Figures/Planetary_Gearbox.PNG>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.103 \par
+           The vibration in planetary gearboxes mainly origins from the mesh...
+[1 <./thumbnails/cas-email.jpeg>] [2 <./Figures/spring_mass.pdf> <./Figures/Pla
+netary_Gearbox.PNG>]
+(c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets/Uneq
+ual load sharing among planet.bbl) [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 134.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 134.
 
 (c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets/Uneq
 ual load sharing among planet.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 134.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 134.
 Package rerunfilecheck Info: File `"Unequal load sharing among planet".out' has
  not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 33328 strings out of 492649
- 618792 string characters out of 6133384
- 698416 words of memory out of 5000000
- 36598 multiletter control sequences out of 15000+600000
- 620986 words of font info for 154 fonts, out of 8000000 for 9000
+ 33049 strings out of 492649
+ 615826 string characters out of 6133384
+ 693866 words of memory out of 5000000
+ 36293 multiletter control sequences out of 15000+600000
+ 622786 words of font info for 164 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,9n,57p,10531b,810s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,9n,57p,10527b,808s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texl
-ive/2018/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}{c:/texlive/2018/texmf-dis
-t/fonts/enc/dvips/stix/stix-ts1.enc}<c:/texlive/2018/texmf-dist/fonts/type1/pub
+ive/2018/texmf-dist/fonts/enc/dvips/stix/stix-ts1.enc}{c:/texlive/2018/texmf-di
+st/fonts/enc/dvips/stix/stix-t1.enc}<c:/texlive/2018/texmf-dist/fonts/type1/pub
 lic/stix/STIXGeneral-Bold.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/st
 ix/STIXGeneral-Italic.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/stix/S
 TIXGeneral-Regular.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/
@@ -2294,10 +2308,10 @@ mathex.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb>
 <c:/texlive/2018/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb><c:/texlive
 /2018/texmf-dist/fonts/type1/public/stix/stix-mathscr.pfb>
 Output written on "c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing 
-among planets/Unequal load sharing among planet.pdf" (3 pages, 2127665 bytes).
+among planets/Unequal load sharing among planet.pdf" (5 pages, 2135374 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
+ 157 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
  26140 words of extra memory for PDF output out of 29859 (max. 10000000)
 

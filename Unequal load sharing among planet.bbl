@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Velex1996}
+P.~Velex, L.~Flamand, Dynamic response of planetary trains to mesh parametric
+  excitations, Journal of mechanical design 118~(1) (1996) 7--14.
+
+\bibitem{Acar2019}
+G.~D. Acar, B.~F. Feeny, Approximate floquet analysis of parametrically excited
+  multi-degree-of-freedom systems with application to wind turbines, Journal of
+  Vibration and Acoustics 141~(1).
+
+\bibitem{Arscott2014}
+F.~M. Arscott, Periodic differential equations: an introduction to Mathieu,
+  Lamé, and allied functions, Vol.~66, Elsevier, 2014.
+
+\end{thebibliography}

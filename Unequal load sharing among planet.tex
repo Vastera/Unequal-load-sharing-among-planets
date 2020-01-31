@@ -1,6 +1,6 @@
 \documentclass[a4paper,fleqn]{cas-sc}
 %%%%%%%%%%%%%%% Declare Package: %%%%%%%%%%%%%
-\usepackage[authoryear,longnamesfirst]{natbib}
+% \usepackage[authoryear,longnamesfirst]{natbib}
 \usepackage{ragged2e}% Align macro package
 \usepackage{amsmath}%math equation IMPORTANT!!!
 \usepackage{amssymb}
@@ -59,16 +59,15 @@ center}% \usepackage{ifthen}% use condition judgement
 %%%%%%%%%%%%%%% Custom commands: %%%%%%%%%%%%
 %%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%
 \section{Introduction}
-
-The Elsevier cas-sc class is based on the standard article class and supports almost all of the functionality of that class. In addition, it features commands and options to format the
+\par Planets split power transmitted from the input sun gear into paralleled paths so that planetary gearboxes can withstand heavy load in a compact volume. While the special structure bring about unequal load sharing among planets.
 %%%%%%%%%%%%%%% References %%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%% Principle %%%%%%%%%%%%%%%%
 \section{Signal model}
 \begin{enumerate}[1.]
     \item Planetary gearboxes have different configuration with similar layouts.
-    \item In this paper, we only consider the case when ring gear is fixed. (refer to the paper mentioning the sun or carrier as the fixed central part)
+    \item In this paper, we only consider the case where ring gear is fixed. (refer to the paper mentioning the sun or carrier as the fixed central part)
     \item The vibration sensor is mounted on the stationary ring gear.
-    \item The vibration mainly origins the the time-varying stiffness gear meshing. When the planet gears engage with the ring gear or sun gear, the number of the involved tooth varies with the relative rotation between gears. Thus, their contact stiffness changes at the time. If the transmission load proximately remain constant, this system is pure parametric excited. (Add a reference about instability) 
+    \item The vibration mainly origins the the time-varying stiffness gear meshing. When the planet gears engage with the ring gear or sun gear, the number of the involved tooth varies with the relative rotation between gears. Thus, their contact stiffness changes at the same time. If the transmission load proximately remain constant, this system is pure parametric excited. (Add a reference about instability) 
     \item Specially, the torque load transferred from the central components in planetary gearboxes is split into parallel paths formed by the planets. Because of the inevitable manufacturing and assembling errors of pinholes or bearings, there are usually differences in the position of pinholes and the shape of planets. The load sharing among planets is non-uniform (collect other reasons from the Sigh's paper).
     \item Another common phenomenon in planetary gearboxes is the difference in meshing phases between ring-planet and sun-planet. When this situation coincides with the load sharing inequality, a complex couple mechanism of time-varying load sharing emerges, rising extra vibrations.
     \item For an individual planet, the vibration signal model can be written as
@@ -84,11 +83,12 @@ The Elsevier cas-sc class is based on the standard article class and supports al
     \begin{figure*}
         \centering
         \includegraphics[scale=0.6,width=0.8\textwidth,height=1.6in]{spring_mass.pdf}
-        \caption{Vibration system of unequal load sharing among four planets}
+        \caption{Vibration system of unequal load sharing among four planets.}
         \label{fig:vibration_system_of_spring_mass}
     \end{figure*}
 \end{enumerate}
-A typical layout of planetary gearboxes consists of three kinds of gears mounted so that the centers of planet gears revolves around the center of sun and ring gears, as shown in Fig. \ref{fig:planetary_gearbox_layout}.
+\subsection{Planetary structure}
+\par A typical layout of planetary gearboxes consists of three kinds of gears mounted so that the centers of planet gears revolves around the center of sun and ring gears, as shown in Fig. \ref{fig:planetary_gearbox_layout}. This paper merely discusses the common cases of speed reducers where the sun gear connects with the power input shaft and the carrier works as power output, while vibration sensors are usually mounted on the surface of the stationary ring gear in diagnostic applications. 
 \begin{figure}[pos=htbp]
     \centering
     \begin{annotate}{\includegraphics[width=0.3\textwidth]{Planetary_Gearbox.PNG}}{0.3}
@@ -97,10 +97,24 @@ A typical layout of planetary gearboxes consists of three kinds of gears mounted
         \callout{-8,7}{Sun gear}{-0.8,1.2}
         \callout{8,7}{Carrier}{4.5,1}
     \end{annotate}
-    \caption{Configuration of planetary gearboxes}
+    \caption{Configuration of planetary gearboxes.}
     \label{fig:planetary_gearbox_layout}
 \end{figure}
-\subsection{}
+\par The vibration in planetary gearboxes mainly origins from the meshing of gears \cite{Velex1996}. When the planet gears engage with the ring gear or sun gear, the number of the involved tooth varies with the relative rotation between gears and their contact stiffness changes consequently. The transmission load nominally remains constant and the gearbox is a parametrically excited multi-degree-freedom system \cite{Acar2019}. 
+\subsection{Vibration of single planets}
+\par To figure out the vibration mechanism of planetary gearboxes, we start with the meshing vibration of a pair of gears. For an individual planet, the vibration model can be written as
+\begin{equation}
+    J \cdot \ddot{\theta}(t) + k(t) \cdot \theta(t) = 0 \label{eq:1_DOF_vibration},
+\end{equation}
+where \(J\) is rotational inertia of the machine, \(\theta(t)\) is the shaft angular, \(\ddot{\theta}(t)\) is the rotational acceleration, \(k(t)\) is time-varying meshing stiffness and fluctuates in the form
+\begin{equation}
+    k(t)=k_0+2 q \cos(2 \pi f_{\rm m} t) \label{eq:meshing_stiffness},
+\end{equation}
+where \(k_0\) is the nominal meshing frequency, \(q\) denotes the the fluctuation intensity, and \(f_{\rm m}\) is the meshing frequency. Substitute Eq. (\ref{eq:meshing_stiffness}) into the Eq. (\ref{eq:1_DOF_vibration}), we have
+\begin{equation}
+    J \cdot \ddot{\theta}(t) + \left[k_0+2 q \cos(2 \pi f_{\rm m} t)\right] \cdot \theta(t) = 0. \label{eq:mathieu_function}
+\end{equation}
+\par Eq. (\ref{eq:mathieu_function}) is the Mathieu function. According to the Floquet theory \cite{Arscott2014}, its general solution the product of an exponential part and a harmonic part. Taking damper into account, we only consider stable operation conditions so that harmonic solution is concentrated. The response of the model in Eq. (\ref{eq:mathieu_function}) has the same harmonic component \(\cos(2 \pi f_{\rm m})\). The oscillation of gear meshing stiffness primarily contributes the vibration of planetary gearboxes.
 \section{Factors considered in the signal model}
 \begin{enumerate}
     \item Mechanism of time-varying gear meshing stiffness and risen impulses. (Including sun-planet and ring-planet)
@@ -112,7 +126,7 @@ A typical layout of planetary gearboxes consists of three kinds of gears mounted
     \item Effects of asyncrhonous meshing among sun-planets or ring-planets.
     \item Natural vibration influence on spectral structure.
 \end{enumerate}
-\section*{References}
+
 %% `Elsevier LaTeX' style
 \bibliographystyle{elsarticle-num}
 \bibliography{My_EndNote_Lib.bib}

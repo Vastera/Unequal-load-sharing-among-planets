@@ -19,7 +19,7 @@
         {
             "label": "PDF Preview",
             "type": "shell",
-            "command": "SumatraPDF -reuse-instance \"${fileDirname}/${fileBasenameNoExtension}.pdf\"",
+            "command": "SumatraPDF -reuse-instance \"${fileDirname}\\${fileBasenameNoExtension}.pdf\"",
             "problemMatcher": "$tsc-watch"
         },
         {
@@ -40,7 +40,7 @@
             "type": "shell",
             "command": "bibtex",
             "args": [
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}\\${fileBasenameNoExtension}"
             ],
             "problemMatcher": "$tsc-watch"
         },
@@ -88,11 +88,11 @@
             "type": "shell",
             "command": "makeindex",
             "args": [
-                "${fileDirname}/${fileBasenameNoExtension}.nlo",
+                "${fileDirname}\\${fileBasenameNoExtension}.nlo",
                 "-s",
                 "nomencl.ist",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.nls"
+                "${fileDirname}\\${fileBasenameNoExtension}.nls"
             ],
             "problemMatcher": "$tsc-watch",
             "group": {
