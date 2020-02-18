@@ -1,0 +1,76 @@
+\documentclass[10pt]{article}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{qqffqq}{rgb}{0,1,0}
+\definecolor{ffxfqq}{rgb}{1,0.4980392156862745,0}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
+\definecolor{wrwrwr}{rgb}{0.3803921568627451,0.3803921568627451,0.3803921568627451}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.05]
+\clip(-5,-5) rectangle (200,125);
+\draw [line width=2pt,color=ffqqqq] (0,0)-- (20,40);
+\draw [line width=2pt,color=ffxfqq] (20,40)-- (40,0);
+\draw [line width=2pt,color=ffxfqq] (40,0)-- (60,40);
+\draw [line width=2pt,color=qqffqq] (60,40)-- (80,0);
+\draw [line width=2pt,color=qqffqq] (80,0)-- (100,40);
+\draw [line width=2pt,color=qqqqff] (100,40)-- (120,0);
+\draw [line width=2pt,color=qqqqff] (120,0)-- (140,40);
+\draw [line width=2pt,color=ffqqqq] (140,40)-- (160,0);
+\draw [line width=2pt,color=ffqqqq] (160,0)-- (180,40);
+\draw (145,120.4820129433962) node[anchor=north west] {$l_{{\rm r}1}$};
+\draw [line width=2pt,color=ffqqqq] (156.2120163661978,114.39142715063404)-- (176.21201636619784,114.39142715063404);
+\draw [line width=2pt,color=ffxfqq] (156.2120163661978,104.39142715063404)-- (176.21201636619784,104.39142715063404);
+\draw [line width=2pt,color=qqffqq] (156.2120163661978,94.39142715063404)-- (176.21201636619784,94.39142715063404);
+\draw [line width=2pt,color=qqqqff] (156.2120163661978,84.39142715063409)-- (176.21201636619784,84.39142715063409);
+\draw (145,110.10098926615788) node[anchor=north west] {$l_{{\rm r}2}$};
+\draw (145,100.00832735773173) node[anchor=north west] {$l_{{\rm r}3}$};
+\draw (145,91.06911252455428) node[anchor=north west] {$l_{{\rm r}4}$};
+\draw [line width=1pt] (100,40)-- (100,50);
+\draw [line width=1pt] (140,40)-- (140,50);
+\draw [line width=1pt] (0,0)-- (0,70);
+\draw [line width=1pt] (160,0)-- (160,70);
+\draw (76.36127144366401,77) node[anchor=north west] {$\frac{1}{f_{{\rm c}}$};
+\draw (115.86683377093208,57) node[anchor=north west] {$\frac{f_{\rm c}}{4}$};
+\draw [<->,line width=1pt] (0,65) -- (160,65);
+\draw [<->,line width=1pt] (100,45) -- (140,45);
+\draw [->,line width=2pt] (0,0) -- (184.2085729794177,0);
+\draw [->,line width=2pt] (0,0) -- (-0,121.05873648102056);
+\draw (176.71116699030114,12.05798787001817) node[anchor=north west] {$t$};
+\draw (3.1173821653714135,121.34709824983273) node[anchor=north west] {$l$};
+\begin{scriptsize}
+\draw [fill=wrwrwr] (0,0) circle (2.5pt);
+\draw [fill=rvwvcq] (20,40) circle (2.5pt);
+\draw [fill=rvwvcq] (40,0) circle (2.5pt);
+\draw [fill=rvwvcq] (60,40) circle (2.5pt);
+\draw [fill=rvwvcq] (80,0) circle (2.5pt);
+\draw [fill=rvwvcq] (100,40) circle (2.5pt);
+\draw [fill=rvwvcq] (120,0) circle (2.5pt);
+\draw [fill=rvwvcq] (140,40) circle (2.5pt);
+\draw [fill=rvwvcq] (160,0) circle (2.5pt);
+\draw [fill=rvwvcq] (180,40) circle (2.5pt);
+\draw [fill=rvwvcq] (156.2120163661978,114.39142715063404) circle (2.5pt);
+\draw [fill=rvwvcq] (176.21201636619784,114.39142715063404) circle (2.5pt);
+\draw [fill=rvwvcq] (156.2120163661978,104.39142715063404) circle (2.5pt);
+\draw [fill=rvwvcq] (176.21201636619784,104.39142715063404) circle (2.5pt);
+\draw [fill=rvwvcq] (156.2120163661978,94.39142715063404) circle (2.5pt);
+\draw [fill=rvwvcq] (176.21201636619784,94.39142715063404) circle (2.5pt);
+\draw [fill=rvwvcq] (156.2120163661978,84.39142715063409) circle (2.5pt);
+\draw [fill=rvwvcq] (176.21201636619784,84.39142715063409) circle (2.5pt);
+\draw [fill=rvwvcq] (100,50) circle (2.5pt);
+\draw [fill=rvwvcq] (140,50) circle (2.5pt);
+\draw [fill=rvwvcq] (140,45) circle (2.5pt);
+\draw [fill=rvwvcq] (100,45) circle (2.5pt);
+\draw [fill=rvwvcq] (0,70) circle (2.5pt);
+\draw [fill=rvwvcq] (160,70) circle (2.5pt);
+\draw [fill=rvwvcq] (160,65) circle (2.5pt);
+\draw [fill=rvwvcq] (0,65) circle (2.5pt);
+\draw [fill=rvwvcq] (184.2085729794177,-0.3415681889053814) circle (2.5pt);
+\draw [fill=rvwvcq] (-0.054597291562518205,121.05873648102056) circle (2.5pt);
+\end{scriptsize}
+\end{tikzpicture}
+\end{document}

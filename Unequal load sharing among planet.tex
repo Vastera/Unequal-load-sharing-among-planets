@@ -1,25 +1,32 @@
-\documentclass[a4paper,fleqn]{cas-sc}
+%chktex-file 46 
+%%turn off the syntax check on $...$
+\documentclass[a4paper]{cas-sc}% fleqn stands for "flush left equations"
 %%%%%%%%%%%%%%% Declare Package: %%%%%%%%%%%%%
-% \usepackage[authoryear,longnamesfirst]{natbib}
+\usepackage[authoryear,longnamesfirst]{natbib}
 \usepackage{ragged2e}% Align macro package
-\usepackage{amsmath}%math equation IMPORTANT!!!
-\usepackage{amssymb}
+\usepackage{amsmath,amssymb}
+%%% Nomenclature packages %%%%%%%%%
+\usepackage{framed,multicol}% frame and multi-column package in the double column for nomenclature
 \usepackage{nomencl}% use nomenclature package
-\usepackage{graphicx}% to insert graph
+\makenomenclature
+\setlength{\nomitemsep}{-\parskip} % Baseline skip between items
+\renewcommand*\nompreamble{\begin{multicols}{2}}
+\renewcommand*\nompostamble{\end{multicols}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \graphicspath{{Figures/}}% the path of graphs1
 % \usepackage{bm}% bold font special for math formulas
 \usepackage{caption}
-\usepackage[raggedright,nooneline,FIGTOPCAP]{subfigure}% need to call both packages: subcaption and caption at the same time
+% \usepackage[raggedright,nooneline,FIGTOPCAP]{subfigure}% need to call both packages: subcaption and caption at the same time
 \captionsetup{figurename=Fig.,
 labelsep=period,
 font={bf,footnotesize},
-center}% \usepackage{ifthen}% use condition judgement
+justification=centering}% \usepackage{ifthen}% use condition judgement
 \usepackage{setspace}
 \DeclareMathOperator\dif{d\!}% the derivative operator d
+\DeclareMathOperator{\Dirac}{\operatorname{DeltaComb}}
 \usepackage{xfrac}% small fraction, for example 1/2
 \usepackage{multirow,booktabs} %three-line table
 \usepackage{array} % fixed width and auto newline(wrap) as well centering
-\usepackage{float}
 \usepackage{callouts}
 \usepackage{microtype}% improve the intervals between words to make typing more beautiful
 \usepackage{lineno,hyperref}% display line number, use hyper reference
@@ -32,6 +39,7 @@ center}% \usepackage{ifthen}% use condition judgement
 \shorttitle{Unequal planet load sharing}
 \shortauthors{Feng et al.}
 
+\setcitestyle{square}
 \title[mode = title]{A vibration signal model of planetary gearboxes with unequal load sharing among planets}
 \author[1]{Haoqun Ma}[type=editor]
 \address[1]{University of Science and Technology Beijing, No.30, Xueyuan Road, Haidian District, Beijing.}
@@ -80,14 +88,29 @@ center}% \usepackage{ifthen}% use condition judgement
         J \cdot \ddot{\theta}(t) + \sum^{M}_{i=1} \left\{ k_i(t) \cdot \left[\theta(t)-L(t)+\epsilon_i \right] \right\} = 0,
     \end{equation}
     where \(M\) is the number of planets, \(k_i(t)\) is the meshing stiffness of \(i\)-th planet, \(\epsilon_i\) is the angular shift away from its normal position of \(i\)-th planet (here we assume \(\epsilon_2\neq 0\)). A translational spring-mass system illustrate the above vibration model in Fig. \ref{fig:vibration_system_of_spring_mass}.
+    %%%%%%%%%%%%%%%%% nomenclature Display %%%%%%%%%%%%
+\begin{table*}[!t] 
+    \begin{framed} 
+        \printnomenclature
+    \end{framed}
+\end{table*}
+\nomenclature{\(f_{\rm m}\)}{gear meshing frequency}
+\nomenclature{\(f_{\rm c}\)}{carrier rotation frequency}
+\nomenclature{\(J\)}{inertia moment}
+\nomenclature{\(k(t)\)}{stiffness}
+\nomenclature{\(L_i\)}{load sharing ratio of the \(i\)-th planet}
+\nomenclature{\(k_e\)}{effective support stiffness concerning both the bearing and gear meshing}
+\nomenclature{\(r_s\)}{sun gear pitch radius}
+\nomenclature{\(T_s\)}{total torque applied on input sun gear}
     \begin{figure*}
         \centering
         \includegraphics[scale=0.6,width=0.8\textwidth,height=1.6in]{spring_mass.pdf}
         \caption{Vibration system of unequal load sharing among four planets.}
-        \label{fig:vibration_system_of_spring_mass}
+    \label{fig:vibration_system_of_spring_mass}
     \end{figure*}
 \end{enumerate}
-\subsection{Planetary structure}
+
+\subsection{Planetary gearbox structure}
 \par A typical layout of planetary gearboxes consists of three kinds of gears mounted so that the centers of planet gears revolves around the center of sun and ring gears, as shown in Fig. \ref{fig:planetary_gearbox_layout}. This paper merely discusses the common cases of speed reducers where the sun gear connects with the power input shaft and the carrier works as power output, while vibration sensors are usually mounted on the surface of the stationary ring gear in diagnostic applications. 
 \begin{figure}[pos=htbp]
     \centering
@@ -114,16 +137,99 @@ where \(k_0\) is the nominal meshing frequency, \(q\) denotes the the fluctuatio
 \begin{equation}
     J \cdot \ddot{\theta}(t) + \left[k_0+2 q \cos(2 \pi f_{\rm m} t)\right] \cdot \theta(t) = 0. \label{eq:mathieu_function}
 \end{equation}
-\par Eq. (\ref{eq:mathieu_function}) is the Mathieu function. According to the Floquet theory \cite{Arscott2014}, its general solution the product of an exponential part and a harmonic part. Taking damper into account, we only consider stable operation conditions so that harmonic solution is concentrated. The response of the model in Eq. (\ref{eq:mathieu_function}) has the same harmonic component \(\cos(2 \pi f_{\rm m})\). The oscillation of gear meshing stiffness primarily contributes the vibration of planetary gearboxes.
+\par Eq. (\ref{eq:mathieu_function}) is the Mathieu function. According to the Floquet theory \cite{Arscott2014}, its general solution the product of an exponential part and a harmonic part. Taking damper into account, we only consider stable operation conditions so that harmonic solution is concentrated. The response of the model in Eq. (\ref{eq:mathieu_function}) has the same harmonic component \(\cos(2 \pi f_{\rm m} t)\). In the situation where the time-varying meshing stiffness of all planets are considered, the solution has the corresponding harmonic components (at the same frequency \(f_{\rm m}\) with different phases in planetary gearboxes).
+The oscillation of gear meshing stiffness primarily contributes the vibration of planetary gearboxes.
+\subsection{Perceived signal model}
+\par The signal model perceived by the stationary transducer on the gearbox housing can be modelled as the summation of all planet vibration considering transfer path effects. The impulsive intensity of gear meshing is assumed to proportional to the load applied on each planet. The vibration of each planet is divided into planet-ring and planet-sun parts. Thus, the general signal model is
+\begin{equation}
+    x(t)=\sum_{i=1}^{M} L_i \cdot \left[ \sigma_{\rm pr}(t) \xi_{{\rm r}i}(t) + \sigma_{\rm ps}(t) \xi_{{\rm s}i}(t) \right], \label{eq:general_signal}
+\end{equation}
+where $M$ is the planet number, $L_i$ denotes the load sharing coefficient, $\sigma_{\rm pr}$ and $\sigma_{\rm ps}$ denotes transfer path effect on planet-ring and planet-sun gears, respectively, $\xi_{{\rm r}i}$ and $\xi_{{\rm s}i}$ are the vibration originating from the $i$-th planet-ring and planet-sun gears.
+\par Nominally, all planet center distribute along circumference of the carrier evenly. Without loss of generality, the nominal angular position of first planet center is set as zero, and
+\begin{equation}
+    \Theta_i=\frac{(i-1)\cdot 2\pi}{M},
+\end{equation}
+where $\Theta_i$ denotes the $i$-th planet's position. In addition, due to the manufacturing or assembling process, the tangential error for each planet center away from the nominal position is described as $\epsilon_i$. $\epsilon_i>0$ denotes the planet engages with the ring or sun gear in advance and negative error represents the engagement lag.
+\par To reveal the spectral structure simply, the gear meshing vibration of each planet is regarded as Dirac comb function $\operatorname{III}(t)=\sum_{i=-\infty}^{+\infty}\delta(t-i)$. The meshing frequency can be calculated by different engaging gears,
+\begin{equation}
+    f_{\rm m}=Z_{\rm r} \cdot (f_{\rm r}+f_{\rm c}\)=Z_{\rm p} \cdot (f_{\rm p}-f_{\rm c})=Z_{\rm s} \cdot (f_{\rm s}-f_{\rm c}).
+\end{equation}
+where $\{\}_{r}$, $\{\}_{p}$, $\{\}_{s}$ denote ring, planet and sun gears, respectively; $Z_{\{\}}$ is the gear number and $f_{\{\}}$ is the rotating frequency. 
+\par For planet-ring gears, the planet angular position error bring about the time shift. The time shift is the angular error divided by the relatively rotating velocity. Thus, the planet-ring meshing vibration can be written as
+\begin{equation}
+    \xi_{{\rm r}i}(t)=\operatorname{III}\left[f_{\rm m} \cdot (t-\frac{\epsilon_i+\Theta_i}{f_{\rm c}})\right],\label{eq:planet-ring_meshing}
+\end{equation}
+where $f_{\rm m}$ is the meshing frequency. Park et al. propose the difference between planet-ring and planet-sun meshing phase \cite{Parker2004}. Similarly, the planet-sun meshing vibration is
+\begin{equation}
+    \xi_{{\rm s}i}(t)=\operatorname{III}\left[f_{\rm m} \cdot (t - \frac{\epsilon_i+\Theta_i}{f_{\rm c}-f_{\rm s}})+\varphi_i\right],\label{eq:planet-sun_meshing}
+\end{equation}
+where $\varphi_i$ is the phase difference between planet-ring and planet-sun meshing for the $i$-th planet.
+\subsection{Unequal load sharing among planets}
+% \begin{enumerate}
+%     \item Reasons of generation
+%     \item Calculation formula (Sigh's paper and illustration graph)
+%     \item influences (frequency modulation and amplitude modulation to the transfer path)
+% \end{enumerate}
+\par The multiple paralleled power paths formed by planets can sharing torque load. This merit of planetary gearboxes will compromise when the load sharing inequality occurs. The position errors of planet pinholes or bearings in the tangential (circumferential) direction happening in manufacturing and assembling lead to the non-uniform loads on planets \cite{Singh2010511-530}. The formula of load sharing ratio of a 4-planet planetary gearbox as follows \cite{Ligata2009}
+\begin{equation}
+    L_i=\frac{1}{4}+\frac{k_{\rm e} r_{\rm s}}{8 T_{\rm s}}\left(e_i-e_{i+1}+e_{i+2}-e_{i+3}\right), i=1,2,3,4. \label{eq:load_sharing_ratio}
+\end{equation}
+In this formula, \(L_i\) denotes the load sharing ratio of the \(i\)-th planet, \(k_{\rm e}\) is the effective support stiffness concerning both the bearing and gear meshing and described in Eq. (\ref{eq:stiffness}), \(r_{\rm s}\) is the sun gear pitch radius, \(T_{\rm s}\) is the total torque applied on input sun gear. For any \(i>4\) in Eq. (\ref{eq:load_sharing_ratio}), \(i=i-4\). The tangential error $_{i}$ can be calculated by Eq. (\ref{eq:tangential_error}).
+In this formula, \(L_i\) denotes the load sharing ratio of the \(i\)-th planet, \(k_{\rm e}\) is the effective support stiffness concerning both the bearing and gear meshing and described in Eq. (\ref{eq:stiffness}), \(r_{\rm s}\) is the sun gear pitch radius, \(T_{\rm s}\) is the total torque applied on input sun gear. For any \(i>4\) in Eq. (\ref{eq:load_sharing_ratio}), \(i=i-4\). The tangential error $\epsilon_{i}$ can be calculated by Eq. (\ref{eq:tangential_error}) and its explanation see Fig. (\ref{eq:tangential_error }).
+\begin{equation}
+    k_{\rm e}=\frac{1}{k_{\rm rp}+k_{\rm sp}}+\frac{1}{k_{\rm b}},\label{eq:stiffness}
+\end{equation}
+where $k_{\rm rp}$ and $k_{\rm sp}$ are the meshing stiffness of planet-ring and planet-sun, respectively, $k_{\rm b}$ is the planet bearing stiffness.
+\begin{equation}
+    e_{i}=2(R_{\rm r}-R_{\rm p})\sin(\epsilon_{{\rm p}i}/2)\cos(\epsilon_{{\rm p}i}/2),\label{eq:tangential_error}
+\end{equation}
+where $R_{\rm p}$ is the planet radius, $R_{\rm s}$ is the sun radius, $\epsilon_{{\rm p}i}$ is the angular position error the $i$-th planet.
+\begin{figure}[pos=htbp]
+    \centering
+    \includegraphics[scale=0.5]{tangential_error.png}
+    \caption{Tangential error calculation}
+    \label{fig:tangential_error}
+\end{figure}
+\par Unequal load sharing will gives rise to non-uniform impulsive intensity. The acceleration are linearly affected by the dynamic force exerted. Thus, the vibration amplitude of each planet is assumed to be proportional to the load applied on it \cite{Inalpolat2009}. In other words, planet load modifies the amplitude of the vibration signal. Moreover, the unevenly planet distribution along the angular position of carrier also has phase modulation when the transfer path is considered simultaneously. These effects will be illustrated explicitly in the later discussion. 
+\subsection{Transfer paths}
+\par The vibration originating from the planet meshing with ring or sun gear propagate through several paths to the stationary sensor mounted on the case. As demonstrated in Fig. \ref{fig:transfer_path}, there are three paths for planet-ring and planet-sun gear meshing, respectively. These transfer paths can be categorized into two types, depending on whether or not they pass through bearings. The paths passing through bearings (path 2, 3, 5, 6 in Fig. \ref{fig:transfer_path}) must transfer via the gearbox housing to reach the sensor fixed on the top. Compared with the paths merely passing through gears (path 1, 4 in Fig. \ref{fig:transfer_path}), these paths passing bearings are longer and more likely to be attenuated by the lubricating oil layer in bearings \cite{Feng2012}. To simplify modelling, only the shorter paths (path 1, 4 in Fig. \ref{fig:transfer_path}) are concerned in this paper.
+\begin{figure}[pos=htbp]
+    \centering
+    \includegraphics[scale=0.5]{transfer_path.pdf}
+    \caption{Transfer paths of gear meshing vibration\label{fig:transfer_path}}
+\end{figure}
+\par The lengths of path 1 and path 4 vary with the circumferential position of carrier. For each planet, the meshing vibration points get close to the fixed sensor as the planet approaches the top surface of gearbox case. When the planet reach the climax of its revolution circle, the fixed transducer percepts the maximum impulsive strength. While the planet arrives at the case bottom, the perceived impulses are most weakened. The path 1 length is triangle wave of time (as shown in Fig. \ref{fig:path_length_trangle_wave}) when planetary gearboxes operate at a constant speed, 
+\begin{equation}
+    l_{{\rm r}i}(t)=
+    \begin{cases}
+        2 \pi R_{\rm r} f_{\rm c} \left|t-\frac{n}{f_{\rm c}}\right|, \frac{n}{f_{\rm c}} - \frac{2i-3}{2 M f_{\rm c}} \leq t < \frac{n}{f_{\rm c}} - \frac{2i-1}{2 M f_{\rm c}}, n\in \mathhb{Z}, i=1,2,\ldots,M\\
+        0, \quad \text{otherwise}
+    \end{cases},
+\end{equation}
+where $M$ is the planet number. The path 4 is the sum of the diameter of the planet pitch circle and $l_{{\rm r}i}$,
+\begin{equation}
+    l_{{\rm s}i}(t)=l_{{\rm r}i}+2 R_{\rm p}.
+\end{equation}
+\begin{figure}[pos=htbp]
+    \centering
+    \includegraphics[scale=0.5]{trangle_wave.png}
+    \caption{Transfer Path 1 length function of time}
+    \label{fig:path_length_trangle_wave}
+\end{figure}
+\par This attenuation effect with regard to the path length can be characterized as window functions such as Hanning window or Gaussian window \cite{Mark2009}. In this paper, we apply the Gaussian window describing the time-varying transfer path effect,
+\begin{equation}
+    \sigma(l)=A\exp\left[-\frac{\left|l\right|}{a}\right],\label{eq:general_transfer_path}
+\end{equation}
+where $l$ is the length of a transfer path, $A$ represents for the strength factor and $a$ is the attenuation factor. The larger $a$ is, the longer impulses can propagate without a large energy loss.
 \section{Factors considered in the signal model}
 \begin{enumerate}
     \item Mechanism of time-varying gear meshing stiffness and risen impulses. (Including sun-planet and ring-planet)
-    \item Transfer path effect led by the carrier rotation.
+    \item Transfer path effect led by the carrier rotation. \textbf{We now use the exponential attenuation function}
     \item Unequal load sharing risen by the planet angular position error.
     \item Differences in the impulsive intensity of planets with sun and ring gears arisen from the position errors of planet. (Amplitude modulation of angular position error)
     \item Phase shifts of transfer path effect of planet position error. (Frequency modulation of angular position error)
-    \item Effects of asyncrhonous meshing between sun-planet and ring-planet.
-    \item Effects of asyncrhonous meshing among sun-planets or ring-planets.
+    \item Effects of asyncrhonous meshing between sun-planet and ring-planet \cite{Parker2004}.
+    \item Effects of asyncrhonous meshing among sun-planets or ring-planets \cite{Inalpolat2009}.
     \item Natural vibration influence on spectral structure.
 \end{enumerate}
 

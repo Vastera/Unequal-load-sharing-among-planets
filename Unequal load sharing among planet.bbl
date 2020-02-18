@@ -12,10 +12,37 @@ P.~Velex, L.~Flamand, Dynamic response of planetary trains to mesh parametric
 \bibitem{Acar2019}
 G.~D. Acar, B.~F. Feeny, Approximate floquet analysis of parametrically excited
   multi-degree-of-freedom systems with application to wind turbines, Journal of
-  Vibration and Acoustics 141~(1).
+  vibration and acoustics 141~(1).
 
 \bibitem{Arscott2014}
 F.~M. Arscott, Periodic differential equations: an introduction to Mathieu,
   Lamé, and allied functions, Vol.~66, Elsevier, 2014.
+
+\bibitem{Inalpolat2009}
+M.~Inalpolat, A.~Kahraman, A theoretical and experimental investigation of
+  modulation sidebands of planetary gear sets, Journal of Sound and Vibration
+  323~(3) (2009) 677--696.
+
+\bibitem{Parker2004}
+R.~G. Parker, J.~Lin, Mesh phasing relationships in planetary and epicyclic
+  gears, Journal of Mechanical Design 126~(2) (2004) 365--370.
+
+\bibitem{Singh2010511-530}
+A.~Singh, Load sharing behavior in epicyclic gears: physical explanation and
+  generalized formulation, Mechanism and machine theory 45~(3) (2010) 511--530.
+
+\bibitem{Ligata2009}
+H.~Ligata, A.~Kahraman, A.~Singh, A closed-form planet load sharing formulation
+  for planetary gear sets using a translational analogy, Journal of mechanical
+  design 131~(2).
+
+\bibitem{Feng2012}
+Z.~P. Feng, M.~J. Zuo, Vibration signal models for fault diagnosis of planetary
+  gearboxes, Journal of Sound and Vibration 331~(22) (2012) 4919--4939.
+
+\bibitem{Mark2009}
+W.~D. Mark, J.~A. Hines, Stationary transducer response to planetary-gear
+  vibration excitation with non-uniform planet loading, Mechanical Systems and
+  Signal Processing 23~(4) (2009) 1366--1381.
 
 \end{thebibliography}
