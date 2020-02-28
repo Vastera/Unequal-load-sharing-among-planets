@@ -18,11 +18,6 @@ G.~D. Acar, B.~F. Feeny, Approximate floquet analysis of parametrically excited
 F.~M. Arscott, Periodic differential equations: an introduction to Mathieu,
   Lamé, and allied functions, Vol.~66, Elsevier, 2014.
 
-\bibitem{Inalpolat2009}
-M.~Inalpolat, A.~Kahraman, A theoretical and experimental investigation of
-  modulation sidebands of planetary gear sets, Journal of Sound and Vibration
-  323~(3) (2009) 677--696.
-
 \bibitem{Parker2004}
 R.~G. Parker, J.~Lin, Mesh phasing relationships in planetary and epicyclic
   gears, Journal of Mechanical Design 126~(2) (2004) 365--370.
@@ -35,6 +30,11 @@ A.~Singh, Load sharing behavior in epicyclic gears: physical explanation and
 H.~Ligata, A.~Kahraman, A.~Singh, A closed-form planet load sharing formulation
   for planetary gear sets using a translational analogy, Journal of mechanical
   design 131~(2).
+
+\bibitem{Inalpolat2009}
+M.~Inalpolat, A.~Kahraman, A theoretical and experimental investigation of
+  modulation sidebands of planetary gear sets, Journal of Sound and Vibration
+  323~(3) (2009) 677--696.
 
 \bibitem{Feng2012}
 Z.~P. Feng, M.~J. Zuo, Vibration signal models for fault diagnosis of planetary
