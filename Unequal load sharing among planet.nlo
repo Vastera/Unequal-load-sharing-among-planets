@@ -1,8 +1,8 @@
-\nomenclatureentry{a\(f_{\rm m}\)@[{\(f_{\rm m}\)}]\begingroup gear meshing frequency\nomeqref {2}|nompageref}{1}
-\nomenclatureentry{a\(f_{\rm c}\)@[{\(f_{\rm c}\)}]\begingroup carrier rotation frequency\nomeqref {2}|nompageref}{1}
-\nomenclatureentry{a\(J\)@[{\(J\)}]\begingroup inertia moment\nomeqref {2}|nompageref}{1}
-\nomenclatureentry{a\(k(t)\)@[{\(k(t)\)}]\begingroup stiffness\nomeqref {2}|nompageref}{1}
-\nomenclatureentry{a\(L_i\)@[{\(L_i\)}]\begingroup load sharing ratio of the \(i\)-th planet\nomeqref {2}|nompageref}{1}
-\nomenclatureentry{a\(k_e\)@[{\(k_e\)}]\begingroup effective support stiffness concerning both the bearing and gear meshing\nomeqref {2}|nompageref}{1}
-\nomenclatureentry{a\(r_s\)@[{\(r_s\)}]\begingroup sun gear pitch radius\nomeqref {2}|nompageref}{1}
-\nomenclatureentry{a\(T_s\)@[{\(T_s\)}]\begingroup total torque applied on input sun gear\nomeqref {2}|nompageref}{1}
+\nomenclatureentry{a\(f_{\rm m}\)@[{\(f_{\rm m}\)}]\begingroup gear meshing frequency\nomeqref {2}|nompageref}{2}
+\nomenclatureentry{a\(f_{\rm c}\)@[{\(f_{\rm c}\)}]\begingroup carrier rotation frequency\nomeqref {2}|nompageref}{2}
+\nomenclatureentry{a\(J\)@[{\(J\)}]\begingroup inertia moment\nomeqref {2}|nompageref}{2}
+\nomenclatureentry{a\(k(t)\)@[{\(k(t)\)}]\begingroup stiffness\nomeqref {2}|nompageref}{2}
+\nomenclatureentry{a\(L_i\)@[{\(L_i\)}]\begingroup load sharing ratio of the \(i\)-th planet\nomeqref {2}|nompageref}{2}
+\nomenclatureentry{a\(k_e\)@[{\(k_e\)}]\begingroup effective support stiffness concerning both the bearing and gear meshing\nomeqref {2}|nompageref}{2}
+\nomenclatureentry{a\(r_s\)@[{\(r_s\)}]\begingroup sun gear pitch radius\nomeqref {2}|nompageref}{2}
+\nomenclatureentry{a\(T_s\)@[{\(T_s\)}]\begingroup total torque applied on input sun gear\nomeqref {2}|nompageref}{2}

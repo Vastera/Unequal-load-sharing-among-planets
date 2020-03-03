@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \draw[thick] (0,0) circle (5);%ring gear
+        \fill[thick,gray] (0,0) circle (2);%sun gear
+        \fill[fill=blue, fill opacity=0.1] (0:3.5) circle (1.5);% planet 1
+        \fill[fill=purple, fill opacity=0.1] (10:3.5) circle (1.5);% planet 2
+        \fill (0:3.5) circle(2pt);% planet 1 center
+        \fill (10:3.5) circle(2pt);% planet 2 center
+        
+        \node (Sun_label) at (-2,2) {Sun gear pitch circle};
+        \draw[<-,line,width=0.5pt] (-1,1) -- (Sun_label);
+
+        \node (Planet_label) at (2.5,2.8) {Planet pitch circle};
+        \draw[<-,line,width=0.5pt] (3.1,1.8) -- (Planet_label);
+
+        \node (Ring_label) at (0,4) {Ring gear pitch circle};
+        \draw[<-,line,width=0.5pt] (0, 5) -- (Ring_label);
+
+        \draw[thick,red] (10:0) -- (10:3.5) arc (10:0:3.5) -- cycle;% arc 
+        \coordinate[label=0:$\frac{P}{2}$] (0.5_P) at (5:3.5);% annotation p/2
+
+        \draw[thick,green] (-5:1.8) -- (-5:2.2);
+        \draw[thick,green] (15:1.8) -- (15:2.2);
+        \draw[thick,blue] (-5:2) arc (-5:15:2); 
+        \coordinate[label=0:$P$] (Tp) at (10:2);
+        
+    \end{tikzpicture}
+\end{figure}
+\end{document}

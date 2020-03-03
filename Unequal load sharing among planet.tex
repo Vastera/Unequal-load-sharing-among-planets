@@ -44,7 +44,7 @@
 % 
 %%%%%%%%%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-    This template helps you to create a properly formatted \LaTeX\ manuscript.
+    Planetary gearboxes feature large transmission ratios within compact volumes, because they can divide the input torque load into several paths through parallel planets. Unevenly load sharing among planets lead to inefficiency and accelerating fatigue. This paper establishes a vibration signal model to describe how the uneven distribution of planet loads affects the vibration signal composition. Compared with fixed shaft bearings, planet bearings are more prone to faults due to its excessive load. We also establish a vibration signal of planet bearing faults along with the uneven distribution of planet loads. Planet bearing faults are more difficult to diagnose due to abundant modulation sidebands arising from the unequal load sharing among planets. Numerical simulation and experimental substations agrees with the proposed theoretical model.
 \end{abstract}
 %%%%%%%%%%%%%%%%% Highlights %%%%%%%%%%%%%%%%%%%%%%
 \begin{highlights}
@@ -120,7 +120,7 @@
     \label{fig:planetary_gearbox_layout}
 \end{figure}
 \par The vibration in planetary gearboxes mainly origins from the meshing of gears \cite{Velex1996}. When the planet gears engage with the ring gear or sun gear, the number of the involved tooth varies with the relative rotation between gears and their contact stiffness changes consequently. The transmission load nominally remains constant and the gearbox is a parametrically excited multi-degree-freedom system \cite{Acar2019}. 
-\subsection{Vibration of single planets}
+\subsection{Vibration of single planet}
 \par To figure out the vibration mechanism of planetary gearboxes, we start with the meshing vibration of a pair of gears. For an individual planet, the vibration model can be written as
 \begin{equation}
     J \cdot \ddot{\theta}(t) + k(t) \cdot \theta(t) = 0 \label{eq:1_DOF_vibration},
@@ -182,7 +182,7 @@ where $k_{\rm rp}$ and $k_{\rm sp}$ are the meshing stiffness of planet-ring and
 where $R_{\rm p}$ is the planet radius, $R_{\rm s}$ is the sun radius, $\epsilon_{{\rm p}i}$ is the angular position error the $i$-th planet.
 \begin{figure}[pos=htbp]
     \centering
-    \includegraphics[scale=0.5]{tangential_error.png}
+    \includegraphics[scale=0.5]{tangential_error.pdf}
     \caption{Tangential error calculation}
     \label{fig:tangential_error}
 \end{figure}
@@ -208,7 +208,7 @@ where $M$ is the planet number. The path 4 is the sum of the diameter of the pla
 \end{equation}
 \begin{figure}[pos=htbp]
     \centering
-    \includegraphics[scale=0.5]{trangle_wave.png}
+    \includegraphics[scale=0.5]{trangle_wave.pdf}
     \caption{Transfer Path 1 length function of time.}
     \label{fig:path_length_trangle_wave}
 \end{figure}
@@ -282,13 +282,16 @@ Where
 \end{equation}
 \begin{equation}
     \sum_{i=1}^{M} \exp[-{\rm j} (m Z_{\rm r} + n)\Theta_i]=\sum_{i=1}^{M} \exp[-{\rm j}(m Z_{\rm r}+n)\frac{2 \pi (i-1)}{M}]=\begin{cases}
-        \eta \exp({\rm j} m \varphi_i) M, \quad \frac{m Z_{\rm s}-n}{M} \in \mathbb{N}\\
+        \exp({\rm j} m \varphi_i) M, \quad \frac{m Z_{\rm s}-n}{M} \in \mathbb{N}\\
         0, \quad \frac{m Z_{\rm r}-n}{M} \notin \mathbb{N}
     \end{cases}.\label{eq:carrier_harmonic_sun}
 \end{equation}
-\par According to the above Eq. (\ref{eq:carrier_harmonic_ring}) and Eq. (\ref{eq:carrier_harmonic_sun}), when $(m Z_{\rm s}-n)$ or $(m Z_{\rm s}-n)$ is the multiple of planet number $M$, the corresponding Fourier coefficient is nonzero. The carrier harmonics only peak at the multiple of planet number $M$ when planet distributes evenly. Interestingly, all planet distributes evenly ($\epsilon_i=0$) can only be achieved when the condition $(Z_{rm r}+Z_{\rm s})/M \in \mathbb{N}$ is guaranteed (details see \nameref{Appendix}) \cite{Inalpolat2009}. Therefore, $(m Z_{\rm r}+n)/M$ and $(m Z_{\rm s}-n)/M$ will be integers at one time. 
-\par When $\epsilon_i \neq 0$, all carrier harmonic $(m Z_{\rm r} + n)$ and $(m Z_{\rm s} - n)$ will appear with their amplitude arising from planet-ring meshing ($\sum_{i=1}^{M} L_i \exp[-{\rm j} (m Z_{\rm r} + n)(\epsilon_i+\Theta_i)]$) and planet-sun meshing ($\sum_{i=1}^{M} L_i \exp[-{\rm j} (m Z_{\rm s} - n)(\epsilon_i+\Theta_i)]$), respectively. For example, the second planet carries all load (the $L_2=1$ and $L_i=0,i\neq2$), the $(m Z_{\rm r} + n)$ order harmonic manifests itself with the amplitude of $\sum_{i=1}^{M} L_i \exp[-{\rm j} (m Z_{\rm r} + n)(\epsilon_i+\Theta_i)]$, which is nonzero. The amplitudes of the planet number multiples of carrier harmonics scale down to $\exp[(m Z_{\rm r}+n)\epsilon_i]$ and $\exp[(m Z_{\rm s}-n)\epsilon_i]$, respectively.
-
+\par According to the above Eq. (\ref{eq:carrier_harmonic_ring}) and Eq. (\ref{eq:carrier_harmonic_sun}), when $(m Z_{\rm s}-n)$ or $(m Z_{\rm s}-n)$ is the multiple of planet number $M$, the corresponding Fourier coefficient is nonzero. The carrier harmonics only peak at the multiple of planet number $M$ when planet distributes evenly. Interestingly, all planet distributes evenly ($\epsilon_i=0$) can only be achieved when the condition $(Z_{\rm r}+Z_{\rm s})/M \in \mathbb{N}$ is guaranteed (explanations see \nameref{Appendix}). Therefore, $(m Z_{\rm r}+n)/M$ and $(m Z_{\rm s}-n)/M$ will be integers at one time. 
+\par When $\epsilon_i \neq 0$, all carrier harmonic $(m Z_{\rm r} + n)$ and $(m Z_{\rm s} - n)$ will appear with their amplitude arising from planet-ring meshing ($\sum_{i=1}^{M} L_i \exp[-{\rm j} (m Z_{\rm r} + n)(\epsilon_i+\Theta_i)]$) and planet-sun meshing ($\sum_{i=1}^{M} L_i \exp[-{\rm j} (m Z_{\rm s} - n)(\epsilon_i+\Theta_i)]$), respectively. For example, the second planet carries all load (the $L_2=1$ and $L_i=0,i\neq2$), the $(m Z_{\rm r} + n)$ order harmonic manifests itself with the amplitude of $\sum_{i=1}^{M} L_i \exp[-{\rm j} (m Z_{\rm r} + n)(\epsilon_i+\Theta_i)]$, which is nonzero. The amplitudes of the planet number multiples of carrier harmonics scale down to $\exp[{\rm j}(m Z_{\rm r}+n)\epsilon_i]$ and $\exp[{\rm j}(m Z_{\rm s}-n)\epsilon_i]$, respectively.
+%%%%%%%%%%%%%%%%%%%%%%%% Numerical simulation %%%%%%%%%%%%%%%%%%%%%%%
+\section{Numerical simulation}
+\par We use Simulink/Matlab to simulate the proposed signal model. If the planet locates the nominal position, only the planet number multiple of carrier harmonics appear (give more specific results in figures), which accords with the Eq. (\ref{eq:carrier_harmonic_ring}) and Eq. (\ref{eq:carrier_harmonic_sun}). When the planet center deviates from the nominal position, other carrier orders emerges.  The dominant planet number multiple peaks shrinks. 
+\par (This explanation can only be used in the advanced version model -- spring-mass model) The amplitude envelope sharpe can also evidence the existence of planet position shifts. Because the support stiffness weakens, the resonance frequency of the entire system shift towards the y-axis. Fig. \ref{} shows the resonance frequency shift from ??Hz to ??Hz.
 
 \section{Factors considered in the signal model}
 \begin{enumerate}
@@ -301,9 +304,38 @@ Where
     \item Effects of asynchronous meshing among sun-planets or ring-planets \cite{Inalpolat2009}.
     \item Natural vibration influence on spectral structure.
 \end{enumerate}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Appendix %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Appendix\label{Appendix}}
-
+\begin{figure}[pos=htbp]
+    \centering
+    \includegraphics[scale=0.5]{Minimum_angle.pdf}
+    \caption{The minimum angle between two adjacent planet possible positions}
+    \label{fig_mini_angle}
+\end{figure}
+\par As shown in Fig. \ref{fig_mini_angle}. The pitch circle of planet gear rolls along the pitch circle of sun gear. When sun gear and ring gear are both fixed, the planet can only assembled at finite discrete angular positions. The minimum angular between two adjacent positions can be calculated as follows. Imagine the sun gear `rotates' an entire tooth, and a planet rotates a distance along with the pinhole circle on the carrier. The transmission ratio between carrier and sun gear is
+\begin{equation}
+    \operatorname{Transmission\,ratio}=\frac{Z_{\rm s}}{Z_{\rm s}+Z_{\rm r}}
+\end{equation}
+the angle the sun gear rotates is:$\frac{P}{R_{\rm s}}$, where $P$ is the tooth spacing (base pitch). So the distance the pinhole center rotates is
+\begin{equation}
+    (R_{\rm s}+R_{\rm p}) \cdot \frac{P}{R_{\rm s}} \cdot \frac{Z_{\rm s}}{Z_{\rm s}+Z_{\rm r}}
+    =\frac{R_{\rm s}+R_{\rm p}}{R_{\rm s}+R_{\rm r}} \cdot P
+    =\frac{R_{\rm s}+R_{\rm p}}{R_{\rm s}+R_{\rm s}+2R_{\rm p}} \cdot P
+    =\frac{P}{2}
+\end{equation}
+Thus, the angle the planet-carrier rotates is
+\begin{equation}
+    \lambda=\frac{P}{2} \cdot \frac{1}{R_{\rm p}+R_{\rm s}}
+    =\frac{P}{R_{\rm r}+R_{\rm s}}
+    \label{equ_carrier_angle}
+\end{equation}
+According to the definition of module of gear$m=\frac{D}{Z}=\frac{P}{\pi}$, the Eq. (\ref{equ_carrier_angle}) can be rewritten as:
+\begin{equation}
+    \lambda=\frac{P \cdot 2}{D_{\rm r}+D_{\rm s}}
+    =\frac{2 \pi m}{m \cdot ({Z_{\rm r}}+Z_{\rm s})}
+    =\frac{2 \pi}{Z_{\rm r}+Z_{\rm s}},
+\end{equation}
+The planets can only locate finite angular positions with minimum space $\lamda$. When planets locate uniformly at angular positions $\frac{2\pi(i-1)}{M}$, the $Z_{\rm r}+Z_{\rm s}$ must be an integer multiple of planet number $M$.
 %% `Elsevier LaTeX' style
 \bibliographystyle{elsarticle-num}
 \bibliography{My_EndNote_Lib.bib}
