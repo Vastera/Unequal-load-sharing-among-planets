@@ -39,7 +39,7 @@
 \address[1]{University of Science and Technology Beijing, No.30, Xueyuan Road, Haidian District, Beijing.}
 \author[1]{Zhipeng Feng}[orcid=0000-0002-3403-4386]
 \cormark[1]
-\cortext[cor1]{corresponding author}%
+\cortext[cor1]{Corresponding author}%
 \ead{fengzp@ustb.edu.cn}%
 % 
 %%%%%%%%%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%
@@ -192,14 +192,14 @@ where $R_{\rm p}$ is the planet radius, $R_{\rm s}$ is the sun radius, $\epsilon
 \begin{figure}[pos=htbp]
     \centering
     \includegraphics[scale=0.5]{transfer_path.pdf}
-    \caption{Transfer paths of gear meshing vibration\label{fig:transfer_path}}
+    \caption{Transfer paths of gear meshing vibration.\textbf{add explanation on path number. from where to where.}\label{fig:transfer_path}}
 \end{figure}
-\par The lengths of path 1 and path 4 vary with the circumferential position of carrier. For each planet, the meshing vibration points get close to the fixed sensor as the planet approaches the top surface of gearbox case. When the planet reach the climax of its revolution circle, the fixed transducer percepts the maximum impulsive strength. While the planet arrives at the case bottom, the perceived impulses are most weakened. The path 1 length is triangle wave of time (as shown in Fig. \ref{fig:path_length_trangle_wave}) when planetary gearboxes operate at a constant speed, 
+\par The lengths of path 1 and path 4 vary with the circumferential position of carrier. For each planet, the meshing vibration points get close to the fixed sensor as the planet approaches the top surface of gearbox case. When the planet reach the climax of its revolution circle, the fixed transducer percepts the maximum impulsive strength. While the planet arrives at the case bottom, the perceived impulses are most weakened. The path 1 length is triangle wave of time (as shown in Fig. \ref{fig:path_length_trangle_wave}) when planetary gearboxes operate at a constant speed and planet distributes evenly, 
 \begin{equation}
     l_{{\rm r}i}(t)=
     \begin{cases}
-        2 \pi R_{\rm r} f_{\rm c} \left|t-\frac{n}{f_{\rm c}}\right|, \frac{n}{f_{\rm c}} - \frac{2i-3}{2 M f_{\rm c}} \leq t < \frac{n}{f_{\rm c}} - \frac{2i-1}{2 M f_{\rm c}}, n\in \mathbb{Z} , i=1,2,\ldots,M\\
-        0, \quad \text{otherwise}
+        2 \pi R_{\rm r} f_{\rm c} \left|t-\frac{M n + i-1}{M f_{\rm c}}\right|, \frac{n}{f_{\rm c}} + \frac{2i-3}{2 M f_{\rm c}} \leq t < \frac{n}{f_{\rm c}} + \frac{2i-1}{2 M f_{\rm c}}, n\in \mathbb{Z} , i=1,2,\ldots,M\\
+        +\infty, \quad \text{otherwise}
     \end{cases},
 \end{equation}
 where $M$ is the planet number. The path 4 is the sum of the diameter of the planet pitch circle and $l_{{\rm r}i}$,
@@ -209,12 +209,12 @@ where $M$ is the planet number. The path 4 is the sum of the diameter of the pla
 \begin{figure}[pos=htbp]
     \centering
     \includegraphics[scale=0.5]{trangle_wave.pdf}
-    \caption{Transfer Path 1 length function of time.}
+    \caption{Transfer Path 1 length function of time. \textbf{vary the line type for different lengends.Add the transfer effect funciton of time}}
     \label{fig:path_length_trangle_wave}
 \end{figure}
 \par This attenuation effect with regard to the path length can be characterized as window functions such as Hanning window or Gaussian window \cite{Mark2009}. In this paper, we apply the Gaussian window describing the time-varying transfer path effect,
 \begin{equation}
-    \sigma(l)=F\exp\left[-\frac{\left|l\right|}{a}\right],\label{eq:general_transfer_path}
+    \sigma(l)=F\exp\left(-\frac{l}{a}\right),\label{eq:general_transfer_path}
 \end{equation}
 where $l$ is the length of a transfer path, $F$ represents for the strength factor and $a$ is the attenuation factor. The larger $a$ is, the longer impulses can propagate without a large energy loss. Given Eq. (\ref{eq:path_4_length}) and Eq. (\ref{eq:general_transfer_path}), we can deduce the proportional relationship between path 1 and path 4,
 \begin{equation}
@@ -223,6 +223,16 @@ where $l$ is the length of a transfer path, $F$ represents for the strength fact
 For simplicity, we set the $\sigma_i(t)=\sigma\left[l_{{\rm r}i}(t)\right]$ and $\eta=\exp(-\frac{2 R_{\rm p}}{a})$. Fig. \ref{fig:path_length_trangle_wave} shows that $\sigma_{i}(t)$ shifts in time by $(\epsilon_i-\Theta_i)/(2 \pi f_{\rm c})$ relative to $\sigma_1$:
 \begin{equation}
     \sigma_{i}(t)=\sigma_{1}(t-\frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}}).
+\end{equation}
+\par Because the transfer path effect function is the exponential function shifting along the time axis with a fixed interval, it can be rewritten as the convolution of exponential function and Dirac comb function with the carrier rotation period $1/f_{\rm c}$.
+\begin{equation}
+    \sigma_i(t)=\sigma_0(t) \ast \operatorname{III}\left[f_{\rm c} (t - \frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}})\right],\label{eq:transfer_path_convolution_form}
+\end{equation}
+where
+\begin{equation}
+    \sigma_0(t)=\begin{cases}F \exp(\frac{2 \pi R_{\rm r} f_{\rm c} \left|t\right|}{a}),\quad &\frac{-1}{2 M f_{\rm c}} \leq t < \frac{1}{2 M f_{\rm c}}\\
+        0, &\text{otherwise}.
+    \end{cases}\label{eq:tranfer_path_time_shape}
 \end{equation}
 \subsection{Natural frequency}
 \par In the above discussion, the gear meshing vibration is simply considered as Dirac impulses. In practice, every impact arising from different components will excite the machine natural frequency. The excited resonance affects the spectral structure globally: the amplitudes of the vibration frequencies around the natural frequency are reinforced and other amplitudes are attenuated. The resonance features a harmonic wave with the amplitude attenuating exponentially, like the vibration of a spring-mass-damper,
@@ -239,41 +249,45 @@ where $\beta$ is the structural damping coefficient, $f_{\rm n}$ is the natural 
 where $\ast$ denotes convolution.
 \par For machines with the same configuration, when the load distribution of the planet is uneven, the contact stiffness of the transfer path of each planet inside the planetary gearbox will decrease relative to the case of the uniform load distribution. As a result, The decrease of internal contact stiffness will lead to the decrease of natural frequency of the whole system. Therefore, the variation of the system's natural frequency can be used as a circumstantial evidence to diagnose the load distribution among planets.
 \section{Spectral structure}
-\par In this section, we will derive the spectral structure of the above proposed signal model for the in-depth understanding of planetary gearbox vibration. The gear meshing vibration (Eq. (\ref{eq:planet-ring_meshing}) and Eq. (\ref{eq:planet-sun_meshing})) and transfer path effect arising from the carrier rotation ($\sigma_{i}(t)$) are periodic with periods $1/f_{\rm m}$ and $1/f_{\rm c}$, respectively. According to Eq. (\ref{eq:meshing_frequency}) and $f_{\rm r}=0$, $f_{\rm m}=Z_{r} \cdot f_{\rm c}$. Expand the planet-ring part as Fourier series
+\par In this section, we will derive the spectral structure of the above proposed signal model for the in-depth understanding of planetary gearbox vibration. The gear meshing vibration (Eq. (\ref{eq:planet-ring_meshing}) and Eq. (\ref{eq:planet-sun_meshing})) and transfer path effect arising from the carrier rotation ($\sigma_{i}(t)$) are periodic with periods $1/f_{\rm m}$ and $1/f_{\rm c}$, respectively. According to Eq. (\ref{eq:meshing_frequency}) and $f_{\rm r}=0$, $f_{\rm m}=Z_{r} \cdot f_{\rm c}$. Apply Fourier transform to the planet-ring vibration, yields
+\begin{equation}
+\begin{split}
+    \mathcal{F}\left[ \sigma_{{\rm r}i}(t) \xi_{{\rm r}i}(t) \right]=&\mathcal{F}\left\{\sigma_0(t) \ast \operatorname{III}\left[f_{\rm c} \cdot (t - \frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}})\right] \cdot A_{{\rm r}i}\operatorname{III}\left[f_{\rm m} \cdot (t-\frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}})\right]\right\}\\
+    =&A_{{\rm r}i} \cdot \mathcal{F}\left[\sigma_0(t)\right] \cdot \mathcal{F}\left\{\operatorname{III}\left[f_{\rm c} \cdot (t - \frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}})\right] \right\}
+    \ast \mathcal{F}\left\{ \operatorname{III}\left[f_{\rm m} \cdot (t-\frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}})\right] \right\}\\
+=&A_{{\rm r}i} \cdot \hat{\sigma}_0(f) \cdot \frac{\operatorname{III}\left(\frac{f}{f_{\rm c}}\right) \exp\left[-\frac{{\rm j} f (\epsilon_i+\Theta_i)}{f_{\rm c}}\right]}{\sqrt{2 \pi} f_{\rm c}} \ast \frac{\operatorname{III}\left(\frac{f}{ Z_{\rm r} f_{\rm c}}\right) \exp\left[-\frac{{\rm j} f (\epsilon_i+\Theta_i)}{ f_{\rm c}}\right]}{\sqrt{2 \pi } Z_{\rm r}f_{\rm c}}\\
+=&A_{{\rm r}i} \cdot \frac{\hat{\sigma}_0(f)}{2 \pi Z_{\rm r} f_{\rm c}^{2}} \cdot \sum_{m=-\infty}^{+\infty} \sum_{n=-\infty}^{+\infty} \delta\left[f-(mZ_{\rm r}+n)f_{\rm c}\right] \exp\left[-{\rm j}(m Z_{\rm r}+n)(\epsilon_i+\Theta_i)\right].
+\end{split}
+\end{equation}
+where $\mathcal{F}\{\cdot\}$ denotes Fourier transform, $\hat{\sigma}_0(f)$ is the Fourier spectrum of $\sigma_0(t)$, $\delta\{\cdot\}$ denotes Dirac impulse, $\ast$ denotes convolve. The convolution between two Dirac comb functions is the summation of all shifted Dirac impulses. Similarly,  the $i$-th planet-sun gear vibration is:
 \begin{equation}
     \begin{split}
-    \sigma_{{\rm r}i}(t) \xi_{{\rm r}i}(t)&=\sigma_{1}(t-\frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}}) \cdot \xi_{{\rm r}1}(t-\frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}}) \\
-    &=\sum_{n=-\infty}^{+\infty} \Delta_{n 1} \exp[-{\rm j} (\epsilon_i+\Theta_i)] \exp({\rm j} 2 \pi n f_{\rm c} t)% transfer path part
-    \cdot \sum_{m=-\infty}^{+\infty} \exp[-{\rm j} m Z_{\rm r} (\epsilon_i + \Theta_i)] \exp({\rm j} 2 \pi m Z_{\rm r} f_{\rm c} t)\\% gear meshing vibration
-    &=\sum_{n=-\infty}^{+\infty} \sum_{m=-\infty}^{+\infty} \Delta_{n 1} \exp[{\rm j} 2 \pi f_{\rm c} (Z_{\rm r} m +n) t] \exp[-{\rm j} (\epsilon_i+\Theta_i) (Z_{\rm r} m +n)],
+        \mathcal{F}\left[\sigma_{{\rm s}i}(t) \xi_{{\rm s}i}(t)\right]&=\mathcal{F}\left\{ \eta \cdot \sigma_0(t) \ast \operatorname{III}\left[f_{\rm c}(t-\frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}})\right] \cdot A_{{\rm s}i} \operatorname{III} \left[ f_{\rm m} \cdot (t+ \frac{\epsilon_i+\Theta_i}{2\pi f_{\rm c} -2\pi f_{\rm s}} ) +\frac{\varphi_i}{2\pi} \right] \right\}\\
+        &=\eta \cdot A_{{\rm s}i} \cdot \mathcal{F}\left[\sigma_0(t)\right] \cdot \mathcal{F}\left\{ \operatorname{III}\left[f_{\rm c} \cdot (t-\frac{\epsilon_i+\Theta_i}{2\pi f_{\rm c}}) \right] \right\} \ast \mathcal{F}\left\{\operatorname{III} \left[ f_{\rm m} \cdot (t+ \frac{\epsilon_i+\Theta_i}{2\pi f_{\rm c} -2\pi f_{\rm s}} ) +\frac{\varphi_i}{2\pi} \right]\right\}\\
+        &=\eta \cdot A_{{\rm s}i} \cdot \hat{\sigma}_0(f) \cdot \frac{\operatorname{III}(\frac{f}{f_{\rm c}}) \exp\left[\frac{-{\rm j}f(\epsilon_i+\Theta_i)}{f_{\rm c}}\right]}{\sqrt{2 \pi} f_{\rm c}} \ast \frac{\operatorname{III}(\frac{f}{Z_{\rm r}f_{\rm c}})\exp\left[\frac{{\rm j}f(\epsilon_i+\Theta_i)}{f_{\rm c}-f_{\rm s}}\right] \exp\left(\frac{\varphi_i f}{2\pi Z_{\rm r} f_{\rm c} } \right)}{\sqrt{2 \pi }Z_{\rm r} f_{\rm c}}\\
+        &=\eta \cdot A_{{\rm s}i} \cdot \frac{\hat{\sigma}_0(f)}{2 \pi  Z_{\rm r} f_{\rm c}^2} \cdot \sum_{m=-\infty}^{+\infty} \sum_{-\infty}^{+\infty} \delta\left[f-(m Z_{\rm r}+ n)f_{\rm c} \right] \exp\left[ {\rm j} (Z_{\rm s} m - n)(\epsilon_i+\Theta_i) \right] \exp({\rm j}m \varphi_i),
     \end{split}
 \end{equation}
-where $\Delta_{n 1}$ is the Fourier coefficient of $n$-th harmonic of $\sigma_1(t)$, the Fourier coefficient of $m$-th harmonic of $\operatorname{III}(t)$ is 1. Similarly, expand the planet-sun part as Fourier series
+where $Z_{\rm s}  (f_{\rm c} -f_{\rm s})= Z_{\rm r} f_{\rm c} =f_{\rm m}$ is applied. Combine the above planet-ring and planet-sun vibration for all planets:
 \begin{equation}
     \begin{split}
-    \sigma_{{\rm s}i}(t) \xi_{{\rm s}i}(t)&=\eta \sigma_{1}(t-\frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}}) \cdot \xi_{{\rm s}1}(t + \frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}+ 2 \pi f_{\rm s}}) \\
-    &=\eta \sum_{n=-\infty}^{+\infty} \Delta_{n 1} \exp[-{\rm j} (\epsilon_i+\Theta_i)] \exp({\rm j} 2 \pi n f_{\rm c} t)% transfer path part
-    \cdot \sum_{m=-\infty}^{+\infty} \exp[{\rm j} m Z_{\rm s} (\epsilon_i + \Theta_i)] \exp[{\rm j} m ( Z_{\rm r} 2 \pi f_{\rm c} t + \varphi_i)]\\% gear meshing vibration
-    &=\eta \sum_{n=-\infty}^{+\infty} \sum_{m=-\infty}^{+\infty} \Delta_{n 1} \exp[{\rm j} 2 \pi f_{\rm c} (Z_{\rm r} m +n) t] \exp[{\rm j} (\epsilon_i+\Theta_i) (Z_{\rm s} m -n)] \exp({\rm j} n \varphi_i),
+        X(f) =& \sum_{\rm i=1}^{M} L_i \cdot \left\{\mathcal{F}\left[ \sigma_{{\rm r}i}(t) \xi_{{\rm r}i}(t) \right] + \mathcal{F}\left[\sigma_{{\rm s}i}(t) \xi_{{\rm s}i}(t)\right] \right\}\\
+        =&\sum_{\rm i=1}^{M} L_i \cdot \Bigg\{ A_{{\rm r}i} \cdot \frac{\hat{\sigma}_0(f)}{2 \pi Z_{\rm r} f_{\rm c}^{2}} \cdot  \sum_{m=-\infty}^{+\infty} \sum_{n=-\infty}^{+\infty} \delta\left[f-(mZ_{\rm r}+n)f_{\rm c}\right] \exp\left[-{\rm j}(m Z_{\rm r}+n)(\epsilon_i+\Theta_i)\right] 
+        \\
+        &+\eta \cdot A_{{\rm s}i} \cdot \frac{\hat{\sigma}_0(f)}{2 \pi  Z_{\rm r} f_{\rm c}^2} \cdot \sum_{m=-\infty}^{+\infty} \sum_{-\infty}^{+\infty} \delta\left[f-(m Z_{\rm r}+ n)f_{\rm c} \right] \exp\left[ {\rm j} (Z_{\rm s} m - n)(\epsilon_i+\Theta_i) \right] \exp({\rm j}m\varphi_i) \Bigg\}\\
+        =&\frac{\hat{\sigma}_0(f)}{2\pi Z_{\rm r} f_{\rm c}^{2}} \sum_{m=-\infty}^{+\infty} \sum_{n=-\infty}^{+\infty} \delta\left[f-(m Z_{\rm r}+n) f_{\rm c} \right] \Bigg\{ \sum_{i=1}^{M} L_i \cdot A_{{\rm r}i} \cdot \exp\left[ -{\rm j}(m Z_{\rm r}+n)(\epsilon_i+\Theta_i)\right]\\
+        &+\eta \cdot L_i \cdot A_{{\rm s}i} \cdot \exp({\rm j}m\varphi_i) \cdot\exp\left[{\rm j}(m Z_{\rm r}-n)(\epsilon_i+\Theta_i) \right] \Bigg\}.
     \end{split}
 \end{equation}
-Combine the above planet-ring and planet-sun parts for all planets:
+\par We assume the isotropy of planet and the amplitudes of $i$-th planet gear meshing impacts $A_{{\rm r}i}$ and $A_{{\rm s}i}$ remain the same for every planet, that is $A_{{\rm r}i}=A_{{\rm r}1}$, $A_{{\rm s}i}=A_{{\rm s}1} $. When all planets locate at the nominal positions ($\epsilon_i=0$), each planet bears the same torque ($L_i=L_1$), The $X(f)$ in the ‘perfect’ case is
 \begin{equation}
-    \begin{split}
-    x(t)=&\sum_{i=1}^{M} \sum_{n=-\infty}^{+\infty} \sum_{m=-\infty}^{+\infty} L_i \Delta_{n 1} \exp[{\rm j} 2 \pi f_{\rm c} (Z_{\rm r} m +n) t] \exp[-{\rm j} (\epsilon_i+\Theta_i) (Z_{\rm r} m +n)]\\%the planet-ring part
-    &+ \eta \sum_{i=1}^{M}  \sum_{n=-\infty}^{+\infty} \sum_{m=-\infty}^{+\infty} L_i \Delta_{n 1} \exp[{\rm j} 2 \pi f_{\rm c} (Z_{\rm r} m +n) t] \exp[{\rm j} (\epsilon_i+\Theta_i) (Z_{\rm s} m -n)] \exp({\rm j} n \varphi_i)\\% the planet-sun part
-     =&\sum_{n=-\infty}^{+\infty} \sum_{m=-\infty}^{+\infty} L_i \Delta_{n 1} \exp[{\rm j}(m Z_{\rm r} + n) 2 \pi f_{\rm c} t] \left\{ \sum_{i=1}^{M} \exp[-{\rm j} (m Z_{\rm r} + n)(\epsilon_i+\Theta_i)]\right\}\\% planet-ring part
-    &+ \eta \sum_{n=-\infty}^{+\infty} \sum_{m=-\infty}^{+\infty} L_i \Delta_{n 1}\exp[{\rm j} (m Z_{\rm r} + n) 2 \pi f_{\rm c} t] \exp({\rm j} n \varphi_i) \left\{ \sum_{i=1}^{M} \exp[{\rm j} (m Z_{\rm s} + n)(\epsilon_i+\Theta_i)] \right\}
-    \end{split}.
+    \begin{align}
+        X(f)=\frac{L_1 \cdot \hat{\sigma}_0(f)}{2\pi Z_{\rm r} f_{\rm c}^{2}} \sum_{m=-\infty}^{+\infty} \sum_{n=-\infty}^{+\infty} \delta\left[f-(m Z_{\rm r}+n) f_{\rm c} \right] 
+              \Bigg\{ \sum_{i=1}^{M}  A_{{\rm r}1}  \exp\left[ -{\rm j}(m Z_{\rm r}+n)\Theta_i\right]\\
+              +\eta A_{{\rm s}1}\exp({\rm j}m\varphi_i) \exp\left[{\rm j}(m Z_{\rm r}-n)\Theta_i \right]\Bigg\}
+    \end{align},%planet-sun part
 \end{equation}
-\par When all planet locate at the nominal position ($\epsilon_i=0$), each planet bears the same torque ($L_i=L_1$). The $x(t)$ in the `perfect' case is
-\begin{equation}
-    \begin{split}
-        x(t)&=\sum_{n=-\infty}^{+\infty} \sum_{m=-\infty}^{+\infty} L_1 \Delta_{n 1} \exp[{\rm j}(m Z_{\rm r} + n) 2 \pi f_{\rm c} t] \left\{ \sum_{i=1}^{M} \exp[-{\rm j} (m Z_{\rm r} + n)\Theta_i]%planet-ring part
-        + \eta \exp({\rm j}n\varphi_i) \exp[{\rm j}(m Z_{\rm s}-n)\Theta_i]\right\},%planet-sun part
-    \end{split}
-\end{equation}
-Where
+where
 \begin{equation}
         \sum_{i=1}^{M} \exp[-{\rm j} (m Z_{\rm r} + n)\Theta_i]=\sum_{i=1}^{M} \exp[-{\rm j}(m Z_{\rm r}+n)\frac{2 \pi (i-1)}{M}]=\begin{cases}
             M, \quad \frac{m Z_{\rm r}+n}{M} \in \mathbb{N}\\
@@ -281,9 +295,9 @@ Where
         \end{cases},\label{eq:carrier_harmonic_ring}
 \end{equation}
 \begin{equation}
-    \sum_{i=1}^{M} \exp[-{\rm j} (m Z_{\rm r} + n)\Theta_i]=\sum_{i=1}^{M} \exp[-{\rm j}(m Z_{\rm r}+n)\frac{2 \pi (i-1)}{M}]=\begin{cases}
-        \exp({\rm j} m \varphi_i) M, \quad \frac{m Z_{\rm s}-n}{M} \in \mathbb{N}\\
-        0, \quad \frac{m Z_{\rm r}-n}{M} \notin \mathbb{N}
+    \sum_{i=1}^{M} \exp[{\rm j} (m Z_{\rm s} - n)\Theta_i]=\sum_{i=1}^{M} \exp[{\rm j}(m Z_{\rm s}-n)\frac{2 \pi (i-1)}{M}]=\begin{cases}
+         M, \quad \frac{m Z_{\rm s}-n}{M} \in \mathbb{N}\\
+        0, \quad \frac{m Z_{\rm s}-n}{M} \notin \mathbb{N}
     \end{cases}.\label{eq:carrier_harmonic_sun}
 \end{equation}
 \par According to the above Eq. (\ref{eq:carrier_harmonic_ring}) and Eq. (\ref{eq:carrier_harmonic_sun}), when $(m Z_{\rm s}-n)$ or $(m Z_{\rm s}-n)$ is the multiple of planet number $M$, the corresponding Fourier coefficient is nonzero. The carrier harmonics only peak at the multiple of planet number $M$ when planet distributes evenly. Interestingly, all planet distributes evenly ($\epsilon_i=0$) can only be achieved when the condition $(Z_{\rm r}+Z_{\rm s})/M \in \mathbb{N}$ is guaranteed (explanations see \nameref{Appendix}). Therefore, $(m Z_{\rm r}+n)/M$ and $(m Z_{\rm s}-n)/M$ will be integers at one time. 
@@ -291,6 +305,12 @@ Where
 %%%%%%%%%%%%%%%%%%%%%%%% Numerical simulation %%%%%%%%%%%%%%%%%%%%%%%
 \section{Numerical simulation}
 \par We use Simulink/Matlab to simulate the proposed signal model. If the planet locates the nominal position, only the planet number multiple of carrier harmonics appear (give more specific results in figures), which accords with the Eq. (\ref{eq:carrier_harmonic_ring}) and Eq. (\ref{eq:carrier_harmonic_sun}). When the planet center deviates from the nominal position, other carrier orders emerges.  The dominant planet number multiple peaks shrinks. 
+\begin{figure}[pos=htbp]
+    \centering
+    \includegraphics[scale=1]{Simulation_Normal_Fourier.pdf}
+    \caption{Fourier spectrum of perfect case. Peaks emerge with the space of M multiples of carrier orders, and the transfer path function determine the envelope shape of every clutter \textbf{formulaic explanation needed for the phenomenon-- transfer path consists of convolution of impulses and exponential function of time, which products the gear meshing vibration impulses. Change the x-axis frequency into carrier orders}}
+\end{figure}
+\par The extra sidebands at non M  multiples of carrier orders can be attributed by the phase modulation effects (with a period of carrier rotation period and fluctuates at each planet position (both time and space)).
 \par (This explanation can only be used in the advanced version model -- spring-mass model) The amplitude envelope sharpe can also evidence the existence of planet position shifts. Because the support stiffness weakens, the resonance frequency of the entire system shift towards the y-axis. Fig. \ref{} shows the resonance frequency shift from ??Hz to ??Hz.
 
 \section{Factors considered in the signal model}
