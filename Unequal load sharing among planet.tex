@@ -157,10 +157,10 @@ where $\{\}_{\rm r}$, $\{\}_{\rm p}$, $\{\}_{\rm s}$, $\{\}_{\rm c}$ denote ring
 \end{equation}
 where $A_{{\rm r}i}$ is the impulsive amplitude of $i$-th planet-ring gear meshing, the $f_{\rm m}$ is the meshing frequency. Park et al. propose the difference between planet-ring and planet-sun meshing phase \cite{Parker2004}. Similarly, the planet-sun meshing vibration is
 \begin{equation}
-    \xi_{{\rm s}i}(t)=A_{{\rm s}i} \operatorname{III}\left[f_{\rm m} \cdot (t + \frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}- 2 \pi f_{\rm s}})+ \frac{\varphi_i}{2 \pi} \right],\label{eq:planet-sun_meshing}
+    \xi_{{\rm s}i}(t)=A_{{\rm s}i} \operatorname{III}\left[f_{\rm m} \cdot (t + \frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm s}- 2 \pi f_{\rm c}})+ \frac{\varphi_i}{2 \pi} \right],\label{eq:planet-sun_meshing}
 \end{equation}
 where $A_{{\rm r}i}$ is the impulsive amplitude of $i$-th planet-sun gear meshing, $\varphi_i$ is the phase difference between planet-ring and planet-sun meshing for the $i$-th planet.
-\subsection{Unequal load sharing among planets}
+\subsection{Unequal load sharing among planets (Add the 5 and 6 planet cases)}
 % \begin{enumerate}
 %     \item Reasons of generation
 %     \item Calculation formula (Sigh's paper and illustration graph)
@@ -177,13 +177,13 @@ In this formula, \(L_i\) denotes the load sharing ratio of the \(i\)-th planet, 
 \end{equation}
 where $k_{\rm rp}$ and $k_{\rm sp}$ are the meshing stiffness of planet-ring and planet-sun, respectively, $k_{\rm b}$ is the planet bearing stiffness.
 \begin{equation}
-    e_{i}=2(R_{\rm r}-R_{\rm p})\sin(\epsilon_{{\rm p}i}/2)\cos(\epsilon_{{\rm p}i}/2),\label{eq:tangential_error}
+    e_{i}=2(R_{\rm r}-R_{\rm p})\sin(\epsilon_{i}/2)\cos(\epsilon_{i}/2),\label{eq:tangential_error}
 \end{equation}
-where $R_{\rm p}$ is the planet radius, $R_{\rm s}$ is the sun radius, $\epsilon_{{\rm p}i}$ is the angular position error the $i$-th planet.
+where $R_{\rm p}$ is the planet radius, $R_{\rm s}$ is the sun radius, $\epsilon_{i}$ is the angular position error the $i$-th planet.
 \begin{figure}[pos=htbp]
     \centering
     \includegraphics[scale=0.5]{tangential_error.pdf}
-    \caption{Tangential error calculation}
+    \caption{Tangential error calculation (correct the $\epsilon_{pi}$)}
     \label{fig:tangential_error}
 \end{figure}
 \par Unequal load sharing will gives rise to non-uniform impulsive intensity. The acceleration are linearly affected by the dynamic force exerted. Thus, the vibration amplitude of each planet is assumed to be proportional to the load applied on it \cite{Inalpolat2009}. In other words, planet load modifies the amplitude of the vibration signal. Moreover, the unevenly planet distribution along the angular position of carrier also has phase modulation when the transfer path is considered simultaneously. These effects will be illustrated explicitly in the later discussion. 
@@ -198,7 +198,7 @@ where $R_{\rm p}$ is the planet radius, $R_{\rm s}$ is the sun radius, $\epsilon
 \begin{equation}
     l_{{\rm r}i}(t)=
     \begin{cases}
-        2 \pi R_{\rm r} f_{\rm c} \left|t-\frac{M n + i-1}{M f_{\rm c}}\right|, \frac{n}{f_{\rm c}} + \frac{2i-3}{2 M f_{\rm c}} \leq t < \frac{n}{f_{\rm c}} + \frac{2i-1}{2 M f_{\rm c}}, n\in \mathbb{Z} , i=1,2,\ldots,M\\
+        2 \pi R_{\rm r} f_{\rm c} \left|t-(\frac{\epsilon_i+\Theta_i}{2 \pi} + \frac{n}{f_{\rm c}}) \right|, \frac{n}{f_{\rm c}} - \frac{1}{2 M f_{\rm c}} + \frac{\epsilon_i+\Theta_i}{2\pi} \leq t < \frac{n}{f_{\rm c}} + \frac{1}{2 M f_{\rm c}} + \frac{\epsilon_i+\Theta_i}{2\pi}, n\in \mathbb{Z} , i=1,2,\ldots,M\\
         +\infty, \quad \text{otherwise}
     \end{cases},
 \end{equation}
@@ -230,11 +230,11 @@ For simplicity, we set the $\sigma_i(t)=\sigma\left[l_{{\rm r}i}(t)\right]$ and 
 \end{equation}
 where
 \begin{equation}
-    \sigma_0(t)=\begin{cases}F \exp(\frac{2 \pi R_{\rm r} f_{\rm c} \left|t\right|}{a}),\quad &\frac{-1}{2 M f_{\rm c}} \leq t < \frac{1}{2 M f_{\rm c}}\\
+    \sigma_0(t)=\begin{cases}F \exp(\frac{- 2 \pi R_{\rm r} f_{\rm c} \left|t\right|}{a}),\quad &\frac{-1}{2 M f_{\rm c}} \leq t < \frac{1}{2 M f_{\rm c}}\\
         0, &\text{otherwise}.
     \end{cases}\label{eq:tranfer_path_time_shape}
 \end{equation}
-\subsection{Natural frequency}
+\subsection{Natural frequency (Add the calculation formula similar to the load sharing factor)}
 \par In the above discussion, the gear meshing vibration is simply considered as Dirac impulses. In practice, every impact arising from different components will excite the machine natural frequency. The excited resonance affects the spectral structure globally: the amplitudes of the vibration frequencies around the natural frequency are reinforced and other amplitudes are attenuated. The resonance features a harmonic wave with the amplitude attenuating exponentially, like the vibration of a spring-mass-damper,
 \begin{equation}
     \lambda(t)=\exp(-t/\beta)\cdot \sin(2 \pi f_{\rm n} t),
@@ -243,7 +243,7 @@ where $\beta$ is the structural damping coefficient, $f_{\rm n}$ is the natural 
 \par Every time a gear meshing vibration occurs, the machine's natural vibration is excited. This process is mathematically equivalent to the convolution of the impact function of the meshing vibration with the exponentially attenuated harmonic function of the natural vibration. Therefore, considering the effect of the natural vibration, the above signal model can be updated into
 \begin{equation}
     \widetilde{x} (t)=\lambda(t) \ast \sum_{i=1}^{M} L_i \sigma_i(t) \left\{ \operatorname{III}\left[f_{\rm m} \cdot (t-\frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}})\right]% planet-ring part
-    + \eta \operatorname{III}\left[f_{\rm m} \cdot (t + \frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}-2 \pi f_{\rm s}}) - \frac{\varphi_i}{2 \pi} \right]% planet-sun part
+    + \eta \operatorname{III}\left[f_{\rm m} \cdot (t + \frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm s}-2 \pi f_{\rm c}}) + \frac{\varphi_i}{2 \pi} \right]% planet-sun part
     \right\},\label{eq:final_signal_model}
 \end{equation}
 where $\ast$ denotes convolution.
@@ -259,11 +259,11 @@ where $\ast$ denotes convolution.
 =&A_{{\rm r}i} \cdot \frac{\hat{\sigma}_0(f)}{2 \pi Z_{\rm r} f_{\rm c}^{2}} \cdot \sum_{m=-\infty}^{+\infty} \sum_{n=-\infty}^{+\infty} \delta\left[f-(mZ_{\rm r}+n)f_{\rm c}\right] \exp\left[-{\rm j}(m Z_{\rm r}+n)(\epsilon_i+\Theta_i)\right].
 \end{split}
 \end{equation}
-where $\mathcal{F}\{\cdot\}$ denotes Fourier transform, $\hat{\sigma}_0(f)$ is the Fourier spectrum of $\sigma_0(t)$, $\delta\{\cdot\}$ denotes Dirac impulse, $\ast$ denotes convolve. The convolution between two Dirac comb functions is the summation of all shifted Dirac impulses. Similarly,  the $i$-th planet-sun gear vibration is:
+where $\mathcal{F}\{\cdot\}$ denotes Fourier transform, $\hat{\sigma}_0(f)$ is the Fourier spectrum of $\sigma_0(t)$, $\delta\{\cdot\}$ denotes Dirac impulse, $\ast$ denotes convolve. The convolution between two Dirac comb functions equals the summation of all shifted Dirac impulses. Similarly,  the $i$-th planet-sun gear vibration is:
 \begin{equation}
     \begin{split}
-        \mathcal{F}\left[\sigma_{{\rm s}i}(t) \xi_{{\rm s}i}(t)\right]&=\mathcal{F}\left\{ \eta \cdot \sigma_0(t) \ast \operatorname{III}\left[f_{\rm c}(t-\frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}})\right] \cdot A_{{\rm s}i} \operatorname{III} \left[ f_{\rm m} \cdot (t+ \frac{\epsilon_i+\Theta_i}{2\pi f_{\rm c} -2\pi f_{\rm s}} ) +\frac{\varphi_i}{2\pi} \right] \right\}\\
-        &=\eta \cdot A_{{\rm s}i} \cdot \mathcal{F}\left[\sigma_0(t)\right] \cdot \mathcal{F}\left\{ \operatorname{III}\left[f_{\rm c} \cdot (t-\frac{\epsilon_i+\Theta_i}{2\pi f_{\rm c}}) \right] \right\} \ast \mathcal{F}\left\{\operatorname{III} \left[ f_{\rm m} \cdot (t+ \frac{\epsilon_i+\Theta_i}{2\pi f_{\rm c} -2\pi f_{\rm s}} ) +\frac{\varphi_i}{2\pi} \right]\right\}\\
+        \mathcal{F}\left[\sigma_{{\rm s}i}(t) \xi_{{\rm s}i}(t)\right]&=\mathcal{F}\left\{ \eta \cdot \sigma_0(t) \ast \operatorname{III}\left[f_{\rm c}(t-\frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}})\right] \cdot A_{{\rm s}i} \operatorname{III} \left[ f_{\rm m} \cdot (t+ \frac{\epsilon_i+\Theta_i}{2\pi f_{\rm s} -2\pi f_{\rm c}} ) +\frac{\varphi_i}{2\pi} \right] \right\}\\
+        &=\eta \cdot A_{{\rm s}i} \cdot \mathcal{F}\left[\sigma_0(t)\right] \cdot \mathcal{F}\left\{ \operatorname{III}\left[f_{\rm c} \cdot (t-\frac{\epsilon_i+\Theta_i}{2\pi f_{\rm c}}) \right] \right\} \ast \mathcal{F}\left\{\operatorname{III} \left[ f_{\rm m} \cdot (t+ \frac{\epsilon_i+\Theta_i}{2\pi f_{\rm s} -2\pi f_{\rm c}} ) +\frac{\varphi_i}{2\pi} \right]\right\}\\
         &=\eta \cdot A_{{\rm s}i} \cdot \hat{\sigma}_0(f) \cdot \frac{\operatorname{III}(\frac{f}{f_{\rm c}}) \exp\left[\frac{-{\rm j}f(\epsilon_i+\Theta_i)}{f_{\rm c}}\right]}{\sqrt{2 \pi} f_{\rm c}} \ast \frac{\operatorname{III}(\frac{f}{Z_{\rm r}f_{\rm c}})\exp\left[\frac{{\rm j}f(\epsilon_i+\Theta_i)}{f_{\rm c}-f_{\rm s}}\right] \exp\left(\frac{\varphi_i f}{2\pi Z_{\rm r} f_{\rm c} } \right)}{\sqrt{2 \pi }Z_{\rm r} f_{\rm c}}\\
         &=\eta \cdot A_{{\rm s}i} \cdot \frac{\hat{\sigma}_0(f)}{2 \pi  Z_{\rm r} f_{\rm c}^2} \cdot \sum_{m=-\infty}^{+\infty} \sum_{-\infty}^{+\infty} \delta\left[f-(m Z_{\rm r}+ n)f_{\rm c} \right] \exp\left[ {\rm j} (Z_{\rm s} m - n)(\epsilon_i+\Theta_i) \right] \exp({\rm j}m \varphi_i),
     \end{split}
@@ -310,7 +310,7 @@ where
     \includegraphics[scale=1]{Simulation_Normal_Fourier.pdf}
     \caption{Fourier spectrum of perfect case. Peaks emerge with the space of M multiples of carrier orders, and the transfer path function determine the envelope shape of every clutter \textbf{formulaic explanation needed for the phenomenon-- transfer path consists of convolution of impulses and exponential function of time, which products the gear meshing vibration impulses. Change the x-axis frequency into carrier orders}}
 \end{figure}
-\par The extra sidebands at non M  multiples of carrier orders can be attributed by the phase modulation effects (with a period of carrier rotation period and fluctuates at each planet position (both time and space)).
+\par The extra sidebands at non M multiples of carrier orders can be attributed by the phase modulation effects (with a period of carrier rotation period and fluctuates at each planet position (both time and space)).
 \par (This explanation can only be used in the advanced version model -- spring-mass model) The amplitude envelope sharpe can also evidence the existence of planet position shifts. Because the support stiffness weakens, the resonance frequency of the entire system shift towards the y-axis. Fig. \ref{} shows the resonance frequency shift from ??Hz to ??Hz.
 
 \section{Factors considered in the signal model}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.21)  8 MAR 2020 21:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.21)  10 MAR 2020 15:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2363,7 +2363,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  33447 strings out of 492649
  621447 string characters out of 6133384
- 711788 words of memory out of 5000000
+ 711969 words of memory out of 5000000
  36581 multiletter control sequences out of 15000+600000
  639257 words of font info for 204 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2391,7 +2391,7 @@ rm.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/stix/stix-mathscr.pfb><c:
 /texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2018/t
 exmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 Output written on "c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing 
-among planets/Unequal load sharing among planet.pdf" (11 pages, 2311964 bytes).
+among planets/Unequal load sharing among planet.pdf" (11 pages, 2312814 bytes).
 
 PDF statistics:
  349 PDF objects out of 1000 (max. 8388607)
