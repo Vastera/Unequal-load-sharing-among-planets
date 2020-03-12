@@ -1,28 +1,42 @@
 %% Intial factors
 fs=10000;% sampling frequency
 t=1/fs:1/fs:10;% time seiries
-M=4;%planet number
 N=61;%ring gear tooth number
 f_c=3;
 R_p=35*0.9e-3;% gear module is 0.9e-3
 R_r=108*0.9e-3;% gear module is 0.9e-3
 R_s=36*0.9e-3;% gear module is 0.9e-3
 F=1;
+%% unequal load sharing case
+%% perfect case
+% epsilon_i=[0,0,0,0];% position error of i-th planet
+epsilon_i=[0,0.00/180*pi,0.00/180*pi,0.00/180*pi];% position error of i-th planet
+M=length(epsilon_i);%planet number
 a=0.1*2*pi*R_r/M;
 %% configuration parameters
 i=1:1:M;% planet sequential order
 Theta_i=2*pi*(i-1)./M;%nominal position
 phi=0.05*pi/180;% phase difference between sun and planet
-%% perfect case
-% epsilon_i=[0,0,0,0];% position error of i-th planet
-%% unequal load sharing case
-epsilon_i=[0,0.01/180*pi,0,0];% position error of i-th planet
+
 %% 
 e_i=2*(R_r-R_p)*sin(epsilon_i/2).*cos(epsilon_i/2);
 k_e=1/(1/3.2e7+1/(1.67e8+2.57e8));
-L_i=0.25*ones(1,M);
-for j=1:4
-    L_i(j)=0.25+k_e*R_s/8/30*circshift(e_i,-(j-1))*[1;-1;1;-1]; %Load sharing , the input torque is 30 N*m
+L_i=1/M*ones(1,M);
+switch M
+    case 4
+        for j=1:M
+            L_i(j)=1/M+k_e*R_s/2/M/30*circshift(e_i,-(j-1))*[1;-1;1;-1]; %Load sharing , the input torque is 30 N*m
+        end
+    case 5
+        for j=1:M
+             L_i(j)=1/M+k_e*R_s/2/M/30*circshift(e_i,-(j-1))*[2;-1.618;0.618;0.618;-1.618]; %Load sharing , the input torque is 30 N*m
+        end
+    case 6
+        for j=1:M
+            subscript=[mod(j,6),mod(j+1,6),mod(j+3,6),mod(j+5,6)];
+            subscript(subscript==0)=6;
+             L_i(j)=1/M+k_e*R_s/2/M/30*e_i(subscript)*[3;-2;1;-2]; %Load sharing , the input torque is 30 N*m
+        end
 end
 eta=exp(-2*R_p/a);%the amplitude factor between planet-ring and planet-sun
 f_m=N*f_c;
@@ -39,27 +53,32 @@ for j=1:M
 end
 %% Natural frequency
 lambda=exp(-150*t).*sin(2*pi*300*t);%normal case
-
 x1=conv(x,lambda,'same');
 %% Fourier spectrum with natural frequency
-Draw(x1,fs);
-[Amp,f]=MyFFT(lambda,fs);
+[Amplitude,f]=MyFFT(x1,fs);
+[~,f_c0]=III(f_m*t);
+f_c0=fs/f_c0/N;% the actual carrier frequency in signal
+plot(f/f_c0,Amplitude,'b');
+[Amp_natural,f]=MyFFT(lambda,fs);
 % Natural frequency envelope in spectrum
 hold on;
-plot(f,Amp*20,'g--');
+plot(f/f_c0,Amp_natural*20,'g--');
 % transfer path envelope in spectrum
 sigma_0=zeros(1,length(t));
-sigma_0(t<=Theta_i(2))=F*exp(-2*pi*R_r*f_c*abs(t(t<=Theta_i(2))-Theta_i(2)/2)/a);
-plot(f,1.5e2*MyFFT(sigma_0.*III(f_m*t),fs),'r:');
-%% substantiate the sigma_0 shape in spectrum
-% plot(t,sigma_0);
-% A1=fft(sigma_0)./length(sigma_0);
-% A1=circshift(A1,length(A1)/2);
-% f1=linspace(-fs/2,fs/2,length(sigma_0));
-% plot(f1,abs(A1));
-% xlim([-100,100]);
-% Figure properties
-legend('Synthesized signal','Natural vibration','Tranfer path effect');
-xlim([0 500]);
-ylabel('Amplitude');xlabel('Frequency [Hz]');
+sigma_0(t<=Theta_i(2))=F*exp(-2*pi*R_r*f_c0*abs(t(t<=Theta_i(2))-Theta_i(2)/2)/a);
+plot(f/f_c0,1.5e2*MyFFT(sigma_0.*III(f_m*t),fs),'r:');
+legend('Synthesized signal','Natural vibration','Tranfer path effect','Location','northeast');
+% figure property settings
+switch M
+case 4
+    xlim([100 150]);
+    ylim([0 1e-2])
+case 5
+    xlim([100 150]);
+    ylim([0 1e-2]);
+case 6
+    xlim([100 150]);
+    ylim([0 1e-2]);
+end
+ylabel('Amplitude');xlabel('Carrier order');
 SetFigureProperties;

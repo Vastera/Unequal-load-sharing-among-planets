@@ -19,23 +19,23 @@ function l=Transfer_length(t,M,f_c,R_r,epsilon_i,Theta_i)
 %% =====================================================
 l=Inf*ones(1,length(t)); % otherwise occasion
 %% Compare first left boundary with zero
-left= -1/(2*M*f_c)+(epsilon_i+Theta_i)/2/pi;
-right= 1/(2*M*f_c)+(epsilon_i+Theta_i)/2/pi;
+left= -1/(2*M*f_c)+(epsilon_i+Theta_i)/2/pi/f_c;
+right= 1/(2*M*f_c)+(epsilon_i+Theta_i)/2/pi/f_c;
 if left>0% if left bound is positive
     index=(t>=left & t<right);
 else% if left bound is negative
     index=(t<right);
 end
-l(index) = 2*pi*R_r*f_c*abs(t(index)-(epsilon_i+Theta_i)/2/pi);
+l(index) = 2*pi*R_r*f_c*abs(t(index)-(epsilon_i+Theta_i)/2/pi/f_c);
 %% Residual n occassions 
 n=1;
-left= n/f_c-1/(2*M*f_c)+(epsilon_i+Theta_i)/2/pi;
-right= n/f_c+1/(2*M*f_c)+(epsilon_i+Theta_i)/2/pi;
+left= n/f_c-1/(2*M*f_c)+(epsilon_i+Theta_i)/2/pi/f_c;
+right= n/f_c+1/(2*M*f_c)+(epsilon_i+Theta_i)/2/pi/f_c;
 while right<=max(t)%% while the right bound is lower than the max time
     index=(t>=left & t<right);
-    l(index) = 2*pi*R_r*f_c*abs(t(index)-n/f_c-(epsilon_i+Theta_i)/2/pi);% the first piece function.
+    l(index) = 2*pi*R_r*f_c*abs(t(index)-n/f_c-(epsilon_i+Theta_i)/2/pi/f_c);% the first piece function.
     n=n+1;
-    left= n/f_c-1/(2*M*f_c)+(epsilon_i+Theta_i)/2/pi;
-    right= n/f_c+1/(2*M*f_c)+(epsilon_i+Theta_i)/2/pi;
+    left= n/f_c-1/(2*M*f_c)+(epsilon_i+Theta_i)/2/pi/f_c;
+    right= n/f_c+1/(2*M*f_c)+(epsilon_i+Theta_i)/2/pi/f_c;
 end
 end
