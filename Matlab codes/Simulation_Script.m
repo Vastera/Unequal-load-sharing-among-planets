@@ -52,7 +52,7 @@ for j=1:M
     x=L_i(j)*sigma_i(j,:).*(III(T_ri)+eta*III(T_si))+x;
 end
 %% Natural frequency
-lambda=exp(-150*t).*sin(2*pi*300*t);%normal case
+lambda=exp(-150*t).*sin(2*pi*400*t);%normal case
 x1=conv(x,lambda,'same');
 %% Fourier spectrum with natural frequency
 [Amplitude,f]=MyFFT(x1,fs);
