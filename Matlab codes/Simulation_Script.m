@@ -7,10 +7,12 @@ R_p=35*0.9e-3;% gear module is 0.9e-3
 R_r=108*0.9e-3;% gear module is 0.9e-3
 R_s=36*0.9e-3;% gear module is 0.9e-3
 F=1;
+Torque=30;% input torque
+f_n=400;% natural frequency when all planets are loaded
 %% unequal load sharing case
 %% perfect case
 % epsilon_i=[0,0,0,0];% position error of i-th planet
-epsilon_i=[0,0.00/180*pi,0.00/180*pi,0.00/180*pi];% position error of i-th planet
+epsilon_i=[0,0.1/180*pi,0.00/180*pi,0.00/180*pi,0,0];% position error of i-th planet
 M=length(epsilon_i);%planet number
 a=0.1*2*pi*R_r/M;
 %% configuration parameters
@@ -25,19 +27,25 @@ L_i=1/M*ones(1,M);
 switch M
     case 4
         for j=1:M
-            L_i(j)=1/M+k_e*R_s/2/M/30*circshift(e_i,-(j-1))*[1;-1;1;-1]; %Load sharing , the input torque is 30 N*m
+            L_i(j)=1/M+k_e*R_s/2/M/Torque*circshift(e_i,-(j-1))*[1;-1;1;-1]; %Load sharing , the input torque is 30 N*m
         end
     case 5
         for j=1:M
-             L_i(j)=1/M+k_e*R_s/2/M/30*circshift(e_i,-(j-1))*[2;-1.618;0.618;0.618;-1.618]; %Load sharing , the input torque is 30 N*m
+             L_i(j)=1/M+k_e*R_s/2/M/Torque*circshift(e_i,-(j-1))*[2;-1.618;0.618;0.618;-1.618]; %Load sharing , the input torque is 30 N*m
         end
     case 6
         for j=1:M
             subscript=[mod(j,6),mod(j+1,6),mod(j+3,6),mod(j+5,6)];
             subscript(subscript==0)=6;
-             L_i(j)=1/M+k_e*R_s/2/M/30*e_i(subscript)*[3;-2;1;-2]; %Load sharing , the input torque is 30 N*m
+             L_i(j)=1/M+k_e*R_s/2/M/Torque*e_i(subscript)*[3;-2;1;-2]; %Load sharing , the input torque is 30 N*m
         end
 end
+%% when certain planets are unloaded
+if ~isempty(find(L_i<0, 1))% when one L_i<0
+    f_n=400;% reset natural frequency
+    sum(L_i(L_i<0));
+end
+%% Transfer path effect
 eta=exp(-2*R_p/a);%the amplitude factor between planet-ring and planet-sun
 f_m=N*f_c;
 f_s=f_m/36+f_c;
@@ -51,8 +59,8 @@ for j=1:M
     sigma_i(j,:)=exp(-F*l(j,:)/a);% sigma_i is the time-varying transfer path effect
     x=L_i(j)*sigma_i(j,:).*(III(T_ri)+eta*III(T_si))+x;
 end
-%% Natural frequency
-lambda=exp(-150*t).*sin(2*pi*400*t);%normal case
+%% Natural vibration
+lambda=exp(-150*t).*sin(2*pi*f_n*t);%normal case
 x1=conv(x,lambda,'same');
 %% Fourier spectrum with natural frequency
 [Amplitude,f]=MyFFT(x1,fs);
@@ -71,8 +79,8 @@ legend('Synthesized signal','Natural vibration','Tranfer path effect','Location'
 % figure property settings
 switch M
 case 4
-    xlim([100 150]);
-    ylim([0 1e-2])
+    xlim([000 200]);
+    ylim([0 1.5e-2])
 case 5
     xlim([100 150]);
     ylim([0 1e-2]);

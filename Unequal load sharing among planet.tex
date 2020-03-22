@@ -311,24 +311,26 @@ where
 \end{equation}
 where $\hat{\lambda}(f)$ is the Fourier transform of $\lambda(t)$:
 \begin{equation}
-    \hat{\lambda}(f)=\frac{\sqrt{2 \pi } \beta ^2 f_{\rm n}}{-4 \pi ^2 \beta ^2 f^2-4 i \pi  \beta  f+4 \pi ^2 \beta ^2 f_{\rm n}^2+1}
+    \hat{\lambda}(f)=\frac{\sqrt{2 \pi } \beta ^2 f_{\rm n}}{-4 \pi ^2 \beta ^2 f^2  + 4 \pi ^2 \beta ^2 f_{\rm n}^2+1 - {\rm j} 4 \pi  \beta  f}
 \end{equation}
-\par Fig. \ref{fig:overview_normal_fourier} and Fig. \ref{fig:Shifted_natural_frequency} explain the mechanism of shifted natural frequency. With the limited measurement conditions about natural frequency in industrial applications, the above natural frequency shift can only be validated qualitatively. The signal model in Eq. (\ref{eq:final_signal_model}) indicates the natural frequency affects the spectral envelope shape. As the load increases, the envelope peak shifting to a higher frequency signifies the unequal load sharing among planets.
 %%%%%%%%%%%%%%%%%%%%%%%% Numerical simulation %%%%%%%%%%%%%%%%%%%%%%%
 \section{Numerical simulation}
-\par We use Matlab to simulate the proposed signal model. If the planet locates the nominal position, only the planet number multiple of carrier harmonics appear (give more specific results in figures), which accords with the Eq. (\ref{eq:carrier_harmonic_ring}) and Eq. (\ref{eq:carrier_harmonic_sun}). When the planet center deviates from the nominal position, other carrier orders emerges.  The dominant planet number multiple peaks shrinks. 
+\par We use MATLAB\textsuperscript \textregistered \ to simulate the proposed signal model. To validate the generality of the propose model, we take different planet pinhole position errors, planet numbers and input torques into account. The simulation parameters are listed in Table \ref{}.
+\par In general, if the planet locates the nominal position, only the planet number multiples of carrier harmonics appear (give more specific results in figures), which accords with the Eq. (\ref{eq:carrier_harmonic_ring}) and Eq. (\ref{eq:carrier_harmonic_sun}). When the planet center deviates from the nominal position, other carrier orders emerges. Differing from the conclusion in \cite{Mark2009}, the dominant planet number multiple peaks do not shrink too, because we also consider the phase modulation induced by the pinhole position errors. 
+\par Fig. \ref{fig:overview_normal_fourier} and Fig. \ref{fig:Shifted_natural_frequency} explain the mechanism of shifted natural frequency -- the resonance frequency shift from 300Hz to 400Hz. With the limited measurement conditions about natural frequency in industrial applications, the above natural frequency shift can only be validated qualitatively. The signal model in Eq. (\ref{eq:final_signal_model}) indicates the natural frequency affects the spectral envelope shape. As the load increases, the envelope peak shifting to a higher frequency signifies the unequal load sharing among planets. 
 \begin{figure}[pos=htbp]
     \centering
     \includegraphics[scale=1]{overview_normal_fourier.pdf}
     \caption{Peaks emerge with the space of M multiples of carrier orders; the transfer path function determine the envelope shape of every clutter; the natural frequency also affects the location of spectral surmount.}\label{fig:overview_normal_fourier}
 \end{figure}
-\par The extra sidebands at non M multiples of carrier orders can be attributed by the phase modulation effects (with a period of carrier rotation period and fluctuates at each planet position (both time and space)).
-\par (This explanation can only be used in the advanced version model -- spring-mass model) The amplitude envelope sharpe can also evidence the existence of planet position shifts. Because the support stiffness weakens, the resonance frequency of the entire system shift towards the y-axis. Fig. \ref{fig:overview_normal_fourier} and Fig. \ref{fig:Shifted_natural_frequency} show the resonance frequency shift from 300Hz to 400Hz.
 \begin{figure}[pos=htbp]
     \centering
     \includegraphics[scale=1]{Shifted_natural_frequency}
-    \caption{Spectral surmount cluster shifts towards a higher frequency due to the uneven load distribution of planets}\label{fig:Shifted_natural_frequency}
+    \caption{Spectral surmount cluster shifts towards a lower frequency due to the uneven load distribution of planets}\label{fig:Shifted_natural_frequency}
 \end{figure}
+\par The extra sidebands at non M multiples of carrier orders can be attributed by the phase modulation effects (with a period of carrier rotation period and fluctuates at each planet position (both time and space)).
+\par (This explanation can only be used in the advanced version model -- spring-mass model) The amplitude envelope sharpe can also evidence the existence of planet position shifts. Because the support stiffness weakens, the resonance frequency of the entire system shift towards the y-axis. Fig. \ref{fig:overview_normal_fourier} and Fig. \ref{fig:Shifted_natural_frequency} show the resonance frequency shift from 300Hz to 400Hz.
+
 \begin{figure}[pos=htbp]
     \centering
     \includegraphics[scale=1]{Figures/4_planet_normal_fourier.pdf}

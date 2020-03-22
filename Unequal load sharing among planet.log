@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.21)  18 MAR 2020 21:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.21)  19 MAR 2020 10:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2384,75 +2384,75 @@ If that doesn't work, type  X <return>  to quit.
 File: Figures/overview_normal_fourier.pdf Graphic file (type pdf)
 <use Figures/overview_normal_fourier.pdf>
 Package pdftex.def Info: Figures/overview_normal_fourier.pdf  used on input lin
-e 324.
+e 322.
 (pdftex.def)             Requested size: 341.27415pt x 170.63707pt.
 <Figures/Shifted_natural_frequency.pdf, id=232, 341.275pt x 170.6375pt>
 File: Figures/Shifted_natural_frequency.pdf Graphic file (type pdf)
 <use Figures/Shifted_natural_frequency.pdf>
 Package pdftex.def Info: Figures/Shifted_natural_frequency.pdf  used on input l
-ine 331.
+ine 329.
 (pdftex.def)             Requested size: 341.27415pt x 170.63707pt.
 <Figures/4_planet_normal_fourier.pdf, id=233, 341.275pt x 170.6375pt>
 File: Figures/4_planet_normal_fourier.pdf Graphic file (type pdf)
 <use Figures/4_planet_normal_fourier.pdf>
 Package pdftex.def Info: Figures/4_planet_normal_fourier.pdf  used on input lin
-e 336.
+e 334.
 (pdftex.def)             Requested size: 341.27415pt x 170.63707pt.
 <Figures/4_planet_2-th-0_01_fourier.pdf, id=234, 341.275pt x 170.6375pt>
 File: Figures/4_planet_2-th-0_01_fourier.pdf Graphic file (type pdf)
 <use Figures/4_planet_2-th-0_01_fourier.pdf>
 Package pdftex.def Info: Figures/4_planet_2-th-0_01_fourier.pdf  used on input 
-line 342.
+line 340.
 (pdftex.def)             Requested size: 341.27415pt x 170.63707pt.
 <Figures/4_planet_2-th-0_02_4_th_0_01_fourier.pdf, id=235, 341.275pt x 170.6375
 pt>
 File: Figures/4_planet_2-th-0_02_4_th_0_01_fourier.pdf Graphic file (type pdf)
 <use Figures/4_planet_2-th-0_02_4_th_0_01_fourier.pdf>
 Package pdftex.def Info: Figures/4_planet_2-th-0_02_4_th_0_01_fourier.pdf  used
- on input line 348.
+ on input line 346.
 (pdftex.def)             Requested size: 341.27415pt x 170.63707pt.
 <Figures/5_planet_normal_fourier.pdf, id=236, 341.275pt x 170.6375pt>
 File: Figures/5_planet_normal_fourier.pdf Graphic file (type pdf)
 <use Figures/5_planet_normal_fourier.pdf>
 Package pdftex.def Info: Figures/5_planet_normal_fourier.pdf  used on input lin
-e 354.
+e 352.
 (pdftex.def)             Requested size: 341.27415pt x 170.63707pt.
 <Figures/5_planet_2_th_0_02_fourier.pdf, id=237, 341.275pt x 170.6375pt>
 File: Figures/5_planet_2_th_0_02_fourier.pdf Graphic file (type pdf)
 <use Figures/5_planet_2_th_0_02_fourier.pdf>
 Package pdftex.def Info: Figures/5_planet_2_th_0_02_fourier.pdf  used on input 
-line 360.
+line 358.
 (pdftex.def)             Requested size: 341.27415pt x 170.63707pt.
 <Figures/5_planet_2_th_0_01_4_th_0_02_fourier.pdf, id=238, 341.275pt x 170.6375
 pt>
 File: Figures/5_planet_2_th_0_01_4_th_0_02_fourier.pdf Graphic file (type pdf)
 <use Figures/5_planet_2_th_0_01_4_th_0_02_fourier.pdf>
 Package pdftex.def Info: Figures/5_planet_2_th_0_01_4_th_0_02_fourier.pdf  used
- on input line 366.
+ on input line 364.
 (pdftex.def)             Requested size: 341.27415pt x 170.63707pt.
 <Figures/6_planet_normal_fourier.pdf, id=239, 341.275pt x 170.6375pt>
 File: Figures/6_planet_normal_fourier.pdf Graphic file (type pdf)
 <use Figures/6_planet_normal_fourier.pdf>
 Package pdftex.def Info: Figures/6_planet_normal_fourier.pdf  used on input lin
-e 372.
+e 370.
 (pdftex.def)             Requested size: 341.27415pt x 170.63707pt.
 <Figures/6_planet_2_th_0_02_fourier.pdf, id=240, 341.275pt x 170.6375pt>
 File: Figures/6_planet_2_th_0_02_fourier.pdf Graphic file (type pdf)
 <use Figures/6_planet_2_th_0_02_fourier.pdf>
 Package pdftex.def Info: Figures/6_planet_2_th_0_02_fourier.pdf  used on input 
-line 378.
+line 376.
 (pdftex.def)             Requested size: 341.27415pt x 170.63707pt.
 
 
 c:/Users/Lenovo/Documents/LaTeX_Papers/Unequal load sharing among planets/Unequ
-al load sharing among planet.tex:384: LaTeX Error: Unknown graphics extension: 
+al load sharing among planet.tex:382: LaTeX Error: Unknown graphics extension: 
 .02_fourier.pdf.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.384 ...6_planet_2_th_0_02_5_th_0.02_fourier.pdf}
+l.382 ...6_planet_2_th_0_02_5_th_0.02_fourier.pdf}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2464,18 +2464,18 @@ ures/5_planet_normal_fourier.pdf> <./Figures/5_planet_2_th_0_02_fourier.pdf>]
 [12 <./Figures/5_planet_2_th_0_01_4_th_0_02_fourier.pdf> <./Figures/6_planet_no
 rmal_fourier.pdf> <./Figures/6_planet_2_th_0_02_fourier.pdf>]
 LaTeX Font Info:    Font shape `T1/stix/bx/n' in size <10> not available
-(Font)              Font shape `T1/stix/b/n' tried instead on input line 391.
+(Font)              Font shape `T1/stix/b/n' tried instead on input line 389.
 <Figures/Minimum_angle.pdf, id=295, 295.62444pt x 291.3565pt>
 File: Figures/Minimum_angle.pdf Graphic file (type pdf)
 <use Figures/Minimum_angle.pdf>
-Package pdftex.def Info: Figures/Minimum_angle.pdf  used on input line 403.
+Package pdftex.def Info: Figures/Minimum_angle.pdf  used on input line 401.
 (pdftex.def)             Requested size: 147.81186pt x 145.67789pt.
  [13 <./Figures/Minimum_angle.pdf>]
 c:/Users/Lenovo/Documents/LaTeX_Papers/Unequal load sharing among planets/Unequ
-al load sharing among planet.tex:430: Undefined control sequence.
+al load sharing among planet.tex:428: Undefined control sequence.
 <recently read> \lamda 
                        
-l.430 ...ular positions with minimum space $\lamda
+l.428 ...ular positions with minimum space $\lamda
                                                   $. When planets locate uni...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2486,27 +2486,23 @@ and I'll forget about whatever was undefined.
 
 (c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets/Uneq
 ual load sharing among planet.bbl) [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 435.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 435.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 433.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 433.
 
 (c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets/Uneq
 ual load sharing among planet.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 435.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 435.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 433.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 433.
 Package rerunfilecheck Info: File `"Unequal load sharing among planet".out' has
  not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 33610 strings out of 492649
- 626153 string characters out of 6133384
- 710870 words of memory out of 5000000
- 36714 multiletter control sequences out of 15000+600000
- 660253 words of font info for 248 fonts, out of 8000000 for 9000
+ 33611 strings out of 492649
+ 626179 string characters out of 6133384
+ 710829 words of memory out of 5000000
+ 36717 multiletter control sequences out of 15000+600000
+ 660404 words of font info for 248 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,13n,56p,10531b,804s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texl
@@ -2532,11 +2528,11 @@ rm.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/stix/stix-mathscr.pfb><c:
 /texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2018/t
 exmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 Output written on "c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing 
-among planets/Unequal load sharing among planet.pdf" (15 pages, 3058071 bytes).
+among planets/Unequal load sharing among planet.pdf" (15 pages, 3058605 bytes).
 
 PDF statistics:
  414 PDF objects out of 1000 (max. 8388607)
  353 compressed objects within 4 object streams
  107 named destinations out of 1000 (max. 500000)
- 27234 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 27746 words of extra memory for PDF output out of 29859 (max. 10000000)
 
