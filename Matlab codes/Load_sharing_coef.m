@@ -86,13 +86,13 @@ else % two spring support load
     zz=[zd(P_support0),mean(zd(P_support0))];
 end
     [a,b,c,d]=Plane_eqn(xx,yy,zz);
-% Calculate the coordinate  in plane  for all planets
+% Calculate the coordinate in plane for all planets
 zd=(-d-a*x-b*y)/c;
 % For all H candidates 
 H_options=1:M;
 H_options=H_options(H_options~=P_J & H_options~=P_K & H_options~=P_M);
 P_support=P_support3;
- i=1;
+i=1;
 while ~isempty(H_options) && i<=length(H_options)
     H=H_options(i);
 % if H point protrude the plane 1
@@ -106,7 +106,7 @@ while ~isempty(H_options) && i<=length(H_options)
                 break;
             end
         end
-        eta=(x(G2)-x(G1)*(y(B)-y(G1))-(x(B)-x(G1))*(y(G2)-y(G1)))/(x(G2)-x(G1)*(y(H)-y(G1))-(x(H)-x(G1))*(y(G2)-y(G1)));
+        eta=((x(G2)-x(G1))*(y(B)-y(G1))-(x(B)-x(G1))*(y(G2)-y(G1)))/((x(G2)-x(G1))*(y(H)-y(G1))-((x(H)-x(G1))*(y(G2)-y(G1))));
         A1=(eta-1)*y(G2)+y(B)-eta*y(H);
         A2=(1-eta)*y(G1)-y(B)+eta*y(H);
         A3=y(G2)-y(G1);
@@ -135,8 +135,6 @@ while ~isempty(H_options) && i<=length(H_options)
     end
     i=i+1;
 end
-
-
 if size(A,1)>3% more than 3 planet support
     F=A\BB;
     L0=F/W;
