@@ -3,6 +3,7 @@
 \documentclass[a4paper,fleqn]{cas-sc}% fleqn stands for "flush left equations"
 %%%%%%%%%%%%%%% Declare Package: %%%%%%%%%%%%%
 \usepackage[authoryear,longnamesfirst]{natbib}
+\usepackage[export]{adjustbox}
 \usepackage{ragged2e}% Align macro package
 \usepackage{amsmath,amssymb}
 %%% Nomenclature packages %%%%%%%%%
@@ -63,6 +64,7 @@
 %%%%%%%%%%%%%%% Custom commands: %%%%%%%%%%%%
 \setcitestyle{square}
 \def\degree{${}^{\circ}$}
+\def\myscale{0.5}
 %%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%
 \section{Introduction}
 \par Planets split power transmitted from the input sun gear into paralleled paths so that planetary gearboxes can withstand heavy load in a compact volume. While the special structure bring about unequal load sharing among planets.
@@ -77,15 +79,7 @@
     \item Specially, the torque load transferred from the central components in planetary gearboxes is split into parallel paths formed by the planets. Because of the inevitable manufacturing and assembling errors of pinholes or bearings, there are usually differences in the position of pinholes and the shape of planets. The load sharing among planets is non-uniform (collect other reasons from the Sigh's paper).
     \item Another common phenomenon in planetary gearboxes is the difference in meshing phases between ring-planet and sun-planet. When this situation coincides with the load sharing inequality, a complex couple mechanism of time-varying load sharing emerges, rising extra vibrations.
     \item For an individual planet, the vibration signal model can be written as
-    \begin{equation}
-        J \cdot \ddot{\theta}(t) + k(t) \cdot \left[\theta(t)-L(t) \right] = 0,
-    \end{equation}
-    where \(J\) is the rotational inertia of machine, \(\theta(t)\) is the shaft angular, \(\ddot{\theta}(t)\) is the rotational acceleration, \(k(t)\) is time-varying meshing stiffness, \(L(t)\) is the external load.
-    \item Taking all planets into account, the above vibration model can be revised as
-    \begin{equation}
-        J \cdot \ddot{\theta}(t) + \sum^{M}_{i=1} \left\{ k_i(t) \cdot \left[\theta(t)-L(t)+\epsilon_i \right] \right\} = 0,
-    \end{equation}
-    where \(M\) is the number of planets, \(k_i(t)\) is the meshing stiffness of \(i\)-th planet, \(\epsilon_i\) is the angular shift away from its normal position of \(i\)-th planet (here we assume \(\epsilon_2\neq 0\)). A translational spring-mass system illustrate the above vibration model in Fig. \ref{fig:vibration_system_of_spring_mass}.
+    
     %%%%%%%%%%%%%%%%% nomenclature Display %%%%%%%%%%%%
 \begin{table*}[!t] 
     \begin{framed} 
@@ -121,23 +115,9 @@
     \caption{Configuration of planetary gearboxes.}
     \label{fig:planetary_gearbox_layout}
 \end{figure}
-\par The vibration in planetary gearboxes mainly origins from the meshing of gears \cite{Velex1996}. When the planet gears engage with the ring gear or sun gear, the number of the involved tooth varies with the relative rotation between gears and their contact stiffness changes consequently. The transmission load nominally remains constant and the gearbox is a parametrically excited multi-degree-freedom system \cite{Acar2019}. 
-\subsection{Vibration of single planet}
-\par To figure out the vibration mechanism of planetary gearboxes, we start with the meshing vibration of a pair of gears. For an individual planet, the vibration model can be written as
-\begin{equation}
-    J \cdot \ddot{\theta}(t) + k(t) \cdot \theta(t) = 0 \label{eq:1_DOF_vibration},
-\end{equation}
-where \(J\) is rotational inertia of the machine, \(\theta(t)\) is the shaft angular, \(\ddot{\theta}(t)\) is the rotational acceleration, \(k(t)\) is time-varying meshing stiffness and fluctuates in the form
-\begin{equation}
-    k(t)=k_0+2 q \cos(2 \pi f_{\rm m} t) \label{eq:meshing_stiffness},
-\end{equation}
-where \(k_0\) is the nominal meshing frequency, \(q\) denotes the the fluctuation intensity, and \(f_{\rm m}\) is the meshing frequency. Substitute Eq. (\ref{eq:meshing_stiffness}) into the Eq. (\ref{eq:1_DOF_vibration}), we have
-\begin{equation}
-    J \cdot \ddot{\theta}(t) + \left[k_0+2 q \cos(2 \pi f_{\rm m} t)\right] \cdot \theta(t) = 0. \label{eq:mathieu_function}
-\end{equation}
-\par Eq. (\ref{eq:mathieu_function}) is the Mathieu function. According to the Floquet theory \cite{Arscott2014}, its general solution the product of an exponential part and a harmonic part. Taking damper into account, we only consider stable operation conditions so that harmonic solution is concentrated. The response of the model in Eq. (\ref{eq:mathieu_function}) has the same harmonic component \(\cos(2 \pi f_{\rm m} t)\). In the situation where the time-varying meshing stiffness of all planets are considered, the solution has the corresponding harmonic components (at the same frequency \(f_{\rm m}\) with different phases in planetary gearboxes).
-The oscillation of gear meshing stiffness primarily contributes the vibration of planetary gearboxes.
+
 \subsection{General signal model}
+\par The vibration in planetary gearboxes mainly origins from the meshing of gears \cite{Velex1996}. When the planet gears engage with the ring gear or sun gear, the number of the involved tooth varies with the relative rotation between gears and their contact stiffness changes consequently. The transmission load nominally remains constant and the gearbox is a parametrically excited multi-degree-freedom system \cite{Acar2019}. 
 \par The signal model perceived by the stationary transducer on the gearbox housing can be modelled as the summation of all planet vibration considering transfer path effects. The impulsive intensity of gear meshing is assumed to proportional to the load applied on each planet. The vibration of each planet is divided into planet-ring and planet-sun parts. Thus, the general signal model is
 \begin{equation}
     x(t)=\sum_{i=1}^{M} L_i \cdot \left[ \sigma_{{\rm r}i}(t) \xi_{{\rm r}i}(t) + \sigma_{{\rm s}i}(t) \xi_{{\rm s}i}(t) \right], \label{eq:general_signal}
@@ -231,7 +211,7 @@ where
         0, &\text{otherwise}.
     \end{cases}\label{eq:tranfer_path_time_shape}
 \end{equation}
-\subsection{Natural frequency\labe{sec:natural_frequency}}
+\subsection{Natural frequency\label{sec:natural_frequency}}
 \par In the above discussion, the gear meshing vibration is simply considered as Dirac impulses. In practice, every impact arising from different components will excite the machine natural frequency. The excited resonance affects the spectral structure globally: the amplitudes of the vibration frequencies around the natural frequency are reinforced and other amplitudes are attenuated. The resonance features a harmonic wave with the amplitude attenuating exponentially, like the vibration of a spring-mass-damper,
 \begin{equation}
     \lambda(t)=\begin{cases}
@@ -318,84 +298,54 @@ where $\hat{\lambda}(f)$ is the Fourier transform of $\lambda(t)$:
 \par We use MATLAB\textsuperscript \textregistered \ to simulate the proposed signal model. To validate the generality of the propose model, we take different planet pinhole position errors, planet numbers and input torques into account. The simulation parameters are listed in Table \ref{}.
 \par In general, if the planet locates the nominal position, only the planet number multiples of carrier harmonics appear (give more specific results in figures), which accords with the Eq. (\ref{eq:carrier_harmonic_ring}) and Eq. (\ref{eq:carrier_harmonic_sun}). When the planet center deviates from the nominal position, other carrier orders emerges. Differing from the conclusion in \cite{Mark2009}, the dominant planet number multiple peaks do not shrink too, because we also consider the phase modulation induced by the pinhole position errors. 
 \par Fig. \ref{fig:overview_normal_fourier} and Fig. \ref{fig:Shifted_natural_frequency} explain the mechanism of shifted natural frequency -- the resonance frequency shift from 300Hz to 400Hz. With the limited measurement conditions about natural frequency in industrial applications, the above natural frequency shift can only be validated qualitatively. The signal model in Eq. (\ref{eq:final_signal_model}) indicates the natural frequency affects the spectral envelope shape. As the load increases, the envelope peak shifting to a higher frequency signifies the unequal load sharing among planets. 
-\begin{figure}[pos=htbp]
-    \centering
-    \includegraphics[scale=1]{overview_normal_fourier.pdf}
-    \caption{Peaks emerge with the space of M multiples of carrier orders; the transfer path function determine the envelope shape of every clutter; the natural frequency also affects the location of spectral surmount.}\label{fig:overview_normal_fourier}
-\end{figure}
+
 \begin{figure}[pos=htbp]
     \centering
     \includegraphics[scale=1]{Shifted_natural_frequency}
     \caption{Spectral surmount cluster shifts towards a lower frequency due to the uneven load distribution of planets}\label{fig:Shifted_natural_frequency}
 \end{figure}
 \par The extra sidebands at non M multiples of carrier orders can be attributed by the phase modulation effects (with a period of carrier rotation period and fluctuates at each planet position (both time and space)).
-\par (This explanation can only be used in the advanced version model -- spring-mass model) The amplitude envelope sharpe can also evidence the existence of planet position shifts. Because the support stiffness weakens, the resonance frequency of the entire system shift towards the y-axis. Fig. \ref{fig:overview_normal_fourier} and Fig. \ref{fig:Shifted_natural_frequency} show the resonance frequency shift from 300Hz to 400Hz.
-
+\par The amplitude envelope sharpe can also evidence the existence of planet position shifts. Because the support stiffness weakens, the resonance frequency of the entire system shift towards the y-axis. Fig. \ref{fig:overview_normal_fourier} and Fig. \ref{fig:Shifted_natural_frequency} show the resonance frequency shift from 300Hz to 400Hz.
+\subsection{Planet number $M=3$}
+\par When at least one central members can float along the radial direction, three planets can offset the influence of uneven load distribution arising from limited pinhole position errors. The condition of floating central members can be satisfied commonly, because the manufacturers deliberately design separable sun gears  and flexible couplings.  When tangential error in planet pinhole occur, the time shifts to the transfer path effects still make the impulsive intervals between adjacent planets uniform. Fig \ref{fig:simulated_p3}(b) present the quasi phase modulation -- if we regard all planets as one -- in time domain.  The corresponding spectrum also manifests the non planet number ($M=3$) peaks. In the baseline case where these pinhole errors are absent, the carrier orders merely appear at the multiples of three.
 \begin{figure}[pos=htbp]
     \centering
-    \includegraphics[scale=1]{Figures/4_planet_normal_fourier.pdf}
-    \caption{4 planets normal fourier}
-    \label{fig:4_planet_normal_fourier}
+    (a) \includegraphics[scale=\myscale,valign=t]{Time_p3_normal.pdf}
+    (b) \includegraphics[scale=\myscale,valign=t]{Time_p3_fault.pdf}\\
+    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p3_normal.pdf}
+    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p3_fault.pdf}
+    \caption{Simulated signals of planetary boxes with 3 planets: (a) normal case; (b) $0.5^\circ$ position error on second planet pinhole.}
+    \label{fig:simulated_p3}
+\end{figure}
+\subsection{Planet number $M \geq 3$}
+\par Fig. \ref{fig:simulated_p4} shows the normal and fault cases where planet number $M=4$. Because the planet number M is an even number, the load sharing $L_1=L_3$, $L_2=L_4$, no matter which planet the position errors occur at. Without loss of generality, we assume the $\epsilon_1 = 0$ in all cases.
+\begin{figure}[pos=htbp]
+    \centering
+    (a) \includegraphics[scale=\myscale,valign=t]{Time_p4_normal.pdf}
+    (b) \includegraphics[scale=\myscale,valign=t]{Time_p4_fault.pdf}\\
+    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p4_normal.pdf}
+    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p4_fault.pdf}
+    \caption{Simulated signals of planetary boxes with 4 planets: (a) normal case; (b) $0.5^\circ$ position error on second planet pinhole.}
+    \label{fig:simulated_p4}
 \end{figure}
 \begin{figure}[pos=htbp]
     \centering
-    \includegraphics[scale=1]{Figures/4_planet_2-th-0_01_fourier.pdf}
-    \caption{4 planets $\epsilon_2=0.01$\degree}
-    \label{fig:4_planet_2-th-0_01_fourier}
+    (a) \includegraphics[scale=\myscale,valign=t]{Time_p5_normal.pdf}
+    (b) \includegraphics[scale=\myscale,valign=t]{Time_p5_fault.pdf}\\
+    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p5_normal.pdf}
+    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p5_fault.pdf}
+    \caption{Simulated signals of planetary boxes with 5 planets: (a) normal case; (b) $0.4^\circ$ position error on third planet pinhole.}
+    \label{fig:simulated_p5}
 \end{figure}
 \begin{figure}[pos=htbp]
     \centering
-    \includegraphics[scale=1]{Figures/4_planet_2-th-0_02_4_th_0_01_fourier.pdf}
-    \caption{4 planets $\epsilon_2=0.02$\degree, $\epsilon_4=0.01$\degree}
-    \label{fig:4_planet_2-th-0_02_4_th_0_01_fourier}
+    (a) \includegraphics[scale=\myscale,valign=t]{Time_p6_normal.pdf}
+    (b) \includegraphics[scale=\myscale,valign=t]{Time_p6_fault.pdf}\\
+    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p6_normal.pdf}
+    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p6_fault.pdf}
+    \caption{Simulated signals of planetary boxes with 6 planets: (a) normal case; (b) $1^\circ$ position error on second planet pinhole.}
+    \label{fig:simulated_p6}
 \end{figure}
-\begin{figure}[pos=htbp]
-    \centering
-    \includegraphics[scale=1]{Figures/5_planet_normal_fourier.pdf}
-    \caption{5 planets normal}
-    \label{fig:5_planet_normal_fourier}
-\end{figure}
-\begin{figure}[pos=htbp]
-    \centering
-    \includegraphics[scale=1]{Figures/5_planet_2_th_0_02_fourier.pdf}
-    \caption{5 planets $\epsilon_2=0.02$\degree}
-    \label{fig:5_planet_2_th_0_02_fourier}
-\end{figure}
-\begin{figure}[pos=htbp]
-    \centering
-    \includegraphics[scale=1]{Figures/5_planet_2_th_0_01_4_th_0_02_fourier.pdf}
-    \caption{5 planets $\epsilon_2=0.02$\degree, $\epsilon_4=0.02$\degree}
-    \label{fig:5_planet_2_th_0_01_4_th_0_02_fourier}
-\end{figure}
-\begin{figure}[pos=htbp]
-    \centering
-    \includegraphics[scale=1]{Figures/6_planet_normal_fourier.pdf}
-    \caption{6 planets normal}
-    \label{fig:6_planet_normal_fourier}
-\end{figure}
-\begin{figure}[pos=htbp]
-    \centering
-    \includegraphics[scale=1]{Figures/6_planet_2_th_0_02_fourier.pdf}
-    \caption{6 planets $\epsilon_2=0.02$\degree}
-    \label{fig:6_planet_2_th_0_02_fourier}
-\end{figure}
-\begin{figure}[pos=htbp]
-    \centering
-    \includegraphics[scale=1]{Figures/6_planet_2_th_0_02_5_th_0.02_fourier.pdf}
-    \caption{6 planet $\epsilon_2=0.02$\degree, $\epsilon_5=0.02$\degree}
-    \label{fig:6_planet_2_th_0_02_5_th_0.02_fourier}
-\end{figure}
-\section{Factors considered in the signal model}
-\begin{enumerate}
-    \item Mechanism of time-varying gear meshing stiffness and risen impulses. (Including sun-planet and ring-planet)
-    \item Transfer path effect led by the carrier rotation. \textbf{We now use the exponential attenuation function}
-    \item Unequal load sharing risen by the planet angular position error.
-    \item Differences in the impulsive intensity of planets with sun and ring gears arisen from the position errors of planet. (Amplitude modulation of angular position error)
-    \item Phase shifts of transfer path effect of planet position error. (Frequency modulation of angular position error)
-    \item Effects of asynchronous meshing between sun-planet and ring-planet \cite{Parker2004}.
-    \item Effects of asynchronous meshing among sun-planets or ring-planets \cite{Inalpolat2009}.
-    \item Natural vibration influence on spectral structure.
-\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Appendix %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Appendix\label{Appendix}}
 \begin{figure}[pos=htbp]
