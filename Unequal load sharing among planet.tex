@@ -142,13 +142,9 @@ where $A_{{\rm r}i}$ is the impulsive amplitude of $i$-th planet-ring gear meshi
     \xi_{{\rm s}i}(t)=A_{{\rm s}i} \operatorname{III}\left[f_{\rm m} \cdot (t + \frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm s}- 2 \pi f_{\rm c}})+ \frac{\varphi_i}{2 \pi} \right],\label{eq:planet-sun_meshing}
 \end{equation}
 where $A_{{\rm r}i}$ is the impulsive amplitude of $i$-th planet-sun gear meshing, $\varphi_i$ is the phase difference between planet-ring and planet-sun meshing for the $i$-th planet.
-\subsection{Unequal load sharing among planets (Add the 5 and 6 planet cases)}
-\par The multiple paralleled power paths formed by planets can sharing torque load. This merit of planetary gearboxes will compromise when the load sharing inequality occurs. The position errors of planet pinholes or bearings in the tangential (circumferential) direction happening in manufacturing and assembling lead to the non-uniform loads on planets \cite{Singh2010511-530}. In this section, we assume the load is heavy and the pinhole position errors are small, so that all planets are loaded. To partly centralize the uneven load, planetary gearboxes usually permit at least one floating central member (sun gear or carrier). The formula of load sharing ratio of a 4-planet planetary gearbox as follows \cite{Ligata2009}
-\begin{equation}
-    L_i=\frac{1}{4}+\frac{k_{\rm e} r_{\rm s}}{8 T_{\rm s}}\left(e_i-e_{i+1}+e_{i+2}-e_{i+3}\right), i=1,2,3,4. \label{eq:load_sharing_ratio}
-\end{equation}
-In this formula, \(L_i\) denotes the load sharing ratio of the \(i\)-th planet, \(k_{\rm e}\) is the effective support stiffness concerning both the bearing and gear meshing and described in Eq. (\ref{eq:stiffness}), \(r_{\rm s}\) is the sun gear pitch radius, \(T_{\rm s}\) is the total torque applied on input sun gear. For any \(i>4\) in Eq. (\ref{eq:load_sharing_ratio}), \(i=i-4\). The tangential error $_{i}$ can be calculated by Eq. (\ref{eq:tangential_error}).
-In this formula, \(L_i\) denotes the load sharing ratio of the \(i\)-th planet, \(k_{\rm e}\) is the effective support stiffness concerning both the bearing and gear meshing and described in Eq. (\ref{eq:stiffness}), \(r_{\rm s}\) is the sun gear pitch radius, \(T_{\rm s}\) is the total torque applied on input sun gear. For any \(i>4\) in Eq. (\ref{eq:load_sharing_ratio}), \(i=i-4\). The tangential error $\epsilon_{i}$ can be calculated by Eq. (\ref{eq:tangential_error}) and its explanation see Fig. \ref{eq:tangential_error}.
+\subsection{Algorithm of load sharing coefficients\label{sec:algorithm_load_sharing}}
+\par The multiple paralleled power paths formed by planets can sharing torque load. This merit of planetary gearboxes will compromise when the load sharing inequality occurs. The position errors of planet pinholes or bearings in the tangential (circumferential) direction happening in manufacturing and assembling lead to the non-uniform loads on planets \cite{Singh2010511-530}. To partly centralize the uneven load, planetary gearboxes usually permit at least one floating central member (sun gear or carrier). The formula of load sharing ratio of a 4-planet planetary gearbox as follows \cite{Ligata2009}
+
 \begin{equation}
     k_{\rm e}=\frac{1}{k_{\rm rp}+k_{\rm sp}}+\frac{1}{k_{\rm b}},\label{eq:stiffness}
 \end{equation}
@@ -163,8 +159,8 @@ where $R_{\rm p}$ is the planet radius, $R_{\rm s}$ is the sun radius, $\epsilon
     \caption{Tangential error calculation (correct the $\epsilon_{pi}$)}
     \label{fig:tangential_error}
 \end{figure}
-\par Unequal load sharing will gives rise to non-uniform impulsive intensity. The acceleration are linearly affected by the dynamic force exerted. Thus, the vibration amplitude of each planet is assumed to be proportional to the load applied on it \cite{Inalpolat2009}. In other words, planet load modifies the amplitude of the vibration signal. Moreover, the unevenly planet distribution along the angular position of carrier also has phase modulation when the transfer path is considered simultaneously. These effects will be illustrated explicitly in the later discussion. 
-\subsection{Transfer paths}
+\par Unequal load sharing will gives rise to non-uniform impulsive intensity. The acceleration are linearly affected by the dynamic force exerted. Thus, the vibration amplitude of each planet is assumed to be proportional to the load applied on it \cite{Inalpolat2009}. In other words, planet load modifies the amplitude of the vibration signal. Moreover, the unevenly planet distribution along the angular position of carrier also has phase modulation when the transfer path is considered simultaneously. These effects will be illustrated explicitly in the later Section \ref{sec:factor_discussion}. 
+\subsection{Transfer paths\label{sec:transfer_path}}
 \par The vibration originating from the planet meshing with ring or sun gear propagate through several paths to the stationary sensor mounted on the case. As demonstrated in Fig. \ref{fig:transfer_path}, there are three paths for planet-ring and planet-sun gear meshing, respectively. These transfer paths can be categorized into two types, depending on whether or not they pass through bearings. The paths passing through bearings (path 2, 3, 5, 6 in Fig. \ref{fig:transfer_path}) must transfer via the gearbox housing to reach the sensor fixed on the top. Compared with the paths merely passing through gears (path 1, 4 in Fig. \ref{fig:transfer_path}), these paths passing bearings are longer and more likely to be attenuated by the lubricating oil layer in bearings \cite{Feng2012}. To simplify modelling, only the shorter paths (path 1, 4 in Fig. \ref{fig:transfer_path}) are concerned in this paper.
 \begin{figure}[pos=htbp]
     \centering
@@ -193,7 +189,7 @@ where $M$ is the planet number. The path 4 is the sum of the diameter of the pla
 \begin{equation}
     \sigma(l)=F\exp\left(-\frac{l}{a}\right),\label{eq:general_transfer_path}
 \end{equation}
-where $l$ is the length of a transfer path, $F$ represents for the strength factor and $a$ is the attenuation factor. The larger $a$ is, the longer impulses can propagate without a large energy loss. Given Eq. (\ref{eq:path_4_length}) and Eq. (\ref{eq:general_transfer_path}), we can deduce the proportional relationship between path 1 and path 4,
+where $l$ is the length of a transfer path, $F$ represents for the strength factor and $a$ is the attenuation factor. $F$ is proportional to the input torque $T_{\rm s}$, here we assume $F=T_{\rm s}/300$. The larger $a$ is, the longer impulses can propagate without a large energy loss. Given Eq. (\ref{eq:path_4_length}) and Eq. (\ref{eq:general_transfer_path}), we can deduce the proportional relationship between path 1 and path 4,
 \begin{equation}
     \sigma (l_{{\rm s}i})=F\exp(-\frac{l_{{\rm r}i}+2 R_{\rm p}}{a})=\exp(-\frac{2 R_{\rm p}}{a}) \cdot \sigma(l_{{\rm r}i}).
 \end{equation}
@@ -294,7 +290,7 @@ where $\hat{\lambda}(f)$ is the Fourier transform of $\lambda(t)$:
     \hat{\lambda}(f)=\frac{\sqrt{2 \pi } \beta ^2 f_{\rm n}}{-4 \pi ^2 \beta ^2 f^2  + 4 \pi ^2 \beta ^2 f_{\rm n}^2+1 - {\rm j} 4 \pi  \beta  f}
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%% Numerical simulation %%%%%%%%%%%%%%%%%%%%%%%
-\section{Numerical simulation}
+\section{Discussion on model factors\label{sec:factor_discussion}}
 \par We use MATLAB\textsuperscript \textregistered \ to simulate the proposed signal model. To validate the generality of the propose model, we take different planet pinhole position errors, planet numbers and input torques into account. The simulation parameters are listed in Table \ref{}.
 \par In general, if the planet locates the nominal position, only the planet number multiples of carrier harmonics appear (give more specific results in figures), which accords with the Eq. (\ref{eq:carrier_harmonic_ring}) and Eq. (\ref{eq:carrier_harmonic_sun}). When the planet center deviates from the nominal position, other carrier orders emerges. Differing from the conclusion in \cite{Mark2009}, the dominant planet number multiple peaks do not shrink too, because we also consider the phase modulation induced by the pinhole position errors. 
 \par Fig. \ref{fig:overview_normal_fourier} and Fig. \ref{fig:Shifted_natural_frequency} explain the mechanism of shifted natural frequency -- the resonance frequency shift from 300Hz to 400Hz. With the limited measurement conditions about natural frequency in industrial applications, the above natural frequency shift can only be validated qualitatively. The signal model in Eq. (\ref{eq:final_signal_model}) indicates the natural frequency affects the spectral envelope shape. As the load increases, the envelope peak shifting to a higher frequency signifies the unequal load sharing among planets. 
@@ -302,11 +298,11 @@ where $\hat{\lambda}(f)$ is the Fourier transform of $\lambda(t)$:
 \begin{figure}[pos=htbp]
     \centering
     \includegraphics[scale=1]{Shifted_natural_frequency}
-    \caption{Spectral surmount cluster shifts towards a lower frequency due to the uneven load distribution of planets}\label{fig:Shifted_natural_frequency}
+    \caption{Spectral summit cluster shifts towards a lower frequency due to the uneven load distribution of planets}\label{fig:Shifted_natural_frequency}
 \end{figure}
 \par The extra sidebands at non M multiples of carrier orders can be attributed by the phase modulation effects (with a period of carrier rotation period and fluctuates at each planet position (both time and space)).
 \par The amplitude envelope sharpe can also evidence the existence of planet position shifts. Because the support stiffness weakens, the resonance frequency of the entire system shift towards the y-axis. Fig. \ref{fig:overview_normal_fourier} and Fig. \ref{fig:Shifted_natural_frequency} show the resonance frequency shift from 300Hz to 400Hz.
-\subsection{Planet number $M=3$}
+\subsection{Different planet numbers}
 \par When at least one central members can float along the radial direction, three planets can offset the influence of uneven load distribution arising from limited pinhole position errors. The condition of floating central members can be satisfied commonly, because the manufacturers deliberately design separable sun gears  and flexible couplings.  When tangential error in planet pinhole occur, the time shifts to the transfer path effects still make the impulsive intervals between adjacent planets uniform. Fig \ref{fig:simulated_p3}(b) present the quasi phase modulation -- if we regard all planets as one -- in time domain.  The corresponding spectrum also manifests the non planet number ($M=3$) peaks. In the baseline case where these pinhole errors are absent, the carrier orders merely appear at the multiples of three.
 \begin{figure}[pos=htbp]
     \centering
@@ -314,37 +310,54 @@ where $\hat{\lambda}(f)$ is the Fourier transform of $\lambda(t)$:
     (b) \includegraphics[scale=\myscale,valign=t]{Time_p3_fault.pdf}\\
     \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p3_normal.pdf}
     \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p3_fault.pdf}
-    \caption{Simulated signals of planetary boxes with 3 planets: (a) normal case; (b) $0.5^\circ$ position error on second planet pinhole.}
+    \caption{Simulated signals of planetary boxes of 3 planets: (a) normal case; (b) $0.5^\circ$ position error on second planet pinhole.}
     \label{fig:simulated_p3}
 \end{figure}
-\subsection{Planet number $M \geq 3$}
-\par Fig. \ref{fig:simulated_p4} shows the normal and fault cases where planet number $M=4$. Because the planet number M is an even number, the load sharing $L_1=L_3$, $L_2=L_4$, no matter which planet the position errors occur at. Without loss of generality, we assume the $\epsilon_1 = 0$ in all cases.
+\par In cases where planet number $M\geq4$, floating members in planetary gearboxes cannot neutralize all effects on load sharing conditions caused by planet pinhole position errors. The time domain signals in Fig. \ref{fig:simulated_p4}(b) ($M=4$) demonstrates the  pinhole errors modulates the  timing and strength of  each planet impulse at the same time. Shown in the Fourier spectra of fault cases, the quasi amplitude and frequency modulation gives rise to the extra sidebands emerge at the non M multiples. While carrier orders only peak with the intervals of  planet number in Fig. \ref{fig:simulated_p4}(a) ($M=4$).
 \begin{figure}[pos=htbp]
     \centering
     (a) \includegraphics[scale=\myscale,valign=t]{Time_p4_normal.pdf}
     (b) \includegraphics[scale=\myscale,valign=t]{Time_p4_fault.pdf}\\
     \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p4_normal.pdf}
     \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p4_fault.pdf}
-    \caption{Simulated signals of planetary boxes with 4 planets: (a) normal case; (b) $0.5^\circ$ position error on second planet pinhole.}
+    \caption{Simulated signals of planetary boxes of 4 planets: (a) normal case; (b) $0.5^\circ$ position error on second planet pinhole.}
     \label{fig:simulated_p4}
+\end{figure}
+\subsection{Effects of input torque}
+\par As explained in the Section \ref{sec:transfer_path}, the input torque affects the impulsive strengths of planets contacting with sun and ring gears, so as to scale the whole signal amplitudes. Fig. \ref{fig:simulated_p5_normal} shows that the larger input torque is applied, the higher signal amplitude in both time and frequency domains. 
+\par The input torque also affects the numbers of contacting planets. As the input torque increases from a lower value, more planets get involved in bearing load gradually. Thus, the natural frequency of the system rises. Fig. \ref{fig:simulated_p5_fault} presents the natural frequency shifts in spectrum. In addition, the larger input torque can improve load sharing conditions to be more uniform. Extra non M multiples shrinks relatively to the dominant M multiples. 
+\begin{figure}[pos=htbp]
+    \centering
+    (a) \includegraphics[scale=\myscale,valign=t]{Time_p5_normal_L30.pdf}
+    (b) \includegraphics[scale=\myscale,valign=t]{Time_p5_normal_L300.pdf}\\
+    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p5_normal_L30.pdf}
+    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p5_normal_L300.pdf}
+    \caption{Simulated signals of normal planetary boxes with different input torques: (a) $T_{\rm s}=30\ {\rm N\ m}$; (b) $T_{\rm s}=300\ {\rm N\ m}$.}
+    \label{fig:simulated_p5_normal}
 \end{figure}
 \begin{figure}[pos=htbp]
     \centering
-    (a) \includegraphics[scale=\myscale,valign=t]{Time_p5_normal.pdf}
-    (b) \includegraphics[scale=\myscale,valign=t]{Time_p5_fault.pdf}\\
-    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p5_normal.pdf}
-    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p5_fault.pdf}
-    \caption{Simulated signals of planetary boxes with 5 planets: (a) normal case; (b) $0.4^\circ$ position error on third planet pinhole.}
-    \label{fig:simulated_p5}
+    (a) \includegraphics[scale=\myscale,valign=t]{Time_p5_fault_L30.pdf}
+    (b) \includegraphics[scale=\myscale,valign=t]{Time_p5_fault_L300.pdf}\\
+    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p5_fault_L30.pdf}
+    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p5_fault_L300.pdf}
+    \caption{Simulated signals of faulty planetary boxes with $0.4^\circ$ error in the third planet pinhole and different input torques: (a) $T_{\rm s}=30\ {\rm N\ m}$; (b) $T_{\rm s}=300\ {\rm N\ m}$;.}
+    \label{fig:simulated_p5_fault}
 \end{figure}
+\subsection{Severity levels of pinhole error}
+\par The severity of pinhole error mainly influences the signal spectra in two stages. At the beginning the planetary gearbox is free of pinhole errors. All planets bear the load evenly with the same strength as shown in time domain of Fig. \ref{fig:simulated_p6_normal}(a), and peaks only exist at the multiples of planet number ($M=6$). When a slight error ($0.1^\circ$ on the fourth planet pinhole) occurs, Fig. \ref{fig:simulated_p6_severity}(b) demonstrates the non M multiples of carrier orders emerge in spectrum.  At the first stage, an increasing error level ($1^\circ$) leads to the amplified the components of non M multiples clustering around the dominant peaks, as presented in Fig. \ref{fig: simulated_p6_severtiy}(c). At the second stage, if we continually enlarges the error to $2.1^\circ$, a pair of planets will separate from contact and the location of envelope summit along with the system natural frequency will decrease to a lower range. Fig. \ref{fig:simulated_p6_severity}(d) illustrates this phenomenon.
 \begin{figure}[pos=htbp]
     \centering
     (a) \includegraphics[scale=\myscale,valign=t]{Time_p6_normal.pdf}
-    (b) \includegraphics[scale=\myscale,valign=t]{Time_p6_fault.pdf}\\
+    (b) \includegraphics[scale=\myscale,valign=t]{Time_p6_slight_error.pdf}\\
     \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p6_normal.pdf}
-    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p6_fault.pdf}
-    \caption{Simulated signals of planetary boxes with 6 planets: (a) normal case; (b) $1^\circ$ position error on second planet pinhole.}
-    \label{fig:simulated_p6}
+    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p6_slight_error.pdf}\\
+    (c) \includegraphics[scale=\myscale,valign=t]{Time_p6_medium_error.pdf}
+    (d) \includegraphics[scale=\myscale,valign=t]{Time_p6_severe_error.pdf}\\
+    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p6_medium_error.pdf}
+    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Freq_p6_severe_error.pdf}
+    \caption{Simulated signals of planetary boxes with errors on the fourth planet in various severity levels: (a) normal; (b) $0.1^\circ$; (c) $1^\circ$; (d) $2.1^\circ$.}
+    \label{fig:simulated_p6_severity}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Appendix %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Appendix\label{Appendix}}

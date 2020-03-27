@@ -6,12 +6,12 @@ f_c=3;
 R_p=35*0.9e-3/2;% gear module is 0.9e-3
 R_r=108*0.9e-3/2;% gear module is 0.9e-3
 R_s=36*0.9e-3/2;% gear module is 0.9e-3
-F=1;
-T_s=300;% input torque
+T_s=30;% input torque
+F=T_s/300;
 %% unequal load sharing case
 %% perfect case
 % epsilon_i=[0,0,0,0];% position error of i-th planet
-epsilon_i=[0,0,0,0/180*pi,0,0];% position error of i-th planet
+epsilon_i=[0,0,0,0/180*pi,0];% position error of i-th planet
 M=length(epsilon_i);%planet number
 a=0.1*2*pi*R_r/M;
 %% configuration parameters
@@ -53,7 +53,7 @@ for j=1:M
     T_ri=f_m*(t-(Theta_i(j)+epsilon_i(j))/(2*pi*f_c));% actual time sequence of planet-ring
     T_si=f_m*(t-(Theta_i(j)+epsilon_i(j))/(2*pi*f_s-2*pi*f_c))+phi/2/pi;% time sequence of planet-sun
     l(j,:)=Transfer_length(t,M,f_c,R_r,epsilon_i(j),Theta_i(j));
-    sigma_i(j,:)=exp(-F*l(j,:)/a);% sigma_i is the time-varying transfer path effect
+    sigma_i(j,:)=F*exp(-l(j,:)/a);% sigma_i is the time-varying transfer path effect
     x=L_i(j)*sigma_i(j,:).*(III(T_ri)+eta*III(T_si))+x;
 end
 %% Natural vibration
@@ -63,11 +63,12 @@ x1=conv(x,lambda);x1=x1(1:length(t));
 [Amplitude,f]=MyFFT(x1,fs);
 [~,f_c0]=III(f_m*t);
 f_c0=fs/f_c0/N;% the actual carrier frequency in signal
+figure('Name','Fourier spectrum');
 plot(f/f_c0,Amplitude,'b');
-[Amp_natural,f]=MyFFT(lambda,fs);
+[Amp_natura1,f]=MyFFT(lambda,fs);
 % Natural frequency envelope in spectrum
 hold on;
-plot(f/f_c0,Amp_natural*20,'g-.');
+plot(f/f_c0,Amp_natura1*F*20,'g-.');
 % transfer path envelope in spectrum
 sigma_0=zeros(1,length(t));
 sigma_0(t<=Theta_i(2))=F*exp(-2*pi*R_r*f_c0*abs(t(t<=Theta_i(2))-Theta_i(2)/2)/a);
@@ -80,9 +81,9 @@ switch M
     case 4
         xlim([170 200]);
     case 5
-        xlim([220 250]);ylim([0 0.04]);
+        xlim([100 300]);%ylim([0 0.03]);
     case 6
-        xlim([220 250]);ylim([0 0.02]);
+        xlim([100 300]);ylim([0 0.02]);
 end
 ylabel('Amplitude');xlabel('Carrier order');
 SetFigureProperties;
