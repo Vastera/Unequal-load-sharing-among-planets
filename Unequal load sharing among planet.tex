@@ -23,7 +23,7 @@
 \usepackage{xfrac}% small fraction, for example 1/2
 \usepackage{multirow,booktabs} %three-line table
 \usepackage{array} % fixed width and auto newline(wrap) as well centering
-\usepackage{callouts}
+\usepackage{callouts}%% annotation for figures
 \usepackage{microtype}% improve the intervals between words to make typing more beautiful
 \usepackage{lineno,hyperref}% display line number, use hyper reference
 \usepackage{nameref}
@@ -359,6 +359,41 @@ where $\hat{\lambda}(f)$ is the Fourier transform of $\lambda(t)$:
     \caption{Simulated signals of planetary boxes with errors on the fourth planet in various severity levels: (a) normal; (b) $0.1^\circ$; (c) $1^\circ$; (d) $2.1^\circ$.}
     \label{fig:simulated_p6_severity}
 \end{figure}
+\section{Experimental validation}
+We implemented experiments to substantiate the proposed signal model and the above theoretical derivation.
+\subsection{Experimental settings}
+\par We set up a test rig consisting of a motor, a planetary gearbox, an encoder,  a torque transducer and a generator as load, as shown in Fig. \ref{fig:test_rig}. Besides a normal planetary gearbox with four planets as baseline,  we designed a fault case where one planet pinhole ahead of the nominal position by $0.1^{\circ}$, demonstrated in Fig. \ref{fig:exp_pinhole_error}. The gearbox's configuration parameters are listed in Table \ref{tab:}. The rotating frequency of sun gear is $2.2$ Hz. $30$ N m load is applied. The gear meshing frequency is $f_{\rm m}=$ and carrier frequency is $f_{\rm c}=$.
+\begin{figure}[pos=htbp]
+    \centering
+    \includegraphics{test_rig_configuration.pdf}
+    \caption{Planetary gearbox test rig: 1. induction motor; 2. planetary gearbox; 3. rotary encoder; 4. torque transducer and 5. generator.}
+    \label{fig:tets_rig}
+\end{figure} 
+\begin{figure}[pos=htbp]
+    \centering
+    \includegraphics[scale=0.7]{exp_pinhole_error.pdf}
+    \caption{Planetary gearbox with a pinhole position error}
+    \label{fig:exp_pinhole_error}
+\end{figure}
+\subsection{Experimental data analysis}
+\par Fig. \ref{fig:exp_natural_frequency_shift} overviews the spectra of normal and fault cases. Generally, the natural vibration and transfer path effects jointly shape the envelopes of the normal and fault spectra. By contrast, the envelope summit of normal spectrum locates at the higher frequency range than the fault case since the natural frequency of normal case is higher. This indicates that the pinhole position error can cause planets to disconnect with sun or ring gears, verifying the natural frequency shift described in Section \ref{sec:natural_frequency}.
+\begin{figure}[pos=htbp]
+    \centering
+    \includegraphics{Exp_natural_frequency_shift.pdf}
+    \caption{Spectrum overview of experimental data}
+    \label{fig:exp_natural_frequency_shift}
+\end{figure}
+\par The signal of unequal load sharing displays more irregular impulses within one carrier rotation period, demonstrated in Fig. \ref{fig:exp_time_freq_comparison}(b).  While the impulsive amplitudes and intervals are more evenly distributed in the normal case (Fig. \ref{fig:}(a)). By comparison between frequency domains, non M multiples of carrier order peaks clearly in the fault case, evidencing the non-uniform load distribution among planets. The unconspicuous noise components are attributed to the inevitable errors during manufacturing and assembling.
+\begin{figure}[pos=htbp]
+    \centering
+    (a) \includegraphics[scale=\myscale,valign=t]{Exp_Time_normal.pdf}
+    (b) \includegraphics[scale=\myscale,valign=t]{Exp_Time_fault.pdf}\\
+    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Exp_normal_22.pdf}
+    \hspace*{1.5em}\includegraphics[scale=\myscale,valign=t]{Exp_fault_22.pdf}
+    \caption{Experimental data analysis in time and frequency domains: (a) normal case; (b) fault case.}
+    \label{fig:exp_time_freq_comparison}
+\end{figure}
+\sectiion{Conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Appendix %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Appendix\label{Appendix}}
 \begin{figure}[pos=htbp]
