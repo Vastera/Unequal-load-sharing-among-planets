@@ -362,7 +362,7 @@ where $\hat{\lambda}(f)$ is the Fourier transform of $\lambda(t)$:
 \section{Experimental validation}
 We implemented experiments to substantiate the proposed signal model and the above theoretical derivation.
 \subsection{Experimental settings}
-\par We set up a test rig consisting of a motor, a planetary gearbox, an encoder,  a torque transducer and a generator as load, as shown in Fig. \ref{fig:test_rig}. Besides a normal planetary gearbox with four planets as baseline,  we designed a fault case where one planet pinhole ahead of the nominal position by $0.1^{\circ}$, demonstrated in Fig. \ref{fig:exp_pinhole_error}. The gearbox's configuration parameters are listed in Table \ref{tab:}. The rotating frequency of sun gear is $2.2$ Hz. $30$ N m load is applied. The gear meshing frequency is $f_{\rm m}=$ and carrier frequency is $f_{\rm c}=$.
+\par We set up a test rig consisting of a motor, a planetary gearbox, an encoder,  a torque transducer and a generator as load, as shown in Fig. \ref{fig:test_rig}. Besides a normal planetary gearbox with four planets as baseline,  we designed a fault case where one planet pinhole ahead of the nominal position by $0.1^{\circ}$, demonstrated in Fig. \ref{fig:exp_pinhole_error}. The rated parameters and configuration parameters of the planetary gearbox are listed in Table \ref{tab:rated_parameters} and Table \ref{tab:configuration_parameters}, respectively. The sampling frequency of the acquisition system is $20480$ Hz, and the duration is $60$ s. The rotating frequency of sun gear is $8.45$ Hz. $30$ N m load is applied. The gear meshing frequency is $f_{\rm m}=228.15$ Hz and carrier frequency is $f_{\rm c}=2.1125$ Hz.
 \begin{figure}[pos=htbp]
     \centering
     \includegraphics{test_rig_configuration.pdf}
@@ -375,6 +375,30 @@ We implemented experiments to substantiate the proposed signal model and the abo
     \caption{Planetary gearbox with a pinhole position error}
     \label{fig:exp_pinhole_error}
 \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%% rated parameters %%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}
+    \centering
+    \caption{Rated parameters of planetary gearbox.\label{tab:rated_parameters}}
+    \begin{tabular}{*{3}{>{\centering\arraybackslash}m{10em}}}
+    \toprule
+    Power (kW) &  Speed (rpm) & Speed ratio \\
+    \midrule
+    8 & 1500 &  4 \\
+    \bottomrule
+    \end{tabular}
+    \end{table}
+%%%%%%%%%%%%%%%%%%%%%%% gearbox configuration %%%%%%%%%%%%%%%%%
+\begin{table}
+\centering
+\caption{Confiuration parameters of planetary gearbox.\label{tab:configuration_parameters}}
+\begin{tabular}{*{4}{>{\centering\arraybackslash}m{8em}}}
+\toprule
+Gear & Sun gear & Planet (number) & Ring gear\\
+\midrule
+Number of teeth & 36 & 35 (3) &  108 \\
+\bottomrule
+\end{tabular}
+\end{table}
 \subsection{Experimental data analysis}
 \par Fig. \ref{fig:exp_natural_frequency_shift} overviews the spectra of normal and fault cases. Generally, the natural vibration and transfer path effects jointly shape the envelopes of the normal and fault spectra. By contrast, the envelope summit of normal spectrum locates at the higher frequency range than the fault case since the natural frequency of normal case is higher. This indicates that the pinhole position error can cause planets to disconnect with sun or ring gears, verifying the natural frequency shift described in Section \ref{sec:natural_frequency}.
 \begin{figure}[pos=htbp]
@@ -383,7 +407,7 @@ We implemented experiments to substantiate the proposed signal model and the abo
     \caption{Spectrum overview of experimental data}
     \label{fig:exp_natural_frequency_shift}
 \end{figure}
-\par The signal of unequal load sharing displays more irregular impulses within one carrier rotation period, demonstrated in Fig. \ref{fig:exp_time_freq_comparison}(b).  While the impulsive amplitudes and intervals are more evenly distributed in the normal case (Fig. \ref{fig:}(a)). By comparison between frequency domains, non M multiples of carrier order peaks clearly in the fault case, evidencing the non-uniform load distribution among planets. The unconspicuous noise components are attributed to the inevitable errors during manufacturing and assembling.
+\par The signal of unequal load sharing displays more irregular impulses within one carrier rotation period, demonstrated in Fig. \ref{fig:exp_time_freq_comparison}(b). While the impulsive amplitudes and intervals are more evenly distributed in the normal case (Fig. \ref{fig:}(a)). By comparison between frequency domains, non M multiples of carrier order peaks clearly in the fault case, evidencing the non-uniform load distribution among planets. The unconspicuous noise components are attributed to the inevitable errors during manufacturing and assembling.
 \begin{figure}[pos=htbp]
     \centering
     (a) \includegraphics[scale=\myscale,valign=t]{Exp_Time_normal.pdf}
@@ -393,7 +417,8 @@ We implemented experiments to substantiate the proposed signal model and the abo
     \caption{Experimental data analysis in time and frequency domains: (a) normal case; (b) fault case.}
     \label{fig:exp_time_freq_comparison}
 \end{figure}
-\sectiion{Conclusion}
+\section{Conclusions}
+\par We established a vibration signal model of planetary gearboxes and derived the corresponding Fourier spectrum, considering the effects of transfer path, gear meshing vibration, natural vibration, amount of contacting planets and load sharing among planets. Only planet number multiples of carrier rotating frequency appear in the Fourier spectrum of the normal case, while the spectrum of unequal load sharing signal additionally presents non planet number multiples of carrier rotating frequency. The pinhole position error severity and the input torque jointly affect the load sharing conditions, the number of contacting planets and the system natural frequency. With the increasing pinhole error severity or the decreasing applied input torque, fewer planets bear loads, the stiffness of the whole system decreases, the natural frequency shifts towards a lower range and the load sharing conditions deteriorate. Thus, the additional carrier orders and the shifted natural frequency in the spectrum can evidence the unequal load sharing among planets for diagnostic purposes. In the future, we will investigate the modeling of unequal load sharing among planets with the existence of gear and planet faults.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Appendix %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Appendix\label{Appendix}}
 \begin{figure}[pos=htbp]
