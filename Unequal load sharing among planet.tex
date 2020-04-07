@@ -45,7 +45,7 @@
 % 
 %%%%%%%%%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-    Planetary gearboxes feature large transmission ratios within compact volumes, because they can divide the input torque load into several paths through parallel planets. Unevenly load sharing among planets lead to inefficiency and accelerating fatigue. This paper establishes a vibration signal model to describe how the uneven distribution of planet loads affects the vibration signal composition. Compared with fixed shaft bearings, planet bearings are more prone to faults due to its excessive load. We also establish a vibration signal of planet bearing faults along with the uneven distribution of planet loads. Planet bearing faults are more difficult to diagnose due to abundant modulation sidebands arising from the unequal load sharing among planets. Numerical simulation and experimental substations agrees with the proposed theoretical model.
+    Planetary gearboxes feature large transmission ratios within compact volumes because they can divide the input torque load into parallel paths formed by planets. Unevenly load sharing among planets leads to inefficiency and accelerating fatigue. This paper establishes a vibration signal model to describe how the uneven distribution of planet loads affects the vibration signal composition. The derived Fourier spectrum illustrates the contacting planet number affects the system natural vibration and spectral structure. we also discuss the influences of different planet numbers, input torques, and manufacturing error severity. Numerical simulation and experimental substations agree well with the proposed theoretical model.
 \end{abstract}
 %%%%%%%%%%%%%%%%% Highlights %%%%%%%%%%%%%%%%%%%%%%
 \begin{highlights}
@@ -67,18 +67,25 @@
 \def\myscale{0.5}
 %%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%
 \section{Introduction}
-\par Planets split power transmitted from the input sun gear into paralleled paths so that planetary gearboxes can withstand heavy load in a compact volume. While the special structure bring about unequal load sharing among planets.
+\par Planetary gearboxes have several planets forming parallel transmission paths to split the input torque. This configuration reduces the load applied to the at each meshing gear and allow the planetary gearboxes to be compact. Because of the co-axial structure of planetary gearboxes, radial forces acting on the gears can be neutralized. And flexibly supported sun gears and carrier can move radially at a certain degree to compensate for the manufacturing errors partially. These above mentioned merits of planetary gearboxes will compromise if the loads are unevenly applied to planets, usually arisen from manufacturing errors, such as a planet pinhole deviating from its nominal position. Unequal load sharing can also lead to inefficiency or accelerating wear. 
+\par  Most of works  on the fault diagnosis of planetary gearboxes mainly concern gears \cite{Feng2012} or bearings \cite{Zhao2019}, and do no involve the planet load sharing, though the planet load sharing also significantly impacts the vibration signals.
+\par Many investigations focus on the calculation of load sharing factors and the physical mechanism. Some conclusions contributed by previous publication are summarized as follows \cite{Singh2010511-530}:
+\begin{itemize}
+    \item The floating (piloting) sun gear can improve the conditions of planet equal load sharing \cite{seager1970}.
+    \item Load sharing characteristics are primarily affected by the tangential errors, and insensitive to radial errors \cite{Bodas2004}. 
+    \item Three planet gearboxes with at least one floating central members can evenly distribute the load if the manufacturing errors are within a certain range \cite{Singh2010511-530}.
+    \item The diagonal planets in four-planet gearboxes have the same load sharing \cite{Ligata2008}.
+    \item Planet load sharing essentially a quasi-static problem and does not need to consider dynamic effects \cite{Kahraman1994}.
+    \item Increasing the input torque can alleviate the planet load inequality \cite{Ligata2008}.
+    \item Increasing the planet number without tightening manufacturing error tolerance will deteriorate the load sharing condition \cite{Singh2005}.
+\end{itemize}
+\par Vibration signal modelling can bridge the physical mechanism of the system and the mathematical expression both in time domain and frequency domain, facilitating the further fault diagnosis of unequal load sharing and other components. McFadden and Smith \cite{McFadden1985} probably firstly proposed that the asymmetry sidebands around the meshing frequency is ascribed to the planet revolution motion relative to the fixed transducer mounted on the ring gear. The established models of vibration signal indicates the planet number multiples of carrier order in spectrum are arisen from the planet motion. This feature originates from the signal acquisition method but not the inherent vibration of planetary gearboxes. Inalpolat and Kahraman \cite{Inalpolat2009} took planet phases into account and classified planetary gearboxes into five classes according to their planet angular positions (equally spaced or unequally spaced) and phases conditions (in phase, sequentially spaced, arbitrary phases). Mark and Hines \cite{Mark2009} derived the Fourier-series spectrum of fixed transducer response mounted on the ring gear and well explained the unequal load sharing will lead to the harmonics at non planet number multiples of tooth meshing. Lei \cite{Lei2016} et al. proposed a phenomenological model containing the meshing vibration between the sun gear and planets as well as the effects of gear faults, further verifying the conclusions in Mark's paper.
+\par The vibration signal model proposed in this paper based on and extends these models in the above references. We  can find that natural vibration excited by the gear meshing cannot be omitted, because it globally shapes the signal envelope in frequency domain. In addition, the assumption that all planets are engaging with sun or ring gear is invalid in cases where the manufacturing errors are severe or the input torques are relatively low, especially for planet number is more than four. When some planets lose connection with sun or ring gears, the natural frequency will also shifts due to the decreased system stiffness. The derived Fourier spectrum with these considerations can better agree with the practical circumstances. As the planet number, error severity and input torque vary, the signal model and its corresponding spectral evolves. All these factors will be discussed in this paper.
+\par Section \ref{sec:signal_model} introduces the vibration signal model. The Fourier spectrum is derived in Section \ref{sec:spectral_structure}. Section \ref{sec:factor_discussion} discusses the influence of main factors in the signal model. Experimental verification is presented in Section \ref{sec:experimental_validation}. At last, Section \ref{sec:conclusions} concludes the above investigation. 
 %%%%%%%%%%%%%%% References %%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%% Principle %%%%%%%%%%%%%%%%
-\section{Signal model}
-\begin{enumerate}[1.]
-    \item Planetary gearboxes have different configuration with similar layouts.
-    \item In this paper, we only consider the case where ring gear is fixed. (refer to the paper mentioning the sun or carrier as the fixed central part)
-    \item The vibration sensor is mounted on the stationary ring gear.
-    \item The vibration mainly origins the the time-varying stiffness gear meshing. When the planet gears engage with the ring gear or sun gear, the number of the involved tooth varies with the relative rotation between gears. Thus, their contact stiffness changes at the same time. If the transmission load proximately remain constant, this system is pure parametric excited. (Add a reference about instability) 
-    \item Specially, the torque load transferred from the central components in planetary gearboxes is split into parallel paths formed by the planets. Because of the inevitable manufacturing and assembling errors of pinholes or bearings, there are usually differences in the position of pinholes and the shape of planets. The load sharing among planets is non-uniform (collect other reasons from the Sigh's paper).
-    \item Another common phenomenon in planetary gearboxes is the difference in meshing phases between ring-planet and sun-planet. When this situation coincides with the load sharing inequality, a complex couple mechanism of time-varying load sharing emerges, rising extra vibrations.
-    \item For an individual planet, the vibration signal model can be written as
+\section{Signal model \label{sec:signal_model}}
+
     
     %%%%%%%%%%%%%%%%% nomenclature Display %%%%%%%%%%%%
 \begin{table*}[!t] 
@@ -100,9 +107,7 @@
         \caption{Vibration system of unequal load sharing among four planets.}
     \label{fig:vibration_system_of_spring_mass}
     \end{figure*}
-\end{enumerate}
-
-\subsection{Planetary gearbox structure}
+\subsection{General signal model}
 \par A typical layout of planetary gearboxes consists of three kinds of gears mounted so that the centers of planet gears revolves around the center of sun and ring gears, as shown in Fig. \ref{fig:planetary_gearbox_layout}. This paper merely discusses the common cases of speed reducers where the sun gear connects with the power input shaft and the carrier works as power output, while vibration sensors are usually mounted on the surface of the stationary ring gear in diagnostic applications. 
 \begin{figure}[pos=htbp]
     \centering
@@ -115,8 +120,6 @@
     \caption{Configuration of planetary gearboxes.}
     \label{fig:planetary_gearbox_layout}
 \end{figure}
-
-\subsection{General signal model}
 \par The vibration in planetary gearboxes mainly origins from the meshing of gears \cite{Velex1996}. When the planet gears engage with the ring gear or sun gear, the number of the involved tooth varies with the relative rotation between gears and their contact stiffness changes consequently. The transmission load nominally remains constant and the gearbox is a parametrically excited multi-degree-freedom system \cite{Acar2019}. 
 \par The signal model perceived by the stationary transducer on the gearbox housing can be modelled as the summation of all planet vibration considering transfer path effects. The impulsive intensity of gear meshing is assumed to proportional to the load applied on each planet. The vibration of each planet is divided into planet-ring and planet-sun parts. Thus, the general signal model is
 \begin{equation}
@@ -144,7 +147,6 @@ where $A_{{\rm r}i}$ is the impulsive amplitude of $i$-th planet-ring gear meshi
 where $A_{{\rm r}i}$ is the impulsive amplitude of $i$-th planet-sun gear meshing, $\varphi_i$ is the phase difference between planet-ring and planet-sun meshing for the $i$-th planet.
 \subsection{Algorithm of load sharing coefficients\label{sec:algorithm_load_sharing}}
 \par The multiple paralleled power paths formed by planets can sharing torque load. This merit of planetary gearboxes will compromise when the load sharing inequality occurs. The position errors of planet pinholes or bearings in the tangential (circumferential) direction happening in manufacturing and assembling lead to the non-uniform loads on planets \cite{Singh2010511-530}. To partly centralize the uneven load, planetary gearboxes usually permit at least one floating central member (sun gear or carrier). The formula of load sharing ratio of a 4-planet planetary gearbox as follows \cite{Ligata2009}
-
 \begin{equation}
     k_{\rm e}=\frac{1}{k_{\rm rp}+k_{\rm sp}}+\frac{1}{k_{\rm b}},\label{eq:stiffness}
 \end{equation}
@@ -225,7 +227,7 @@ where $\beta>0$ is the structural damping coefficient, $f_{\rm n}$ is the natura
 where $\ast$ denotes convolution.
 \par For machines with the same configuration, when the load distribution of the planet is uneven, the contact stiffness of the transfer path of each planet inside the planetary gearbox will decrease relative to the case of the uniform load distribution. As a result, The decrease of internal contact stiffness will lead to the decrease of natural frequency of the whole system. Therefore, the variation of the system's natural frequency can be used as a circumstantial evidence to diagnose the load distribution among planets.
 \par If the planet pinhole distribute evenly on the carrier, the number of the planets bearing the input load varies as the applied load increases gradually. When the load starts at almost zero, only three planets or one pair of diagonal planets simultaneously engaging with sun and ring gear \cite{Ligata2009}. In this circumstance, load sharing coefficients $L_i=0$ for the unloaded planets. With the ascending input load, another pair of gears get involved. At the same time, the entire transmission system stiffen because more gears support the connection between the input and output. The natural frequency rises along with the system stiffness because the natural frequency equals the square root of stiffness over mass.
-\section{Spectral structure}
+\section{Spectral structure \label{sec:spectral_structure}}
 \par In this section, we will derive the spectral structure of the above proposed signal model for the in-depth understanding of planetary gearbox vibration. Because natural vibration merely affects the spectral envelope shape, we can consider it separately later on. The gear meshing vibration (Eq. (\ref{eq:planet-ring_meshing}) and Eq. (\ref{eq:planet-sun_meshing})) and transfer path effect arising from the carrier rotation $\sigma_{i}(t)$ are periodic with periods $1/f_{\rm m}$ and $1/f_{\rm c}$, respectively. According to Eq. (\ref{eq:meshing_frequency}) and $f_{\rm r}=0$, $f_{\rm m}=Z_{r} \cdot f_{\rm c}$. Apply Fourier transform to the planet-ring vibration, yields
 \begin{equation}
 \begin{split}
@@ -359,7 +361,7 @@ where $\hat{\lambda}(f)$ is the Fourier transform of $\lambda(t)$:
     \caption{Simulated signals of planetary boxes with errors on the fourth planet in various severity levels: (a) normal; (b) $0.1^\circ$; (c) $1^\circ$; (d) $2.1^\circ$.}
     \label{fig:simulated_p6_severity}
 \end{figure}
-\section{Experimental validation}
+\section{Experimental validation\label{sec:experimental_validation}}
 We implemented experiments to substantiate the proposed signal model and the above theoretical derivation.
 \subsection{Experimental settings}
 \par We set up a test rig consisting of a motor, a planetary gearbox, an encoder,  a torque transducer and a generator as load, as shown in Fig. \ref{fig:test_rig}. Besides a normal planetary gearbox with four planets as baseline,  we designed a fault case where one planet pinhole ahead of the nominal position by $0.1^{\circ}$, demonstrated in Fig. \ref{fig:exp_pinhole_error}. The rated parameters and configuration parameters of the planetary gearbox are listed in Table \ref{tab:rated_parameters} and Table \ref{tab:configuration_parameters}, respectively. The sampling frequency of the acquisition system is $20480$ Hz, and the duration is $60$ s. The rotating frequency of sun gear is $8.45$ Hz. $30$ N m load is applied. The gear meshing frequency is $f_{\rm m}=228.15$ Hz and carrier frequency is $f_{\rm c}=2.1125$ Hz.
@@ -417,8 +419,8 @@ Number of teeth & 36 & 35 (3) &  108 \\
     \caption{Experimental data analysis in time and frequency domains: (a) normal case; (b) fault case.}
     \label{fig:exp_time_freq_comparison}
 \end{figure}
-\section{Conclusions}
-\par We established a vibration signal model of planetary gearboxes and derived the corresponding Fourier spectrum, considering the effects of transfer path, gear meshing vibration, natural vibration, amount of contacting planets and load sharing among planets. Only planet number multiples of carrier rotating frequency appear in the Fourier spectrum of the normal case, while the spectrum of unequal load sharing signal additionally presents non planet number multiples of carrier rotating frequency. The pinhole position error severity and the input torque jointly affect the load sharing conditions, the number of contacting planets and the system natural frequency. With the increasing pinhole error severity or the decreasing applied input torque, fewer planets bear loads, the stiffness of the whole system decreases, the natural frequency shifts towards a lower range and the load sharing conditions deteriorate. Thus, the additional carrier orders and the shifted natural frequency in the spectrum can evidence the unequal load sharing among planets for diagnostic purposes. In the future, we will investigate the modeling of unequal load sharing among planets with the existence of gear and planet faults.
+\section{Conclusions \label{sec:conclusions}}
+\par We established a vibration signal model of planetary gearboxes and derived the corresponding Fourier spectrum, considering the effects of transfer path, gear meshing vibration, natural vibration, amount of contacting planets and load sharing among planets. Only planet number multiples of carrier rotating frequency appear in the Fourier spectrum of the normal case, while the spectrum of unequal load sharing signal additionally presents non planet number multiples of carrier rotating frequency. The pinhole position error severity and the input torque jointly affect the load sharing conditions, the number of contacting planets and the system natural frequency. With the increasing pinhole error severity or the decreasing applied input torque, fewer planets bear loads, the stiffness of the whole system decreases, the natural frequency shifts towards a lower range and the load sharing conditions deteriorate. Thus, the additional carrier orders and the shifted natural frequency in the spectrum can evidence the unequal load sharing among planets for diagnostic purposes. In the future, we will investigate the modeling of unequal load sharing among planets with the existence of gear and bearing faults.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Appendix %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Appendix\label{Appendix}}
 \begin{figure}[pos=htbp]
