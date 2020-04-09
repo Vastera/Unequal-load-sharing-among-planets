@@ -3,6 +3,29 @@
 \nomenclatureentry{a\(J\)@[{\(J\)}]\begingroup inertia moment\nomeqref {0}|nompageref}{2}
 \nomenclatureentry{a\(k(t)\)@[{\(k(t)\)}]\begingroup stiffness\nomeqref {0}|nompageref}{2}
 \nomenclatureentry{a\(L_i\)@[{\(L_i\)}]\begingroup load sharing ratio of the \(i\)-th planet\nomeqref {0}|nompageref}{2}
-\nomenclatureentry{a\(k_e\)@[{\(k_e\)}]\begingroup effective support stiffness concerning both the bearing and gear meshing\nomeqref {0}|nompageref}{2}
-\nomenclatureentry{a\(r_s\)@[{\(r_s\)}]\begingroup sun gear pitch radius\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a\(k_{\rm e}\)@[{\(k_{\rm e}\)}]\begingroup effective support stiffness concerning both the bearing and gear meshing\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a\(R_{\{\}}\)@[{\(R_{\{\}}\)}]\begingroup gear pitch circle radius\nomeqref {0}|nompageref}{2}
 \nomenclatureentry{a\(T_s\)@[{\(T_s\)}]\begingroup total torque applied on input sun gear\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$M$@[{$M$}]\begingroup planet number\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$L_i$@[{$L_i$}]\begingroup load sharing factor\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$\sigma_{\rm pr},\sigma_{\rm ps}$@[{$\sigma_{\rm pr},\sigma_{\rm ps}$}]\begingroup transfer path effect on planet-ring and planet-sun gears, respectively\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$\xi_{{\rm r}i},\xi_{{\rm s}i}$@[{$\xi_{{\rm r}i},\xi_{{\rm s}i}$}]\begingroup vibration originating from the $i$-th planet-ring and planet-sun gears\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$\Theta_i$@[{$\Theta_i$}]\begingroup nominal position of $i$-th planet\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$\epsilon_i$@[{$\epsilon_i$}]\begingroup position angular error of $i$-th planet center\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$e_i$@[{$e_i$}]\begingroup tangential error of $i$-th planet center\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$\operatorname{III}(t)$@[{$\operatorname{III}(t)$}]\begingroup Dirac comb function\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$\{\}_{\rm r}$, $\{\}_{\rm p}$, $\{\}_{\rm s}$, $\{\}_{\rm c}$@[{$\{\}_{\rm r}$, $\{\}_{\rm p}$, $\{\}_{\rm s}$, $\{\}_{\rm c}$}]\begingroup ring gear, planet, sun gears and carrier, respectively\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$Z_{\{\}}$@[{$Z_{\{\}}$}]\begingroup gear tooth number\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$f_{\{\}}$@[{$f_{\{\}}$}]\begingroup rotating frequency\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$A_{{\rm r}i}$@[{$A_{{\rm r}i}$}]\begingroup impulsive amplitude of $i$-th planet-ring gear meshing\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$A_{{\rm s}i}$@[{$A_{{\rm s}i}$}]\begingroup impulsive amplitude of $i$-th planet-sun gear meshing\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$\varphi_i$@[{$\varphi_i$}]\begingroup phase difference between planet-ring and planet-sun meshing for the $i$-th planet\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$l$@[{$l$}]\begingroup length of a transfer path\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$F$@[{$F$}]\begingroup the strength factor of transfer path effect, proportional to the input torque $T_{\rm s}$\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$a$@[{$a$}]\begingroup attenuation factor of transfer path effect\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$\beta>0$@[{$\beta>0$}]\begingroup tructural damping coefficient\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$f_{\rm n}$@[{$f_{\rm n}$}]\begingroup natural frequency\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a $\mathcal{F}\{\cdot\}$@[{ $\mathcal{F}\{\cdot\}$}]\begingroup Fourier transform\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$\hat{\sigma}_0(f)$@[{$\hat{\sigma}_0(f)$}]\begingroup Fourier spectrum of $\sigma_0(t)$\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$\delta\{\cdot\}$@[{$\delta\{\cdot\}$}]\begingroup Dirac impulse\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{a$\hat{\lambda}(f)$@[{$\hat{\lambda}(f)$}]\begingroup Fourier transform of $\lambda(t)$\nomeqref {0}|nompageref}{2}

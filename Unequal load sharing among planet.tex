@@ -98,15 +98,39 @@
 \nomenclature{\(J\)}{inertia moment}
 \nomenclature{\(k(t)\)}{stiffness}
 \nomenclature{\(L_i\)}{load sharing ratio of the \(i\)-th planet}
-\nomenclature{\(k_e\)}{effective support stiffness concerning both the bearing and gear meshing}
-\nomenclature{\(r_s\)}{sun gear pitch radius}
+\nomenclature{\(k_{\rm e}\)}{effective support stiffness concerning both the bearing and gear meshing}
+\nomenclature{\(R_{\{\}}\)}{gear pitch circle radius}
 \nomenclature{\(T_s\)}{total torque applied on input sun gear}
-    \begin{figure*}
-        \centering
-        \includegraphics[scale=0.6,width=0.8\textwidth,height=1.6in]{spring_mass.pdf}
-        \caption{Vibration system of unequal load sharing among four planets.}
-    \label{fig:vibration_system_of_spring_mass}
-    \end{figure*}
+\nomenclature{$M$}{planet number}
+\nomenclature{$L_i$}{load sharing factor}
+\nomenclature{$\sigma_{\rm pr},\sigma_{\rm ps}$}{transfer path effect on planet-ring and planet-sun gears, respectively}
+\nomenclature{$\xi_{{\rm r}i},\xi_{{\rm s}i}$}{vibration originating from the $i$-th planet-ring and planet-sun gears}
+\nomenclature{$\Theta_i$}{nominal position of $i$-th planet}
+\nomenclature{$\epsilon_i$}{position angular error of $i$-th planet center}
+\nomenclature{$e_i$}{tangential error of $i$-th planet center}
+\nomenclature{$\operatorname{III}(t)$}{Dirac comb function}
+\nomenclature{$\{\}_{\rm r}$, $\{\}_{\rm p}$, $\{\}_{\rm s}$, $\{\}_{\rm c}$}{ring gear, planet, sun gears and carrier, respectively}
+\nomenclature{$Z_{\{\}}$}{gear tooth number}
+\nomenclature{$f_{\{\}}$}{rotating frequency}
+\nomenclature{$A_{{\rm r}i}$}{impulsive amplitude of $i$-th planet-ring gear meshing} 
+\nomenclature{$A_{{\rm s}i}$}{impulsive amplitude of $i$-th planet-sun gear meshing}
+\nomenclature{$\varphi_i$}{phase difference between planet-ring and planet-sun meshing for the $i$-th planet}
+\nomenclature{$l$}{length of a transfer path}
+\nomenclature{$F$}{the strength factor of transfer path effect, proportional to the input torque $T_{\rm s}$}
+\nomenclature{$a$}{attenuation factor of transfer path effect}
+\nomenclature{$\beta>0$}{tructural damping coefficient}
+\nomenclature{$f_{\rm n}$}{natural frequency}
+\nomenclature{ $\mathcal{F}\{\cdot\}$}{Fourier transform}
+\nomenclature{$\hat{\sigma}_0(f)$}{Fourier spectrum of $\sigma_0(t)$}
+\nomenclature{$\delta\{\cdot\}$}{Dirac impulse}
+\nomenclature{$\hat{\lambda}(f)$}{Fourier transform of $\lambda(t)$}
+
+\begin{figure*}
+    \centering
+    \includegraphics[scale=0.6,width=0.8\textwidth,height=1.6in]{spring_mass.pdf}
+    \caption{Vibration system of unequal load sharing among four planets. \textbf{Revise this figure into circle.}}
+\label{fig:vibration_system_of_spring_mass}
+\end{figure*}
 \subsection{General signal model}
 \par A typical layout of planetary gearboxes consists of three kinds of gears mounted so that the centers of planet gears revolves around the center of sun and ring gears. This paper merely discusses the common cases of speed reducers where the sun gear connects with the power input shaft and the carrier works as power output, while vibration sensors are usually mounted on the surface of the stationary ring gear in diagnostic applications. 
 % \begin{figure}[pos=htbp]
@@ -125,26 +149,26 @@
 \begin{equation}
     x(t)=\sum_{i=1}^{M} L_i \cdot \left[ \sigma_{{\rm r}i}(t) \xi_{{\rm r}i}(t) + \sigma_{{\rm s}i}(t) \xi_{{\rm s}i}(t) \right], \label{eq:general_signal}
 \end{equation}
-where $M$ is the planet number, $L_i$ denotes the load sharing coefficient, $\sigma_{\rm pr}$ and $\sigma_{\rm ps}$ denotes transfer path effect on planet-ring and planet-sun gears, respectively, $\xi_{{\rm r}i}$ and $\xi_{{\rm s}i}$ are the vibration originating from the $i$-th planet-ring and planet-sun gears.
+where $M$ is the planet number, $L_i$ denotes the load sharing factor, $\sigma_{\rm pr}$ and $\sigma_{\rm ps}$ denotes transfer path effect on planet-ring and planet-sun gears, respectively, $\xi_{{\rm r}i}$ and $\xi_{{\rm s}i}$ are the vibration originating from the $i$-th planet-ring and planet-sun gears.
 \par Nominally, all planet center distribute along circumference of the carrier evenly. Without loss of generality, the nominal angular position of first planet center is set as zero, and
 \begin{equation}
     \Theta_i=\frac{(i-1)\cdot 2\pi}{M},
 \end{equation}
-where $\Theta_i$ denotes the nominal position of $i$-th planet. In addition, due to the manufacturing or assembling process, each planet center deviates from the nominal position by $\epsilon_i$. If $\epsilon_i>0$, the planet engages with the ring or sun gear in advance, or negative error represents the engagement lag. We can assume $\epsilon_1=0$ in the coordinate system, because these planets locate relatively to each other. Even if $\epsilon_1 \neq 0$, we can also set $\epsilon_i=\epsilon'_i-\epsilon'_1,i \geq 2$, where $\epsilon'_i$ is $i$-th planet error in another coordinate system.
+where $\Theta_i$ denotes the nominal position of $i$-th planet. In addition, due to the manufacturing or assembling process, each planet center deviates along the tangential direction from the nominal position by $\epsilon_i$. If $\epsilon_i>0$, the planet engages with the ring or sun gear in advance, or negative error represents the engagement lag. We can assume $\epsilon_1=0$ in the coordinate system, because these planets locate relatively to each other. Even if $\epsilon_1 \neq 0$, we can also set $\epsilon_i=\epsilon'_i-\epsilon'_1,i \geq 2$, where $\epsilon'_i$ is $i$-th planet error in another coordinate system.
 \par To reveal the spectral structure simply, the gear meshing vibration of each planet is regarded as Dirac comb function $\operatorname{III}(t)=\sum_{i=-\infty}^{+\infty}\delta(t-i)$. The meshing frequency can be calculated by different engaging gears,
 \begin{equation}
     f_{\rm m}=Z_{\rm r} \cdot (f_{\rm r}+f_{\rm c})=Z_{\rm p} \cdot (f_{\rm p}-f_{\rm c})=Z_{\rm s} \cdot (f_{\rm s}-f_{\rm c}). \label{eq:meshing_frequency}
 \end{equation}
-where $\{\}_{\rm r}$, $\{\}_{\rm p}$, $\{\}_{\rm s}$, $\{\}_{\rm c}$ denote ring gear, planet, sun gears and carrier, respectively; $Z_{\{\}}$ is the gear number and $f_{\{\}}$ is the rotating frequency. 
+where $\{\}_{\rm r}$, $\{\}_{\rm p}$, $\{\}_{\rm s}$, $\{\}_{\rm c}$ denote ring gear, planet, sun gears and carrier, respectively; $Z_{\{\}}$ is the gear tooth number and $f_{\{\}}$ is the rotating frequency. 
 \par For planet-ring gears, the planet angular position error bring about the time shift. The time shift is the angular error divided by the relatively rotating velocity. Thus, the planet-ring meshing vibration can be written as
 \begin{equation}
     \xi_{{\rm r}i}(t)=A_{{\rm r}i}\operatorname{III}\left[f_{\rm m} \cdot (t-\frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}})\right],\label{eq:planet-ring_meshing}
 \end{equation}
-where $A_{{\rm r}i}$ is the impulsive amplitude of $i$-th planet-ring gear meshing, the $f_{\rm m}$ is the meshing frequency. Park et al. propose the difference between planet-ring and planet-sun meshing phase \cite{Parker2004}. Similarly, the planet-sun meshing vibration is
+where $A_{{\rm r}i}$ is the impulsive amplitude of $i$-th planet-ring gear meshing, $f_{\rm m}$ is the meshing frequency. Park et al. propose the difference between planet-ring and planet-sun meshing phase \cite{Parker2004}. Similarly, the planet-sun meshing vibration is
 \begin{equation}
     \xi_{{\rm s}i}(t)=A_{{\rm s}i} \operatorname{III}\left[f_{\rm m} \cdot (t + \frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm s}- 2 \pi f_{\rm c}})+ \frac{\varphi_i}{2 \pi} \right],\label{eq:planet-sun_meshing}
 \end{equation}
-where $A_{{\rm r}i}$ is the impulsive amplitude of $i$-th planet-sun gear meshing, $\varphi_i$ is the phase difference between planet-ring and planet-sun meshing for the $i$-th planet.
+where $A_{{\rm s}i}$ is the impulsive amplitude of $i$-th planet-sun gear meshing, $\varphi_i$ is the phase difference between planet-ring and planet-sun meshing for the $i$-th planet.
 %%%%%%%%%%%%%%%%%%%%%%%% Algorithm of load sharing factors %%%%%%%%%%%
 \subsection{Algorithm of load sharing factors\label{sec:algorithm_load_sharing}}
 \par Ligata et al. proposed an algorithm to calculate the load sharing factor through analogizing the in-plane torque balance problem to the 3-D force and torque balance problem \cite{Ligata2009}.
@@ -212,7 +236,7 @@ where $A_{{\rm r}i}$ is the impulsive amplitude of $i$-th planet-sun gear meshin
         +\infty, \quad \text{otherwise}
     \end{cases},
 \end{equation}
-where $M$ is the planet number. The path 4 is the sum of the diameter of the planet pitch circle and $l_{{\rm r}i}$,
+The path 4 is the sum of the diameter of the planet pitch circle and $l_{{\rm r}i}$,
 \begin{equation}
     l_{{\rm s}i}(t)=l_{{\rm r}i}+2 R_{\rm p}. \label{eq:path_4_length}
 \end{equation}
@@ -261,7 +285,7 @@ where $\beta>0$ is the structural damping coefficient, $f_{\rm n}$ is the natura
 \end{equation}
 where $\ast$ denotes convolution.
 \par For machines with the same configuration, when the load distribution of the planet is uneven, the contact stiffness of the transfer path of each planet inside the planetary gearbox will decrease relative to the case of the uniform load distribution. As a result, The decrease of internal contact stiffness will lead to the decrease of natural frequency of the whole system. Therefore, the variation of the system's natural frequency can be used as a circumstantial evidence to diagnose the load distribution among planets.
-\par If the planet pinhole distribute evenly on the carrier, the number of the planets bearing the input load varies as the applied load increases gradually. When the load starts at almost zero, only three planets or one pair of diagonal planets simultaneously engaging with sun and ring gear \cite{Ligata2009}. In this circumstance, load sharing coefficients $L_i=0$ for the unloaded planets. With the ascending input load, another pair of gears get involved. At the same time, the entire transmission system stiffen because more gears support the connection between the input and output. The natural frequency rises along with the system stiffness because the natural frequency equals the square root of stiffness over mass.
+\par If the planet pinhole distribute evenly on the carrier, the number of the planets bearing the input load varies as the applied load increases gradually. When the load starts at almost zero, only three planets or one pair of diagonal planets simultaneously engaging with sun and ring gear \cite{Ligata2009}. In this circumstance, load sharing factors $L_i=0$ for the unloaded planets. With the ascending input load, another pair of gears get involved. At the same time, the entire transmission system stiffen because more gears support the connection between the input and output. The natural frequency rises along with the system stiffness because the natural frequency equals the square root of stiffness over mass.
 \section{Spectral structure \label{sec:spectral_structure}}
 \par In this section, we will derive the spectral structure of the above proposed signal model for the in-depth understanding of planetary gearbox vibration. Because natural vibration merely affects the spectral envelope shape, we can consider it separately later on. The gear meshing vibration (Eq. (\ref{eq:planet-ring_meshing}) and Eq. (\ref{eq:planet-sun_meshing})) and transfer path effect arising from the carrier rotation $\sigma_{i}(t)$ are periodic with periods $1/f_{\rm m}$ and $1/f_{\rm c}$, respectively. According to Eq. (\ref{eq:meshing_frequency}) and $f_{\rm r}=0$, $f_{\rm m}=Z_{r} \cdot f_{\rm c}$. Apply Fourier transform to the planet-ring vibration, yields
 \begin{equation}
@@ -273,7 +297,7 @@ where $\ast$ denotes convolution.
 =&A_{{\rm r}i} \cdot \frac{\hat{\sigma}_0(f)}{2 \pi Z_{\rm r} f_{\rm c}^{2}} \cdot \sum_{m=-\infty}^{+\infty} \sum_{n=-\infty}^{+\infty} \delta\left[f-(mZ_{\rm r}+n)f_{\rm c}\right] \exp\left[-{\rm j}(m Z_{\rm r}+n)(\epsilon_i+\Theta_i)\right].
 \end{split}
 \end{equation}
-where $\mathcal{F}\{\cdot\}$ denotes Fourier transform, $\hat{\sigma}_0(f)$ is the Fourier spectrum of $\sigma_0(t)$, $\delta\{\cdot\}$ denotes Dirac impulse, $\ast$ denotes convolve. The convolution between two Dirac comb functions equals the summation of all shifted Dirac impulses. Similarly,  the $i$-th planet-sun gear vibration is:
+where $\mathcal{F}\{\cdot\}$ denotes Fourier transform, $\hat{\sigma}_0(f)$ is the Fourier spectrum of $\sigma_0(t)$, $\delta\{\cdot\}$ denotes Dirac impulse. The convolution between two Dirac comb functions equals the summation of all shifted Dirac impulses. Similarly,  the $i$-th planet-sun gear vibration is:
 \begin{equation}
     \begin{split}
         \mathcal{F}\left[\sigma_{{\rm s}i}(t) \xi_{{\rm s}i}(t)\right]&=\mathcal{F}\left\{ \eta \cdot \sigma_0(t) \ast \operatorname{III}\left[f_{\rm c}(t-\frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}})\right] \cdot A_{{\rm s}i} \operatorname{III} \left[ f_{\rm m} \cdot (t+ \frac{\epsilon_i+\Theta_i}{2\pi f_{\rm s} -2\pi f_{\rm c}} ) +\frac{\varphi_i}{2\pi} \right] \right\}\\

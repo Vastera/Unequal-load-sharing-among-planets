@@ -7,8 +7,8 @@ Scanning style file c:/texlive/2018/texmf-dist/makeindex/nomencl/nomencl.ist....
 ** Input style error (file = c:/texlive/2018/texmf-dist/makeindex/nomencl/nomencl.ist, line = 72):
    -- Unknown specifier lethead_flag.
 ...done (10 attributes redefined, 3 ignored).
-Scanning input file c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets\Unequal load sharing among planet.nlo....done (8 entries accepted, 0 rejected).
-Sorting entries....done (23 comparisons).
-Generating output file c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets\Unequal load sharing among planet.nls....done (20 lines written, 0 warnings).
+Scanning input file c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets\Unequal load sharing among planet.nlo....done (31 entries accepted, 0 rejected).
+Sorting entries....done (158 comparisons).
+Generating output file c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets\Unequal load sharing among planet.nls....done (65 lines written, 0 warnings).
 Output written in c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets\Unequal load sharing among planet.nls.
 Transcript written in c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets\Unequal load sharing among planet.ilg.
