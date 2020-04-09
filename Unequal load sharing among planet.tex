@@ -79,7 +79,7 @@
     \item Increasing the input torque can alleviate the planet load inequality \cite{Ligata2008}.
     \item Increasing the planet number without tightening manufacturing error tolerance will deteriorate the load sharing condition \cite{Singh2005}.
 \end{itemize}
-\par Vibration signal modelling can bridge the physical mechanism of the system and the mathematical expression both in time domain and frequency domain, facilitating the further fault diagnosis of unequal load sharing and other components. McFadden and Smith \cite{McFadden1985} probably firstly proposed that the asymmetry sidebands around the meshing frequency is ascribed to the planet revolution motion relative to the fixed transducer mounted on the ring gear. The established models of vibration signal indicates the planet number multiples of carrier order in spectrum are arisen from the planet motion. This feature originates from the signal acquisition method but not the inherent vibration of planetary gearboxes. Inalpolat and Kahraman \cite{Inalpolat2009} took planet phases into account and classified planetary gearboxes into five classes according to their planet angular positions (equally spaced or unequally spaced) and phases conditions (in phase, sequentially spaced, arbitrary phases). Mark and Hines \cite{Mark2009} derived the Fourier-series spectrum of fixed transducer response mounted on the ring gear and well explained the unequal load sharing will lead to the harmonics at non planet number multiples of tooth meshing. Lei \cite{Lei2016} et al. proposed a phenomenological model containing the meshing vibration between the sun gear and planets as well as the effects of gear faults, further verifying the conclusions in Mark's paper.
+\par Vibration signal modelling can bridge between the physical mechanism of the system and the mathematical expression both in time domain and frequency domain, facilitating the further fault diagnosis of unequal load sharing and other components. McFadden and Smith \cite{McFadden1985} probably firstly proposed that the asymmetry sidebands around the meshing frequency is ascribed to the planet revolution motion relative to the fixed transducer mounted on the ring gear. The established models of vibration signal indicates the planet number multiples of carrier order in spectrum are arisen from the planet motion. This feature originates from the signal acquisition method but not the inherent vibration of planetary gearboxes. Inalpolat and Kahraman \cite{Inalpolat2009} took planet phases into account and classified planetary gearboxes into five classes according to their planet angular positions (equally spaced or unequally spaced) and phases conditions (in phase, sequentially spaced, arbitrary phases). Mark and Hines \cite{Mark2009} derived the Fourier-series spectrum of fixed transducer response mounted on the ring gear and well explained the unequal load sharing will lead to the harmonics at non planet number multiples of tooth meshing. Lei \cite{Lei2016} et al. proposed a phenomenological model containing the meshing vibration between the sun gear and planets as well as the effects of gear faults, further verifying the conclusions in Mark's paper.
 \par The vibration signal model proposed in this paper based on and extends these models in the above references. We  can find that natural vibration excited by the gear meshing cannot be omitted, because it globally shapes the signal envelope in frequency domain. In addition, the assumption that all planets are engaging with sun or ring gear is invalid in cases where the manufacturing errors are severe or the input torques are relatively low, especially for planet number is more than four. When some planets lose connection with sun or ring gears, the natural frequency will also shifts due to the decreased system stiffness. The derived Fourier spectrum with these considerations can better agree with the practical circumstances. As the planet number, error severity and input torque vary, the signal model and its corresponding spectral evolves. All these factors will be discussed in this paper.
 \par Section \ref{sec:signal_model} introduces the vibration signal model. The Fourier spectrum is derived in Section \ref{sec:spectral_structure}. Section \ref{sec:factor_discussion} discusses the influence of main factors in the signal model. Experimental verification is presented in Section \ref{sec:experimental_validation}. At last, Section \ref{sec:conclusions} concludes the above investigation. 
 %%%%%%%%%%%%%%% References %%%%%%%%%%%%%%%%%
@@ -108,18 +108,18 @@
     \label{fig:vibration_system_of_spring_mass}
     \end{figure*}
 \subsection{General signal model}
-\par A typical layout of planetary gearboxes consists of three kinds of gears mounted so that the centers of planet gears revolves around the center of sun and ring gears, as shown in Fig. \ref{fig:planetary_gearbox_layout}. This paper merely discusses the common cases of speed reducers where the sun gear connects with the power input shaft and the carrier works as power output, while vibration sensors are usually mounted on the surface of the stationary ring gear in diagnostic applications. 
-\begin{figure}[pos=htbp]
-    \centering
-    \begin{annotate}{\includegraphics[width=0.3\textwidth]{Planetary_Gearbox.PNG}}{0.3}
-        \callout{-8,-7}{Ring gear}{-5,-5.8}
-        \callout{8,-7}{Planet gear}{4,-5.5}
-        \callout{-8,7}{Sun gear}{-0.8,1.2}
-        \callout{8,7}{Carrier}{4.5,1}
-    \end{annotate}
-    \caption{Configuration of planetary gearboxes.}
-    \label{fig:planetary_gearbox_layout}
-\end{figure}
+\par A typical layout of planetary gearboxes consists of three kinds of gears mounted so that the centers of planet gears revolves around the center of sun and ring gears. This paper merely discusses the common cases of speed reducers where the sun gear connects with the power input shaft and the carrier works as power output, while vibration sensors are usually mounted on the surface of the stationary ring gear in diagnostic applications. 
+% \begin{figure}[pos=htbp]
+%     \centering
+%     \begin{annotate}{\includegraphics[width=0.3\textwidth]{Planetary_Gearbox.PNG}}{0.3}
+%         \callout{-8,-7}{Ring gear}{-5,-5.8}
+%         \callout{8,-7}{Planet gear}{4,-5.5}
+%         \callout{-8,7}{Sun gear}{-0.8,1.2}
+%         \callout{8,7}{Carrier}{4.5,1}
+%     \end{annotate}
+%     \caption{Configuration of planetary gearboxes.}
+%     \label{fig:planetary_gearbox_layout}
+% \end{figure}
 \par The vibration in planetary gearboxes mainly origins from the meshing of gears \cite{Velex1996}. When the planet gears engage with the ring gear or sun gear, the number of the involved tooth varies with the relative rotation between gears and their contact stiffness changes consequently. The transmission load nominally remains constant and the gearbox is a parametrically excited multi-degree-freedom system \cite{Acar2019}. 
 \par The signal model perceived by the stationary transducer on the gearbox housing can be modelled as the summation of all planet vibration considering transfer path effects. The impulsive intensity of gear meshing is assumed to proportional to the load applied on each planet. The vibration of each planet is divided into planet-ring and planet-sun parts. Thus, the general signal model is
 \begin{equation}
@@ -145,16 +145,51 @@ where $A_{{\rm r}i}$ is the impulsive amplitude of $i$-th planet-ring gear meshi
     \xi_{{\rm s}i}(t)=A_{{\rm s}i} \operatorname{III}\left[f_{\rm m} \cdot (t + \frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm s}- 2 \pi f_{\rm c}})+ \frac{\varphi_i}{2 \pi} \right],\label{eq:planet-sun_meshing}
 \end{equation}
 where $A_{{\rm r}i}$ is the impulsive amplitude of $i$-th planet-sun gear meshing, $\varphi_i$ is the phase difference between planet-ring and planet-sun meshing for the $i$-th planet.
-\subsection{Algorithm of load sharing coefficients\label{sec:algorithm_load_sharing}}
-\par The multiple paralleled power paths formed by planets can sharing torque load. This merit of planetary gearboxes will compromise when the load sharing inequality occurs. The position errors of planet pinholes or bearings in the tangential (circumferential) direction happening in manufacturing and assembling lead to the non-uniform loads on planets \cite{Singh2010511-530}. To partly centralize the uneven load, planetary gearboxes usually permit at least one floating central member (sun gear or carrier). The formula of load sharing ratio of a 4-planet planetary gearbox as follows \cite{Ligata2009}
-\begin{equation}
-    k_{\rm e}=\frac{1}{k_{\rm rp}+k_{\rm sp}}+\frac{1}{k_{\rm b}},\label{eq:stiffness}
-\end{equation}
-where $k_{\rm rp}$ and $k_{\rm sp}$ are the meshing stiffness of planet-ring and planet-sun, respectively, $k_{\rm b}$ is the planet bearing stiffness.
-\begin{equation}
-    e_{i}=2(R_{\rm r}-R_{\rm p})\sin(\epsilon_{i}/2)\cos(\epsilon_{i}/2),\label{eq:tangential_error}
-\end{equation}
-where $R_{\rm p}$ is the planet radius, $R_{\rm s}$ is the sun radius, $\epsilon_{i}$ is the angular position error the $i$-th planet.
+%%%%%%%%%%%%%%%%%%%%%%%% Algorithm of load sharing factors %%%%%%%%%%%
+\subsection{Algorithm of load sharing factors\label{sec:algorithm_load_sharing}}
+\par Ligata et al. proposed an algorithm to calculate the load sharing factor through analogizing the in-plane torque balance problem to the 3-D force and torque balance problem \cite{Ligata2009}.
+\begin{enumerate}
+    \item Initialization of parameters. Analogize the torque balance model with the planet center circle to the force and moment balance model in the axial direction perpendicular to the planet center plane.  Analogize the planet gears to springs with the same stiffness $1/k_{\rm e}=1/(k_{\rm rp}+k_{\rm sp})+1/k_{\rm b}$, where $k_{\rm rp}=2.57\times 10^8$ and $k_{\rm sp}=1.67\times 10^8$ are the meshing stiffness of planet-ring and planet-sun, respectively, $k_{\rm b}=3.2\times 10^7$ is the planet bearing stiffness. The pinhole errors is equivalent to length of spring in the axial direction $z_i=e_i=2(R_{\rm r}-R_{\rm p})\sin(\epsilon_i/2)\cos(\epsilon_i/2)$, where $R_{\rm p}$ is the planet radius, $R_{\rm s}$ is the sun radius, $\epsilon_{i}$ is the angular position error the $i$-th planet. The locations of springs accord with planet pinhole positions the planet center plane, $x_i=-(R_{\rm p}+R_{\rm s})\sin(\Theta_i+\epsilon_i)$ , $y_i=(R_{\rm p}+R_{\rm s})\cos(\Theta_i+\epsilon_i)$. The input torque equals the axial load on a plate pushing on the springs, $W=2T_{\rm s}/R_{\rm s}$.  The rocking motions $\phi_x$ and $\phi_y$ of the plate are analogous to the floating motions of the central member in the x and y directions. The radius of the circle where planet centers locate at is $R_{\rm b}=R_{\rm s}+R_{\rm p}$.
+    \item Determine the initial disposition of \textit{planet center plate}. The first contacting point $J=\mathop{\arg\max}\limits_{i}(z_i)$. Define a line  tangent to the circle on plane  $P_1$ (parallel with the x-y plane) and anther point $Q$ also on the line $y_Q=-(x_Q-x_J)x_J/y_J+y_J$. Define the plane $P_2$ by three points $J, Q, K$:
+    \begin{equation}
+        \begin{split}
+        a x+ b y+ c z+ d=0,\\
+        a= \left(y_Q-y_J\right)\left(z_K-z_J\right)-\left(y_K-y_J\right) \left(z_Q-z_J\right),\\
+        b=\left(x_K-x_J\right) \left(z_Q-z_J\right)-\left(x_Q-x_J\right) \left(z_K-z_J\right),\\
+        c=\left(y_K-y_J\right) \left(x_Q-x_J\right)-\left(y_Q-y_J\right) \left(x_K-y_J\right),\\
+        d=x_Q \left(y_J z_K-z_J y_K\right)+x_J \left(y_K z_Q-z_K y_Q\right)+x_K \left(z_J y_Q-y_J z_Q\right).
+        \end{split} 
+    \end{equation}
+    \item Transverse all $K\neq J$ to find the second point $K$ satisfying $K=\mathop{\arg\max}\limits_{K \neq J}\left\{\arccos\left[\frac{|c|}{\sqrt{a^2+b^2+c^2}}\right]\right\}$. Define the plane  $P_3$  by the three points $J, K, N$. Recalculate the corresponding $a, b,c$ for plane $P_3$. The third point $N=\mathop{\arg\max}\limits_{N \neq J,K}\left\{\arccos\left[\frac{|c|}{\sqrt{a^2+b^2+c^2}}\right]\right\}$.
+    \item Verify whether the load  application point $C$ (origin point) is within the triangle $J,K,N$ via crossing between the vectors formed by three sides, otherwise repeat the step 4.
+    \item Calculate the supporting forces of three points ($J,K,N$) by applying the force and moment balance equations.
+    \begin{equation}
+        \begin{split}
+        \sum F_i=W,\\
+        M_x=\sum F_i\cdot y_i=0,\\
+        M_y=\sum F_i\cdot x_i=0, \label{eq:force_equilibrium}
+        \end{split}
+    \end{equation}
+    \item Consider the case of more than three supporting planets. Obtain the $i$-th spring deflection $\delta_i=\frac{F_i}{k_e}$. Update the coordinates on the new plane $P_d$: $z^d_i=z_i-\delta_i$, as well as the $a,b,c,d$. Recalculate the coordinates of other points.
+    \item For $H\neq J,K,N$, if the origin length protrude the plane $P_d$:$z_H>z^d_H$, chose $G_1,G_2$ from $J,K,N$ to satisfy load application point $C$ is within triangel $HG_1G_2$, the other residual point is denoted by $B$. Add the following equation to the Eq. \ref{eq:force_equilibrium}.
+    \begin{equation}
+        F_{G_1}A_1+F_{G_2}A_2+F_B A_3 F_H A_4=k_{\rm e}Y.
+    \end{equation}
+    where
+    \begin{equation}
+        \begin{split}
+            Y=[A_1,A_2,A_3,A_4] \cdot [z_{G_1};z_{G_2};z_B;z_H],\\
+            \eta=\frac{(x_{G_2}-x_{G_1})(y_B-y_{G1})-(x_B-x_{G_1})(y_{G_2}-y_{G_1})}{(x_{G_2}-x_{G_1})(y_H-y_{G_1})-(x_H-x_{G_1})(y_{G_2}-y_{G_1})},\\
+            A_1=(\eta-1)y_{G_2}+y_B-\eta y_H,    A_2=(1-\eta)y_{G_1}-y_B+\eta y_H,\\
+            A_3=y_{G_2}-y_{G_1},A_4=y_{G_2}-y_{G_1}.
+        \end{split}
+    \end{equation}
+    \item Repeat the step 7 for all springs in contact with the plate after the load $W$ is applied. Generally if the contacting planets are more than 3, $N_C>3$, add $N_C-3$ equations:
+    \begin{equation}
+        F_{G_{1m}}A_{1m}+F_{G_{2m}}A_{2m}+F_{Bm}A_{3m}-F_{Hm}A_{4m}=K_{\rm e}Y_m,\quad m\in[1,N_C-3].
+    \end{equation}
+    \item Finally, the load sharing factors are $L_i=F_i/W$.
+\end{enumerate}
 \begin{figure}[pos=htbp]
     \centering
     \includegraphics[scale=0.5]{tangential_error.pdf}
@@ -295,7 +330,7 @@ where $\hat{\lambda}(f)$ is the Fourier transform of $\lambda(t)$:
 \section{Discussion on model factors\label{sec:factor_discussion}}
 \par We use MATLAB\textsuperscript \textregistered \ to simulate the proposed signal model. To validate the generality of the propose model, we take different planet pinhole position errors, planet numbers and input torques into account. The simulation parameters are listed in Table \ref{}.
 \par In general, if the planet locates the nominal position, only the planet number multiples of carrier harmonics appear (give more specific results in figures), which accords with the Eq. (\ref{eq:carrier_harmonic_ring}) and Eq. (\ref{eq:carrier_harmonic_sun}). When the planet center deviates from the nominal position, other carrier orders emerges. Differing from the conclusion in \cite{Mark2009}, the dominant planet number multiple peaks do not shrink too, because we also consider the phase modulation induced by the pinhole position errors. 
-\par Fig. \ref{fig:overview_normal_fourier} and Fig. \ref{fig:Shifted_natural_frequency} explain the mechanism of shifted natural frequency -- the resonance frequency shift from 300Hz to 400Hz. With the limited measurement conditions about natural frequency in industrial applications, the above natural frequency shift can only be validated qualitatively. The signal model in Eq. (\ref{eq:final_signal_model}) indicates the natural frequency affects the spectral envelope shape. As the load increases, the envelope peak shifting to a higher frequency signifies the unequal load sharing among planets. 
+\par Fig. \ref{fig:Shifted_natural_frequency} explain the mechanism of shifted natural frequency -- the resonance frequency shift from 300Hz to 400Hz. With the limited measurement conditions about natural frequency in industrial applications, the above natural frequency shift can only be validated qualitatively. The signal model in Eq. (\ref{eq:final_signal_model}) indicates the natural frequency affects the spectral envelope shape. As the load increases, the envelope peak shifting to a higher frequency signifies the unequal load sharing among planets. 
 
 \begin{figure}[pos=htbp]
     \centering

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.21)  7 APR 2020 20:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.21)  9 APR 2020 14:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2017,7 +2017,7 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 ual load sharing among planet.aux
 
 c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets/Unequ
-al load sharing among planet.aux:142: Package natbib Error: Bibliography not co
+al load sharing among planet.aux:138: Package natbib Error: Bibliography not co
 mpatible with author-year citations.
 (natbib)                Press <return> to continue in numerical citation style.
 
@@ -2026,7 +2026,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.142 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.138 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
 Check the bibliography entries for non-compliant syntax,
 or select author-year BibTeX style, e.g. plainnat
@@ -2320,39 +2320,31 @@ Package pdftex.def Info: Figures/spring_mass.pdf  used on input line 106.
 (pdftex.def)             Requested size: 194.24217pt x 78.3238pt.
 LaTeX Font Info:    Font shape `T1/stix/bx/n' in size <11> not available
 (Font)              Font shape `T1/stix/b/n' tried instead on input line 110.
-<Figures/Planetary_Gearbox.PNG, id=55, 589.9641pt x 604.8999pt>
-File: Figures/Planetary_Gearbox.PNG Graphic file (type png)
-<use Figures/Planetary_Gearbox.PNG>
-Package pdftex.def Info: Figures/Planetary_Gearbox.PNG  used on input line 114.
-
-(pdftex.def)             Requested size: 140.50114pt x 144.05287pt.
-\xtic=\dimen355
-\ytic=\dimen356
-[2 <./Figures/spring_mass.pdf>] [3 <./Figures/Planetary_Gearbox.PNG>]
-<Figures/tangential_error.pdf, id=110, 401.81416pt x 287.35558pt>
+[2 <./Figures/spring_mass.pdf>] [3] [4]
+<Figures/tangential_error.pdf, id=126, 401.81416pt x 287.35558pt>
 File: Figures/tangential_error.pdf Graphic file (type pdf)
 <use Figures/tangential_error.pdf>
-Package pdftex.def Info: Figures/tangential_error.pdf  used on input line 160.
+Package pdftex.def Info: Figures/tangential_error.pdf  used on input line 195.
 (pdftex.def)             Requested size: 200.90659pt x 143.67743pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Figures/transfer_path.pdf): PDF inclusion:
  found PDF version <1.6>, but at most version <1.5> allowed
-<Figures/transfer_path.pdf, id=118, 350.57976pt x 303.21481pt>
+<Figures/transfer_path.pdf, id=134, 350.57976pt x 303.21481pt>
 File: Figures/transfer_path.pdf Graphic file (type pdf)
 <use Figures/transfer_path.pdf>
-Package pdftex.def Info: Figures/transfer_path.pdf  used on input line 169.
+Package pdftex.def Info: Figures/transfer_path.pdf  used on input line 204.
 (pdftex.def)             Requested size: 175.28944pt x 151.60703pt.
-[4 <./Figures/tangential_error.pdf>]
-<Figures/trangle_wave.pdf, id=154, 273.95952pt x 180.47926pt>
+[5 <./Figures/tangential_error.pdf> <./Figures/transfer_path.pdf>]
+<Figures/trangle_wave.pdf, id=172, 273.95952pt x 180.47926pt>
 File: Figures/trangle_wave.pdf Graphic file (type pdf)
 <use Figures/trangle_wave.pdf>
-Package pdftex.def Info: Figures/trangle_wave.pdf  used on input line 186.
+Package pdftex.def Info: Figures/trangle_wave.pdf  used on input line 221.
 (pdftex.def)             Requested size: 136.97942pt x 90.2394pt.
- [5 <./Figures/transfer_path.pdf> <./Figures/trangle_wave.pdf>] [6] [7]
+ [6 <./Figures/trangle_wave.pdf>] [7]
 
 c:/Users/Lenovo/Documents/LaTeX_Papers/Unequal load sharing among planets/Unequ
-al load sharing among planet.tex:267: Package amsmath Error: Erroneous nesting 
+al load sharing among planet.tex:302: Package amsmath Error: Erroneous nesting 
 of equation structures;
 (amsmath)                trying to recover with `aligned'.
 
@@ -2360,256 +2352,255 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.267     \end{align}
+l.302     \end{align}
                      ,%planet-sun part
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [8]
 LaTeX Font Info:    Font shape `T1/stix/bx/n' in size <10> not available
-(Font)              Font shape `T1/stix/b/n' tried instead on input line 296.
+(Font)              Font shape `T1/stix/b/n' tried instead on input line 331.
 
 
-LaTeX Warning: Reference `' on page 9 undefined on input line 296.
+LaTeX Warning: Reference `' on page 9 undefined on input line 331.
 
 
 LaTeX Warning: Reference `fig:overview_normal_fourier' on page 9 undefined on i
-nput line 298.
+nput line 333.
 
-<Figures/Shifted_natural_frequency.pdf, id=232, 341.275pt x 170.6375pt>
+<Figures/Shifted_natural_frequency.pdf, id=235, 341.275pt x 170.6375pt>
 File: Figures/Shifted_natural_frequency.pdf Graphic file (type pdf)
 <use Figures/Shifted_natural_frequency.pdf>
 Package pdftex.def Info: Figures/Shifted_natural_frequency.pdf  used on input l
-ine 302.
+ine 337.
 (pdftex.def)             Requested size: 341.27415pt x 170.63707pt.
+[9]
 
-LaTeX Warning: Reference `fig:overview_normal_fourier' on page 9 undefined on i
-nput line 306.
+LaTeX Warning: Reference `fig:overview_normal_fourier' on page 10 undefined on 
+input line 341.
 
-<Figures/Time_p3_normal.pdf, id=235, 341.275pt x 170.6375pt>
+<Figures/Time_p3_normal.pdf, id=249, 341.275pt x 170.6375pt>
 File: Figures/Time_p3_normal.pdf Graphic file (type pdf)
 <use Figures/Time_p3_normal.pdf>
-Package pdftex.def Info: Figures/Time_p3_normal.pdf  used on input line 311.
+Package pdftex.def Info: Figures/Time_p3_normal.pdf  used on input line 346.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Time_p3_fault.pdf, id=236, 341.275pt x 170.6375pt>
+<Figures/Time_p3_fault.pdf, id=250, 341.275pt x 170.6375pt>
 File: Figures/Time_p3_fault.pdf Graphic file (type pdf)
 <use Figures/Time_p3_fault.pdf>
-Package pdftex.def Info: Figures/Time_p3_fault.pdf  used on input line 312.
+Package pdftex.def Info: Figures/Time_p3_fault.pdf  used on input line 347.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Freq_p3_normal.pdf, id=237, 341.275pt x 170.6375pt>
+<Figures/Freq_p3_normal.pdf, id=251, 341.275pt x 170.6375pt>
 File: Figures/Freq_p3_normal.pdf Graphic file (type pdf)
 <use Figures/Freq_p3_normal.pdf>
-Package pdftex.def Info: Figures/Freq_p3_normal.pdf  used on input line 313.
+Package pdftex.def Info: Figures/Freq_p3_normal.pdf  used on input line 348.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Freq_p3_fault.pdf, id=238, 341.275pt x 170.6375pt>
+<Figures/Freq_p3_fault.pdf, id=252, 341.275pt x 170.6375pt>
 File: Figures/Freq_p3_fault.pdf Graphic file (type pdf)
 <use Figures/Freq_p3_fault.pdf>
-Package pdftex.def Info: Figures/Freq_p3_fault.pdf  used on input line 314.
+Package pdftex.def Info: Figures/Freq_p3_fault.pdf  used on input line 349.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Time_p4_normal.pdf, id=241, 341.275pt x 170.6375pt>
+<Figures/Time_p4_normal.pdf, id=255, 341.275pt x 170.6375pt>
 File: Figures/Time_p4_normal.pdf Graphic file (type pdf)
 <use Figures/Time_p4_normal.pdf>
-Package pdftex.def Info: Figures/Time_p4_normal.pdf  used on input line 321.
+Package pdftex.def Info: Figures/Time_p4_normal.pdf  used on input line 356.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Time_p4_fault.pdf, id=242, 341.275pt x 170.6375pt>
+<Figures/Time_p4_fault.pdf, id=256, 341.275pt x 170.6375pt>
 File: Figures/Time_p4_fault.pdf Graphic file (type pdf)
 <use Figures/Time_p4_fault.pdf>
-Package pdftex.def Info: Figures/Time_p4_fault.pdf  used on input line 322.
+Package pdftex.def Info: Figures/Time_p4_fault.pdf  used on input line 357.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Freq_p4_normal.pdf, id=243, 341.275pt x 170.6375pt>
+<Figures/Freq_p4_normal.pdf, id=257, 341.275pt x 170.6375pt>
 File: Figures/Freq_p4_normal.pdf Graphic file (type pdf)
 <use Figures/Freq_p4_normal.pdf>
-Package pdftex.def Info: Figures/Freq_p4_normal.pdf  used on input line 323.
+Package pdftex.def Info: Figures/Freq_p4_normal.pdf  used on input line 358.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Freq_p4_fault.pdf, id=244, 341.275pt x 170.6375pt>
+<Figures/Freq_p4_fault.pdf, id=258, 341.275pt x 170.6375pt>
 File: Figures/Freq_p4_fault.pdf Graphic file (type pdf)
 <use Figures/Freq_p4_fault.pdf>
-Package pdftex.def Info: Figures/Freq_p4_fault.pdf  used on input line 324.
+Package pdftex.def Info: Figures/Freq_p4_fault.pdf  used on input line 359.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-[9 <./Figures/Shifted_natural_frequency.pdf>]
-<Figures/Time_p5_normal_L30.pdf, id=258, 341.275pt x 170.6375pt>
+[10 <./Figures/Shifted_natural_frequency.pdf> <./Figures/Time_p3_normal.pdf> <.
+/Figures/Time_p3_fault.pdf> <./Figures/Freq_p3_normal.pdf> <./Figures/Freq_p3_f
+ault.pdf>]
+<Figures/Time_p5_normal_L30.pdf, id=279, 341.275pt x 170.6375pt>
 File: Figures/Time_p5_normal_L30.pdf Graphic file (type pdf)
 <use Figures/Time_p5_normal_L30.pdf>
-Package pdftex.def Info: Figures/Time_p5_normal_L30.pdf  used on input line 333
+Package pdftex.def Info: Figures/Time_p5_normal_L30.pdf  used on input line 368
 .
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Time_p5_normal_L300.pdf, id=259, 341.275pt x 170.6375pt>
+<Figures/Time_p5_normal_L300.pdf, id=280, 341.275pt x 170.6375pt>
 File: Figures/Time_p5_normal_L300.pdf Graphic file (type pdf)
 <use Figures/Time_p5_normal_L300.pdf>
-Package pdftex.def Info: Figures/Time_p5_normal_L300.pdf  used on input line 33
-4.
+Package pdftex.def Info: Figures/Time_p5_normal_L300.pdf  used on input line 36
+9.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Freq_p5_normal_L30.pdf, id=260, 341.275pt x 170.6375pt>
+<Figures/Freq_p5_normal_L30.pdf, id=281, 341.275pt x 170.6375pt>
 File: Figures/Freq_p5_normal_L30.pdf Graphic file (type pdf)
 <use Figures/Freq_p5_normal_L30.pdf>
-Package pdftex.def Info: Figures/Freq_p5_normal_L30.pdf  used on input line 335
+Package pdftex.def Info: Figures/Freq_p5_normal_L30.pdf  used on input line 370
 .
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Freq_p5_normal_L300.pdf, id=261, 341.275pt x 170.6375pt>
+<Figures/Freq_p5_normal_L300.pdf, id=282, 341.275pt x 170.6375pt>
 File: Figures/Freq_p5_normal_L300.pdf Graphic file (type pdf)
 <use Figures/Freq_p5_normal_L300.pdf>
-Package pdftex.def Info: Figures/Freq_p5_normal_L300.pdf  used on input line 33
-6.
+Package pdftex.def Info: Figures/Freq_p5_normal_L300.pdf  used on input line 37
+1.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Time_p5_fault_L30.pdf, id=262, 341.275pt x 170.6375pt>
+<Figures/Time_p5_fault_L30.pdf, id=283, 341.275pt x 170.6375pt>
 File: Figures/Time_p5_fault_L30.pdf Graphic file (type pdf)
 <use Figures/Time_p5_fault_L30.pdf>
-Package pdftex.def Info: Figures/Time_p5_fault_L30.pdf  used on input line 342.
+Package pdftex.def Info: Figures/Time_p5_fault_L30.pdf  used on input line 377.
 
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Time_p5_fault_L300.pdf, id=263, 341.275pt x 170.6375pt>
+<Figures/Time_p5_fault_L300.pdf, id=284, 341.275pt x 170.6375pt>
 File: Figures/Time_p5_fault_L300.pdf Graphic file (type pdf)
 <use Figures/Time_p5_fault_L300.pdf>
-Package pdftex.def Info: Figures/Time_p5_fault_L300.pdf  used on input line 343
+Package pdftex.def Info: Figures/Time_p5_fault_L300.pdf  used on input line 378
 .
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Freq_p5_fault_L30.pdf, id=264, 341.275pt x 170.6375pt>
+<Figures/Freq_p5_fault_L30.pdf, id=285, 341.275pt x 170.6375pt>
 File: Figures/Freq_p5_fault_L30.pdf Graphic file (type pdf)
 <use Figures/Freq_p5_fault_L30.pdf>
-Package pdftex.def Info: Figures/Freq_p5_fault_L30.pdf  used on input line 344.
+Package pdftex.def Info: Figures/Freq_p5_fault_L30.pdf  used on input line 379.
 
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Freq_p5_fault_L300.pdf, id=265, 341.275pt x 170.6375pt>
+<Figures/Freq_p5_fault_L300.pdf, id=286, 341.275pt x 170.6375pt>
 File: Figures/Freq_p5_fault_L300.pdf Graphic file (type pdf)
 <use Figures/Freq_p5_fault_L300.pdf>
-Package pdftex.def Info: Figures/Freq_p5_fault_L300.pdf  used on input line 345
+Package pdftex.def Info: Figures/Freq_p5_fault_L300.pdf  used on input line 380
 .
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
 
 
-LaTeX Warning: Reference `fig:simulated_p6_normal' on page 10 undefined on inpu
-t line 350.
+LaTeX Warning: Reference `fig:simulated_p6_normal' on page 11 undefined on inpu
+t line 385.
 
 
-LaTeX Warning: Reference `fig: simulated_p6_severtiy' on page 10 undefined on i
-nput line 350.
+LaTeX Warning: Reference `fig: simulated_p6_severtiy' on page 11 undefined on i
+nput line 385.
 
-<Figures/Time_p6_normal.pdf, id=268, 341.275pt x 170.6375pt>
+<Figures/Time_p6_normal.pdf, id=289, 341.275pt x 170.6375pt>
 File: Figures/Time_p6_normal.pdf Graphic file (type pdf)
 <use Figures/Time_p6_normal.pdf>
-Package pdftex.def Info: Figures/Time_p6_normal.pdf  used on input line 353.
+Package pdftex.def Info: Figures/Time_p6_normal.pdf  used on input line 388.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Time_p6_slight_error.pdf, id=269, 341.275pt x 170.6375pt>
+<Figures/Time_p6_slight_error.pdf, id=290, 341.275pt x 170.6375pt>
 File: Figures/Time_p6_slight_error.pdf Graphic file (type pdf)
 <use Figures/Time_p6_slight_error.pdf>
 Package pdftex.def Info: Figures/Time_p6_slight_error.pdf  used on input line 3
-54.
+89.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Freq_p6_normal.pdf, id=270, 341.275pt x 170.6375pt>
+<Figures/Freq_p6_normal.pdf, id=291, 341.275pt x 170.6375pt>
 File: Figures/Freq_p6_normal.pdf Graphic file (type pdf)
 <use Figures/Freq_p6_normal.pdf>
-Package pdftex.def Info: Figures/Freq_p6_normal.pdf  used on input line 355.
+Package pdftex.def Info: Figures/Freq_p6_normal.pdf  used on input line 390.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Freq_p6_slight_error.pdf, id=271, 341.275pt x 170.6375pt>
+<Figures/Freq_p6_slight_error.pdf, id=292, 341.275pt x 170.6375pt>
 File: Figures/Freq_p6_slight_error.pdf Graphic file (type pdf)
 <use Figures/Freq_p6_slight_error.pdf>
 Package pdftex.def Info: Figures/Freq_p6_slight_error.pdf  used on input line 3
-56.
+91.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Time_p6_medium_error.pdf, id=272, 341.275pt x 170.6375pt>
+<Figures/Time_p6_medium_error.pdf, id=293, 341.275pt x 170.6375pt>
 File: Figures/Time_p6_medium_error.pdf Graphic file (type pdf)
 <use Figures/Time_p6_medium_error.pdf>
 Package pdftex.def Info: Figures/Time_p6_medium_error.pdf  used on input line 3
-57.
+92.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Time_p6_severe_error.pdf, id=273, 341.275pt x 170.6375pt>
+<Figures/Time_p6_severe_error.pdf, id=294, 341.275pt x 170.6375pt>
 File: Figures/Time_p6_severe_error.pdf Graphic file (type pdf)
 <use Figures/Time_p6_severe_error.pdf>
 Package pdftex.def Info: Figures/Time_p6_severe_error.pdf  used on input line 3
-58.
+93.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Freq_p6_medium_error.pdf, id=274, 341.275pt x 170.6375pt>
+<Figures/Freq_p6_medium_error.pdf, id=295, 341.275pt x 170.6375pt>
 File: Figures/Freq_p6_medium_error.pdf Graphic file (type pdf)
 <use Figures/Freq_p6_medium_error.pdf>
 Package pdftex.def Info: Figures/Freq_p6_medium_error.pdf  used on input line 3
-59.
+94.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Freq_p6_severe_error.pdf, id=275, 341.275pt x 170.6375pt>
+<Figures/Freq_p6_severe_error.pdf, id=296, 341.275pt x 170.6375pt>
 File: Figures/Freq_p6_severe_error.pdf Graphic file (type pdf)
 <use Figures/Freq_p6_severe_error.pdf>
 Package pdftex.def Info: Figures/Freq_p6_severe_error.pdf  used on input line 3
-60.
+95.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-[10 <./Figures/Time_p3_normal.pdf> <./Figures/Time_p3_fault.pdf> <./Figures/Fre
-q_p3_normal.pdf> <./Figures/Freq_p3_fault.pdf> <./Figures/Time_p4_normal.pdf> <
-./Figures/Time_p4_fault.pdf> <./Figures/Freq_p4_normal.pdf> <./Figures/Freq_p4_
-fault.pdf>]
+[11 <./Figures/Time_p4_normal.pdf> <./Figures/Time_p4_fault.pdf> <./Figures/Fre
+q_p4_normal.pdf> <./Figures/Freq_p4_fault.pdf> <./Figures/Time_p5_normal_L30.pd
+f> <./Figures/Time_p5_normal_L300.pdf> <./Figures/Freq_p5_normal_L30.pdf> <./Fi
+gures/Freq_p5_normal_L300.pdf>]
 
-LaTeX Warning: Reference `fig:test_rig' on page 11 undefined on input line 367.
+LaTeX Warning: Reference `fig:test_rig' on page 12 undefined on input line 402.
 
 
 
 
 pdfTeX warning: pdflatex.exe (file ./Figures/test_rig_configuration.pdf): PDF i
 nclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Figures/test_rig_configuration.pdf, id=303, 346.83879pt x 103.56793pt>
+<Figures/test_rig_configuration.pdf, id=325, 346.83879pt x 103.56793pt>
 File: Figures/test_rig_configuration.pdf Graphic file (type pdf)
 <use Figures/test_rig_configuration.pdf>
 Package pdftex.def Info: Figures/test_rig_configuration.pdf  used on input line
- 370.
+ 405.
 (pdftex.def)             Requested size: 346.83794pt x 103.56766pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Figures/exp_pinhole_error.pdf): PDF inclus
 ion: found PDF version <1.6>, but at most version <1.5> allowed
-<Figures/exp_pinhole_error.pdf, id=304, 173.27737pt x 174.69968pt>
+<Figures/exp_pinhole_error.pdf, id=326, 173.27737pt x 174.69968pt>
 File: Figures/exp_pinhole_error.pdf Graphic file (type pdf)
 <use Figures/exp_pinhole_error.pdf>
-Package pdftex.def Info: Figures/exp_pinhole_error.pdf  used on input line 376.
+Package pdftex.def Info: Figures/exp_pinhole_error.pdf  used on input line 411.
 
 (pdftex.def)             Requested size: 121.29332pt x 122.28893pt.
-[11 <./Figures/Time_p5_normal_L30.pdf> <./Figures/Time_p5_normal_L300.pdf> <./F
-igures/Freq_p5_normal_L30.pdf> <./Figures/Freq_p5_normal_L300.pdf> <./Figures/T
-ime_p5_fault_L30.pdf> <./Figures/Time_p5_fault_L300.pdf> <./Figures/Freq_p5_fau
-lt_L30.pdf> <./Figures/Freq_p5_fault_L300.pdf>]
-<Figures/Exp_natural_frequency_shift.pdf, id=331, 341.275pt x 170.6375pt>
+<Figures/Exp_natural_frequency_shift.pdf, id=329, 341.275pt x 170.6375pt>
 File: Figures/Exp_natural_frequency_shift.pdf Graphic file (type pdf)
 <use Figures/Exp_natural_frequency_shift.pdf>
 Package pdftex.def Info: Figures/Exp_natural_frequency_shift.pdf  used on input
- line 408.
+ line 443.
 (pdftex.def)             Requested size: 341.27415pt x 170.63707pt.
- [12 <./Figures/Time_p6_normal.pdf> <./Figures/Time_p6_slight_error.pdf> <./Fig
-ures/Freq_p6_normal.pdf> <./Figures/Freq_p6_slight_error.pdf> <./Figures/Time_p
-6_medium_error.pdf> <./Figures/Time_p6_severe_error.pdf> <./Figures/Freq_p6_med
-ium_error.pdf> <./Figures/Freq_p6_severe_error.pdf> <./Figures/test_rig_configu
-ration.pdf>]
+[12 <./Figures/Time_p5_fault_L30.pdf> <./Figures/Time_p5_fault_L300.pdf> <./Fig
+ures/Freq_p5_fault_L30.pdf> <./Figures/Freq_p5_fault_L300.pdf>]
 
-LaTeX Warning: Reference `fig:' on page 13 undefined on input line 412.
+LaTeX Warning: Reference `fig:' on page 13 undefined on input line 447.
 
-<Figures/Exp_Time_normal.pdf, id=366, 341.275pt x 170.6375pt>
+<Figures/Exp_Time_normal.pdf, id=351, 341.275pt x 170.6375pt>
 File: Figures/Exp_Time_normal.pdf Graphic file (type pdf)
 <use Figures/Exp_Time_normal.pdf>
-Package pdftex.def Info: Figures/Exp_Time_normal.pdf  used on input line 415.
+Package pdftex.def Info: Figures/Exp_Time_normal.pdf  used on input line 450.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Exp_Time_fault.pdf, id=367, 341.275pt x 170.6375pt>
+<Figures/Exp_Time_fault.pdf, id=352, 341.275pt x 170.6375pt>
 File: Figures/Exp_Time_fault.pdf Graphic file (type pdf)
 <use Figures/Exp_Time_fault.pdf>
-Package pdftex.def Info: Figures/Exp_Time_fault.pdf  used on input line 416.
+Package pdftex.def Info: Figures/Exp_Time_fault.pdf  used on input line 451.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Exp_normal_22.pdf, id=368, 341.275pt x 170.6375pt>
+<Figures/Exp_normal_22.pdf, id=353, 341.275pt x 170.6375pt>
 File: Figures/Exp_normal_22.pdf Graphic file (type pdf)
 <use Figures/Exp_normal_22.pdf>
-Package pdftex.def Info: Figures/Exp_normal_22.pdf  used on input line 417.
+Package pdftex.def Info: Figures/Exp_normal_22.pdf  used on input line 452.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-<Figures/Exp_fault_22.pdf, id=369, 341.275pt x 170.6375pt>
+<Figures/Exp_fault_22.pdf, id=354, 341.275pt x 170.6375pt>
 File: Figures/Exp_fault_22.pdf Graphic file (type pdf)
 <use Figures/Exp_fault_22.pdf>
-Package pdftex.def Info: Figures/Exp_fault_22.pdf  used on input line 418.
+Package pdftex.def Info: Figures/Exp_fault_22.pdf  used on input line 453.
 (pdftex.def)             Requested size: 170.63707pt x 85.31853pt.
-[13 <./Figures/exp_pinhole_error.pdf> <./Figures/Exp_natural_frequency_shift.pd
-f>]
-<Figures/Minimum_angle.pdf, id=395, 295.62444pt x 291.3565pt>
+[13 <./Figures/Time_p6_normal.pdf> <./Figures/Time_p6_slight_error.pdf> <./Figu
+res/Freq_p6_normal.pdf> <./Figures/Freq_p6_slight_error.pdf> <./Figures/Time_p6
+_medium_error.pdf> <./Figures/Time_p6_severe_error.pdf> <./Figures/Freq_p6_medi
+um_error.pdf> <./Figures/Freq_p6_severe_error.pdf> <./Figures/test_rig_configur
+ation.pdf>]
+<Figures/Minimum_angle.pdf, id=385, 295.62444pt x 291.3565pt>
 File: Figures/Minimum_angle.pdf Graphic file (type pdf)
 <use Figures/Minimum_angle.pdf>
-Package pdftex.def Info: Figures/Minimum_angle.pdf  used on input line 428.
+Package pdftex.def Info: Figures/Minimum_angle.pdf  used on input line 463.
 (pdftex.def)             Requested size: 147.81186pt x 145.67789pt.
- [14 <./Figures/Exp_Time_normal.pdf> <./Figures/Exp_Time_fault.pdf> <./Figures/
-Exp_normal_22.pdf> <./Figures/Exp_fault_22.pdf>]
+ [14 <./Figures/exp_pinhole_error.pdf> <./Figures/Exp_natural_frequency_shift.p
+df>]
 c:/Users/Lenovo/Documents/LaTeX_Papers/Unequal load sharing among planets/Unequ
-al load sharing among planet.tex:455: Undefined control sequence.
+al load sharing among planet.tex:490: Undefined control sequence.
 <recently read> \lamda 
                        
-l.455 ...ular positions with minimum space $\lamda
+l.490 ...ular positions with minimum space $\lamda
                                                   $. When planets locate uni...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2619,14 +2610,16 @@ and I'll forget about whatever was undefined.
 
 
 (c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets/Uneq
-ual load sharing among planet.bbl [15 <./Figures/Minimum_angle.pdf>]) [16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 460.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 460.
+ual load sharing among planet.bbl [15 <./Figures/Exp_Time_normal.pdf> <./Figure
+s/Exp_Time_fault.pdf> <./Figures/Exp_normal_22.pdf> <./Figures/Exp_fault_22.pdf
+> <./Figures/Minimum_angle.pdf>]) [16]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 495.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 495.
 
 (c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets/Uneq
 ual load sharing among planet.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 460.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 460.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 495.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 495.
 Package rerunfilecheck Info: File `"Unequal load sharing among planet".out' has
  not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -2634,18 +2627,15 @@ Package rerunfilecheck Info: File `"Unequal load sharing among planet".out' has
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 34617 strings out of 492649
- 643516 string characters out of 6133384
- 728627 words of memory out of 5000000
- 37659 multiletter control sequences out of 15000+600000
- 641208 words of font info for 214 fonts, out of 8000000 for 9000
+ 34531 strings out of 492649
+ 641322 string characters out of 6133384
+ 727486 words of memory out of 5000000
+ 37559 multiletter control sequences out of 15000+600000
+ 643697 words of font info for 217 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,13n,92p,10531b,850s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,13n,92p,10531b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texl
 ive/2018/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}{c:/texlive/2018/texmf-dis
 t/fonts/enc/dvips/stix/stix-ts1.enc}<c:/texlive/2018/texmf-dist/fonts/type1/pub
@@ -2658,23 +2648,22 @@ xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2018/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2018/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2018/texmf-dist/fonts/type
 1/public/pxfonts/pxsy.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/pxfont
-s/rpxmi.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfss0700.pf
-b><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb><c:/texl
-ive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb><c:/texlive/2018/t
-exmf-dist/fonts/type1/public/cm-super/sftt0800.pfb><c:/texlive/2018/texmf-dist/
-fonts/type1/public/stix/stix-mathbb.pfb><c:/texlive/2018/texmf-dist/fonts/type1
-/public/stix/stix-mathcal.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/st
-ix/stix-mathex.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/stix/stix-mat
-hit.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb><c:
-/texlive/2018/texmf-dist/fonts/type1/public/stix/stix-mathscr.pfb><c:/texlive/2
-018/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2018/texmf-dist/
-fonts/type1/urw/palatino/uplri8a.pfb>
+s/rpxmi.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfss0900.pf
+b><c:/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb><c:/texl
+ive/2018/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb><c:/texlive/2018/t
+exmf-dist/fonts/type1/public/stix/stix-mathbb.pfb><c:/texlive/2018/texmf-dist/f
+onts/type1/public/stix/stix-mathcal.pfb><c:/texlive/2018/texmf-dist/fonts/type1
+/public/stix/stix-mathex.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/sti
+x/stix-mathit.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/stix/stix-math
+rm.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/stix/stix-mathscr.pfb><c:
+/texlive/2018/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2018/t
+exmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 Output written on "c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing 
-among planets/Unequal load sharing among planet.pdf" (17 pages, 8947066 bytes).
+among planets/Unequal load sharing among planet.pdf" (17 pages, 7067671 bytes).
 
 PDF statistics:
- 517 PDF objects out of 1000 (max. 8388607)
- 428 compressed objects within 5 object streams
- 99 named destinations out of 1000 (max. 500000)
- 27856 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 525 PDF objects out of 1000 (max. 8388607)
+ 438 compressed objects within 5 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 29387 words of extra memory for PDF output out of 29859 (max. 10000000)
 
