@@ -125,25 +125,9 @@
 \nomenclature{$\delta\{\cdot\}$}{Dirac impulse}
 \nomenclature{$\hat{\lambda}(f)$}{Fourier transform of $\lambda(t)$}
 
-\begin{figure*}
-    \centering
-    \includegraphics[scale=0.6,width=0.8\textwidth,height=1.6in]{spring_mass.pdf}
-    \caption{Vibration system of unequal load sharing among four planets. \textbf{Revise this figure into circle.}}
-\label{fig:vibration_system_of_spring_mass}
-\end{figure*}
 \subsection{General signal model}
 \par A typical layout of planetary gearboxes consists of three kinds of gears mounted so that the centers of planet gears revolves around the center of sun and ring gears. This paper merely discusses the common cases of speed reducers where the sun gear connects with the power input shaft and the carrier works as power output, while vibration sensors are usually mounted on the surface of the stationary ring gear in diagnostic applications. 
-% \begin{figure}[pos=htbp]
-%     \centering
-%     \begin{annotate}{\includegraphics[width=0.3\textwidth]{Planetary_Gearbox.PNG}}{0.3}
-%         \callout{-8,-7}{Ring gear}{-5,-5.8}
-%         \callout{8,-7}{Planet gear}{4,-5.5}
-%         \callout{-8,7}{Sun gear}{-0.8,1.2}
-%         \callout{8,7}{Carrier}{4.5,1}
-%     \end{annotate}
-%     \caption{Configuration of planetary gearboxes.}
-%     \label{fig:planetary_gearbox_layout}
-% \end{figure}
+
 \par The vibration in planetary gearboxes mainly origins from the meshing of gears \cite{Velex1996}. When the planet gears engage with the ring gear or sun gear, the number of the involved tooth varies with the relative rotation between gears and their contact stiffness changes consequently. The transmission load nominally remains constant and the gearbox is a parametrically excited multi-degree-freedom system \cite{Acar2019}. 
 \par The signal model perceived by the stationary transducer on the gearbox housing can be modelled as the summation of all planet vibration considering transfer path effects. The impulsive intensity of gear meshing is assumed to proportional to the load applied on each planet. The vibration of each planet is divided into planet-ring and planet-sun parts. Thus, the general signal model is
 \begin{equation}
@@ -171,7 +155,13 @@ where $A_{{\rm r}i}$ is the impulsive amplitude of $i$-th planet-ring gear meshi
 where $A_{{\rm s}i}$ is the impulsive amplitude of $i$-th planet-sun gear meshing, $\varphi_i$ is the phase difference between planet-ring and planet-sun meshing for the $i$-th planet.
 %%%%%%%%%%%%%%%%%%%%%%%% Algorithm of load sharing factors %%%%%%%%%%%
 \subsection{Algorithm of load sharing factors\label{sec:algorithm_load_sharing}}
-\par Ligata et al. proposed an algorithm to calculate the load sharing factor through analogizing the in-plane torque balance problem to the 3-D force and torque balance problem \cite{Ligata2009}.
+\par Ligata et al. proposed an algorithm to calculate the load sharing factor through analogizing the in-plane torque balance problem to the 3-D force and torque balance problem \cite{Ligata2009}, as demonstrated in Fig. \ref{fig:analogical_model}.
+\begin{figure}[pos=htbp]
+    \centering
+    \includegraphics[scale=0.2]{Analogical_planet_load.png}
+    \caption{Analogical model of 4 planet load sharing: springs are analogized to planets: $W$ is the equivalent input torque, $\epsilon_2$ is the position error of second planet.}
+    \label{fig:analogical_model}
+\end{figure}
 \begin{enumerate}
     \item Initialization of parameters. Analogize the torque balance model with the planet center circle to the force and moment balance model in the axial direction perpendicular to the planet center plane.  Analogize the planet gears to springs with the same stiffness $1/k_{\rm e}=1/(k_{\rm rp}+k_{\rm sp})+1/k_{\rm b}$, where $k_{\rm rp}=2.57\times 10^8$ and $k_{\rm sp}=1.67\times 10^8$ are the meshing stiffness of planet-ring and planet-sun, respectively, $k_{\rm b}=3.2\times 10^7$ is the planet bearing stiffness. The pinhole errors is equivalent to length of spring in the axial direction $z_i=e_i=2(R_{\rm r}-R_{\rm p})\sin(\epsilon_i/2)\cos(\epsilon_i/2)$, where $R_{\rm p}$ is the planet radius, $R_{\rm s}$ is the sun radius, $\epsilon_{i}$ is the angular position error the $i$-th planet. The locations of springs accord with planet pinhole positions the planet center plane, $x_i=-(R_{\rm p}+R_{\rm s})\sin(\Theta_i+\epsilon_i)$ , $y_i=(R_{\rm p}+R_{\rm s})\cos(\Theta_i+\epsilon_i)$. The input torque equals the axial load on a plate pushing on the springs, $W=2T_{\rm s}/R_{\rm s}$.  The rocking motions $\phi_x$ and $\phi_y$ of the plate are analogous to the floating motions of the central member in the x and y directions. The radius of the circle where planet centers locate at is $R_{\rm b}=R_{\rm s}+R_{\rm p}$.
     \item Determine the initial disposition of \textit{planet center plate}. The first contacting point $J=\mathop{\arg\max}\limits_{i}(z_i)$. Define a line  tangent to the circle on plane  $P_1$ (parallel with the x-y plane) and anther point $Q$ also on the line $y_Q=-(x_Q-x_J)x_J/y_J+y_J$. Define the plane $P_2$ by three points $J, Q, K$:
@@ -204,8 +194,8 @@ where $A_{{\rm s}i}$ is the impulsive amplitude of $i$-th planet-sun gear meshin
         \begin{split}
             Y=[A_1,A_2,A_3,A_4] \cdot [z_{G_1};z_{G_2};z_B;z_H],\\
             \eta=\frac{(x_{G_2}-x_{G_1})(y_B-y_{G1})-(x_B-x_{G_1})(y_{G_2}-y_{G_1})}{(x_{G_2}-x_{G_1})(y_H-y_{G_1})-(x_H-x_{G_1})(y_{G_2}-y_{G_1})},\\
-            A_1=(\eta-1)y_{G_2}+y_B-\eta y_H,    A_2=(1-\eta)y_{G_1}-y_B+\eta y_H,\\
-            A_3=y_{G_2}-y_{G_1},A_4=y_{G_2}-y_{G_1}.
+            A_1=(\eta-1)y_{G_2}+y_B-\eta y_H,\quad A_2=(1-\eta)y_{G_1}-y_B+\eta y_H,\\
+            A_3=y_{G_2}-y_{G_1},\quad A_4=y_{G_2}-y_{G_1}.
         \end{split}
     \end{equation}
     \item Repeat the step 7 for all springs in contact with the plate after the load $W$ is applied. Generally if the contacting planets are more than 3, $N_C>3$, add $N_C-3$ equations:
@@ -216,8 +206,8 @@ where $A_{{\rm s}i}$ is the impulsive amplitude of $i$-th planet-sun gear meshin
 \end{enumerate}
 \begin{figure}[pos=htbp]
     \centering
-    \includegraphics[scale=0.5]{tangential_error.pdf}
-    \caption{Tangential error calculation (correct the $\epsilon_{pi}$)}
+    \includegraphics[scale=0.5]{tangential_error}
+    \caption{Tangential error calculation}
     \label{fig:tangential_error}
 \end{figure}
 \par Unequal load sharing will gives rise to non-uniform impulsive intensity. The acceleration are linearly affected by the dynamic force exerted. Thus, the vibration amplitude of each planet is assumed to be proportional to the load applied on it \cite{Inalpolat2009}. In other words, planet load modifies the amplitude of the vibration signal. Moreover, the unevenly planet distribution along the angular position of carrier also has phase modulation when the transfer path is considered simultaneously. These effects will be illustrated explicitly in the later Section \ref{sec:factor_discussion}. 
@@ -226,9 +216,9 @@ where $A_{{\rm s}i}$ is the impulsive amplitude of $i$-th planet-sun gear meshin
 \begin{figure}[pos=htbp]
     \centering
     \includegraphics[scale=0.5]{transfer_path.pdf}
-    \caption{Transfer paths of gear meshing vibration.\textbf{add explanation on path number. from where to where.}\label{fig:transfer_path}}
+    \caption{Transfer paths of gear meshing vibration: 1. planet-ring meshing point $\to$ ring gear $\to$ transducer; 2. planet-ring meshing point $\to$ planet $\to$ planet bearing $\to$ carrier $\to$ carrier bearing $\to$ gearbox case $\to$ transducer; 3. planet-ring meshing point $\to$ planet $\to$ planet-sun meshing point $\to$ sun gear shaft $\to$ sun gear bearing $\to$ gearbox case $\to$ transducer; 4. planet-sun meshing point $\to$ planet $\to$ planet-ring meshing point $\to$ ring gear $\to$ transducer; 5. planet-sun meshing point $\to$ sun gear shaft $\to$ sun gear bearing $\to$ gearbox case $\to$ transducer; 6. planet-sun meshing point $\to$ planet $\to$ planet bearing $\to$ carrier $\to$ carrier bearing $\to$ gearbox case $\to$ transducer.}\label{fig:transfer_path}}
 \end{figure}
-\par The lengths of path 1 and path 4 vary with the circumferential position of carrier. For each planet, the meshing vibration points get close to the fixed sensor as the planet approaches the top surface of gearbox case. When the planet reach the climax of its revolution circle, the fixed transducer percepts the maximum impulsive strength. While the planet arrives at the case bottom, the perceived impulses are most weakened. The path 1 length is triangle wave of time (as shown in Fig. \ref{fig:path_length_trangle_wave}) when planetary gearboxes operate at a constant speed and planet distributes evenly, 
+\par The lengths of path 1 and path 4 vary with the circumferential position of carrier. For each planet, the meshing vibration points get close to the fixed sensor as the planet approaches the top surface of gearbox case. When the planet reach the climax of its revolution circle, the fixed transducer percepts the maximum impulsive strength. While the planet arrives at the case bottom, the perceived impulses are most weakened. The path 1 length is triangle wave of time (as shown in Fig. \ref{fig:transfer_path_effect}(a)) when planetary gearboxes operate at a constant speed and planet distributes evenly, 
 \begin{equation}
     l_{{\rm r}i}(t)=
     \begin{cases}
@@ -242,11 +232,12 @@ The path 4 is the sum of the diameter of the planet pitch circle and $l_{{\rm r}
 \end{equation}
 \begin{figure}[pos=htbp]
     \centering
-    \includegraphics[scale=0.5]{trangle_wave.pdf}
-    \caption{Transfer Path 1 length function of time. \textbf{vary the line type for different lengends.Add the transfer effect funciton of time}}
-    \label{fig:path_length_trangle_wave}
+    (a) \includegraphics[scale=0.7,valign=t]{trangle_wave.pdf}\\
+    (b) \includegraphics[scale=0.7,valign=t]{transfer_path_timedomain.pdf}
+    \caption{Transfer Path 1: (a). length function of time; (b). amplitude scaling effects.}
+    \label{fig:transfer_path_effect}
 \end{figure}
-\par This attenuation effect with regard to the path length can be characterized as window functions such as Hanning window or Gaussian window \cite{Mark2009}. In this paper, we apply the Gaussian window describing the time-varying transfer path effect,
+\par This attenuation effect with regard to the path length can be characterized as window functions such as Hanning window or Gaussian window \cite{Mark2009}. As demonstrated in Fig. \ref{fig:transfer_path_effect}(b), we apply the Gaussian window describing the time-varying transfer path effect,
 \begin{equation}
     \sigma(l)=F\exp\left(-\frac{l}{a}\right),\label{eq:general_transfer_path}
 \end{equation}
@@ -254,7 +245,7 @@ where $l$ is the length of a transfer path, $F$ represents for the strength fact
 \begin{equation}
     \sigma (l_{{\rm s}i})=F\exp(-\frac{l_{{\rm r}i}+2 R_{\rm p}}{a})=\exp(-\frac{2 R_{\rm p}}{a}) \cdot \sigma(l_{{\rm r}i}).
 \end{equation}
-For simplicity, we set the $\sigma_i(t)=\sigma\left[l_{{\rm r}i}(t)\right]$ and $\eta=\exp(-\frac{2 R_{\rm p}}{a})$. Fig. \ref{fig:path_length_trangle_wave} shows that $\sigma_{i}(t)$ shifts in time by $(\epsilon_i-\Theta_i)/(2 \pi f_{\rm c})$ relative to $\sigma_1$:
+For simplicity, we set the $\sigma_i(t)=\sigma\left[l_{{\rm r}i}(t)\right]$ and $\eta=\exp(-\frac{2 R_{\rm p}}{a})$. Fig. \ref{fig:transfer_path_effect}(a) shows that $\sigma_{i}(t)$ shifts in time by $(\epsilon_i-\Theta_i)/(2 \pi f_{\rm c})$ relative to $\sigma_1$:
 \begin{equation}
     \sigma_{i}(t)=\sigma_{1}(t-\frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}}).
 \end{equation}
@@ -362,7 +353,7 @@ where $\hat{\lambda}(f)$ is the Fourier transform of $\lambda(t)$:
     \caption{Spectral summit cluster shifts towards a lower frequency due to the uneven load distribution of planets}\label{fig:Shifted_natural_frequency}
 \end{figure}
 \par The extra sidebands at non M multiples of carrier orders can be attributed by the phase modulation effects (with a period of carrier rotation period and fluctuates at each planet position (both time and space)).
-\par The amplitude envelope sharpe can also evidence the existence of planet position shifts. Because the support stiffness weakens, the resonance frequency of the entire system shift towards the y-axis. Fig. \ref{fig:overview_normal_fourier} and Fig. \ref{fig:Shifted_natural_frequency} show the resonance frequency shift from 300Hz to 400Hz.
+\par The amplitude envelope sharpe can also evidence the existence of planet position shifts. Because the support stiffness weakens, the resonance frequency of the entire system shift towards the y-axis. Fig. \ref{fig:Shifted_natural_frequency} shows the resonance frequency shift from 230 carrier orders to 170 carrier orders.
 \subsection{Different planet numbers}
 \par When at least one central members can float along the radial direction, three planets can offset the influence of uneven load distribution arising from limited pinhole position errors. The condition of floating central members can be satisfied commonly, because the manufacturers deliberately design separable sun gears  and flexible couplings.  When tangential error in planet pinhole occur, the time shifts to the transfer path effects still make the impulsive intervals between adjacent planets uniform. Fig \ref{fig:simulated_p3}(b) present the quasi phase modulation -- if we regard all planets as one -- in time domain.  The corresponding spectrum also manifests the non planet number ($M=3$) peaks. In the baseline case where these pinhole errors are absent, the carrier orders merely appear at the multiples of three.
 \begin{figure}[pos=htbp]
@@ -406,7 +397,7 @@ where $\hat{\lambda}(f)$ is the Fourier transform of $\lambda(t)$:
     \label{fig:simulated_p5_fault}
 \end{figure}
 \subsection{Severity levels of pinhole error}
-\par The severity of pinhole error mainly influences the signal spectra in two stages. At the beginning the planetary gearbox is free of pinhole errors. All planets bear the load evenly with the same strength as shown in time domain of Fig. \ref{fig:simulated_p6_normal}(a), and peaks only exist at the multiples of planet number ($M=6$). When a slight error ($0.1^\circ$ on the fourth planet pinhole) occurs, Fig. \ref{fig:simulated_p6_severity}(b) demonstrates the non M multiples of carrier orders emerge in spectrum.  At the first stage, an increasing error level ($1^\circ$) leads to the amplified the components of non M multiples clustering around the dominant peaks, as presented in Fig. \ref{fig: simulated_p6_severtiy}(c). At the second stage, if we continually enlarges the error to $2.1^\circ$, a pair of planets will separate from contact and the location of envelope summit along with the system natural frequency will decrease to a lower range. Fig. \ref{fig:simulated_p6_severity}(d) illustrates this phenomenon.
+\par The severity of pinhole error mainly influences the signal spectra in two stages. At the beginning the planetary gearbox is free of pinhole errors. All planets bear the load evenly with the same strength as shown in time domain of Fig. \ref{fig:simulated_p6_severity}(a), and peaks only exist at the multiples of planet number ($M=6$). When a slight error ($0.1^\circ$ on the fourth planet pinhole) occurs, Fig. \ref{fig:simulated_p6_severity}(b) demonstrates the non M multiples of carrier orders emerge in spectrum.  At the first stage, an increasing error level ($1^\circ$) leads to the amplified the components of non M multiples clustering around the dominant peaks, as presented in Fig. \ref{fig:simulated_p6_severity}(c). At the second stage, if we continually enlarges the error to $2.1^\circ$, a pair of planets will separate from contact and the location of envelope summit along with the system natural frequency will decrease to a lower range. Fig. \ref{fig:simulated_p6_severity}(d) illustrates this phenomenon.
 \begin{figure}[pos=htbp]
     \centering
     (a) \includegraphics[scale=\myscale,valign=t]{Time_p6_normal.pdf}
@@ -428,7 +419,7 @@ We implemented experiments to substantiate the proposed signal model and the abo
     \centering
     \includegraphics{test_rig_configuration.pdf}
     \caption{Planetary gearbox test rig: 1. induction motor; 2. planetary gearbox; 3. rotary encoder; 4. torque transducer and 5. generator.}
-    \label{fig:tets_rig}
+    \label{fig:test_rig}
 \end{figure} 
 \begin{figure}[pos=htbp]
     \centering
@@ -468,7 +459,7 @@ Number of teeth & 36 & 35 (3) &  108 \\
     \caption{Spectrum overview of experimental data}
     \label{fig:exp_natural_frequency_shift}
 \end{figure}
-\par The signal of unequal load sharing displays more irregular impulses within one carrier rotation period, demonstrated in Fig. \ref{fig:exp_time_freq_comparison}(b). While the impulsive amplitudes and intervals are more evenly distributed in the normal case (Fig. \ref{fig:}(a)). By comparison between frequency domains, non M multiples of carrier order peaks clearly in the fault case, evidencing the non-uniform load distribution among planets. The unconspicuous noise components are attributed to the inevitable errors during manufacturing and assembling.
+\par The signal of unequal load sharing displays more irregular impulses within one carrier rotation period, demonstrated in Fig. \ref{fig:exp_time_freq_comparison}(b). While the impulsive amplitudes and intervals are more evenly distributed in the normal case (Fig. \ref{fig:exp_time_freq_comparison}(a)). By comparison between frequency domains, non M multiples of carrier order peaks clearly in the fault case, evidencing the non-uniform load distribution among planets. The unconspicuous noise components are attributed to the inevitable errors during manufacturing and assembling.
 \begin{figure}[pos=htbp]
     \centering
     (a) \includegraphics[scale=\myscale,valign=t]{Exp_Time_normal.pdf}
