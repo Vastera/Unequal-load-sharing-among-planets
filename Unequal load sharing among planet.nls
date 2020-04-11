@@ -24,7 +24,7 @@
 		\nompageref{2}
   \item [{$\xi_{{\rm r}i},\xi_{{\rm s}i}$}]\begingroup vibration originating from the $i$-th planet-ring and planet-sun gears\nomeqref {0}
 		\nompageref{2}
-  \item [{$\{\}_{\rm r}$, $\{\}_{\rm p}$, $\{\}_{\rm s}$, $\{\}_{\rm c}$}]\begingroup ring gear, planet, sun gears and carrier, respectively\nomeqref {0}
+  \item [{$\{\cdot\}_{\rm r}$, $\{\cdot\}_{\rm p}$, $\{\cdot\}_{\rm s}$, $\{\cdot\}_{\rm c}$}]\begingroup ring gear, planet, sun gears and carrier, respectively\nomeqref {0}
 		\nompageref{2}
   \item [{$a$}]\begingroup attenuation factor of transfer path effect\nomeqref {0}
 		\nompageref{2}
@@ -34,32 +34,27 @@
 		\nompageref{2}
   \item [{$e_i$}]\begingroup tangential error of $i$-th planet center\nomeqref {0}
 		\nompageref{2}
-  \item [{$F$}]\begingroup the strength factor of transfer path effect, proportional to the input torque $T_{\rm s}$\nomeqref {0}
+  \item [{$F$}]\begingroup strength factor of transfer path effect, proportional to the input torque $T_{\rm s}$\nomeqref {0}
 		\nompageref{2}
   \item [{$f_{\rm n}$}]\begingroup natural frequency\nomeqref {0}
 		\nompageref{2}
-  \item [{$f_{\{\}}$}]\begingroup rotating frequency\nomeqref {0}
-		\nompageref{2}
   \item [{$l$}]\begingroup length of a transfer path\nomeqref {0}
 		\nompageref{2}
-  \item [{$L_i$}]\begingroup load sharing factor\nomeqref {0}
-		\nompageref{2}
   \item [{$M$}]\begingroup planet number\nomeqref {0}\nompageref{2}
-  \item [{$Z_{\{\}}$}]\begingroup gear tooth number\nomeqref {0}
+  \item [{$Z_{\{\cdot\}}$}]\begingroup gear tooth number\nomeqref {0}
 		\nompageref{2}
   \item [{\(f_{\rm c}\)}]\begingroup carrier rotation frequency\nomeqref {0}
 		\nompageref{2}
   \item [{\(f_{\rm m}\)}]\begingroup gear meshing frequency\nomeqref {0}
 		\nompageref{2}
   \item [{\(J\)}]\begingroup inertia moment\nomeqref {0}\nompageref{2}
-  \item [{\(k(t)\)}]\begingroup stiffness\nomeqref {0}\nompageref{2}
   \item [{\(k_{\rm e}\)}]\begingroup effective support stiffness concerning both the bearing and gear meshing\nomeqref {0}
 		\nompageref{2}
   \item [{\(L_i\)}]\begingroup load sharing ratio of the \(i\)-th planet\nomeqref {0}
 		\nompageref{2}
-  \item [{\(R_{\{\}}\)}]\begingroup gear pitch circle radius\nomeqref {0}
+  \item [{\(R_{\{\cdot\}}\)}]\begingroup gear pitch circle radius\nomeqref {0}
 		\nompageref{2}
-  \item [{\(T_s\)}]\begingroup total torque applied on input sun gear\nomeqref {0}
+  \item [{\(T_{\rm s}\)}]\begingroup total torque applied on input sun gear\nomeqref {0}
 		\nompageref{2}
 
 \end{thenomenclature}

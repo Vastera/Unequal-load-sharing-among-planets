@@ -52,7 +52,7 @@
     \item Vibration signal model of equal load sharing among planets
     \item Influence of gear meshing vibration, transfer path effects and natural frequency
     \item Analytical expression of Fourier spectrum 
-    \item Explanation on spectral configuration arisen from different factors
+    \item Influence on spectral configuration of planet number, error severity and input torque
 \end{highlights}
 %%%%%%%%%%%%%%%% keywords %%%%%%%%%%%%%%%%%%
 \begin{keywords}
@@ -96,27 +96,24 @@
 \nomenclature{\(f_{\rm m}\)}{gear meshing frequency}
 \nomenclature{\(f_{\rm c}\)}{carrier rotation frequency}
 \nomenclature{\(J\)}{inertia moment}
-\nomenclature{\(k(t)\)}{stiffness}
 \nomenclature{\(L_i\)}{load sharing ratio of the \(i\)-th planet}
 \nomenclature{\(k_{\rm e}\)}{effective support stiffness concerning both the bearing and gear meshing}
-\nomenclature{\(R_{\{\}}\)}{gear pitch circle radius}
-\nomenclature{\(T_s\)}{total torque applied on input sun gear}
+\nomenclature{\(R_{\{\cdot\}}\)}{gear pitch circle radius}
+\nomenclature{\(T_{\rm s}\)}{total torque applied on input sun gear}
 \nomenclature{$M$}{planet number}
-\nomenclature{$L_i$}{load sharing factor}
 \nomenclature{$\sigma_{\rm pr},\sigma_{\rm ps}$}{transfer path effect on planet-ring and planet-sun gears, respectively}
 \nomenclature{$\xi_{{\rm r}i},\xi_{{\rm s}i}$}{vibration originating from the $i$-th planet-ring and planet-sun gears}
 \nomenclature{$\Theta_i$}{nominal position of $i$-th planet}
 \nomenclature{$\epsilon_i$}{position angular error of $i$-th planet center}
 \nomenclature{$e_i$}{tangential error of $i$-th planet center}
 \nomenclature{$\operatorname{III}(t)$}{Dirac comb function}
-\nomenclature{$\{\}_{\rm r}$, $\{\}_{\rm p}$, $\{\}_{\rm s}$, $\{\}_{\rm c}$}{ring gear, planet, sun gears and carrier, respectively}
-\nomenclature{$Z_{\{\}}$}{gear tooth number}
-\nomenclature{$f_{\{\}}$}{rotating frequency}
+\nomenclature{$\{\cdot\}_{\rm r}$, $\{\cdot\}_{\rm p}$, $\{\cdot\}_{\rm s}$, $\{\cdot\}_{\rm c}$}{ring gear, planet, sun gears and carrier, respectively}
+\nomenclature{$Z_{\{\cdot\}}$}{gear tooth number}
 \nomenclature{$A_{{\rm r}i}$}{impulsive amplitude of $i$-th planet-ring gear meshing} 
 \nomenclature{$A_{{\rm s}i}$}{impulsive amplitude of $i$-th planet-sun gear meshing}
 \nomenclature{$\varphi_i$}{phase difference between planet-ring and planet-sun meshing for the $i$-th planet}
 \nomenclature{$l$}{length of a transfer path}
-\nomenclature{$F$}{the strength factor of transfer path effect, proportional to the input torque $T_{\rm s}$}
+\nomenclature{$F$}{strength factor of transfer path effect, proportional to the input torque $T_{\rm s}$}
 \nomenclature{$a$}{attenuation factor of transfer path effect}
 \nomenclature{$\beta>0$}{tructural damping coefficient}
 \nomenclature{$f_{\rm n}$}{natural frequency}
@@ -143,7 +140,7 @@ where $\Theta_i$ denotes the nominal position of $i$-th planet. In addition, due
 \begin{equation}
     f_{\rm m}=Z_{\rm r} \cdot (f_{\rm r}+f_{\rm c})=Z_{\rm p} \cdot (f_{\rm p}-f_{\rm c})=Z_{\rm s} \cdot (f_{\rm s}-f_{\rm c}). \label{eq:meshing_frequency}
 \end{equation}
-where $\{\}_{\rm r}$, $\{\}_{\rm p}$, $\{\}_{\rm s}$, $\{\}_{\rm c}$ denote ring gear, planet, sun gears and carrier, respectively; $Z_{\{\}}$ is the gear tooth number and $f_{\{\}}$ is the rotating frequency. 
+where $\{\cdot\}_{\rm r}$, $\{\cdot\}_{\rm p}$, $\{\cdot\}_{\rm s}$, $\{\cdot\}_{\rm c}$ denote ring gear, planet, sun gears and carrier, respectively; $Z_{\{\cdot\}}$ is the gear tooth number and $f_{\{\cdot\}}$ is the rotating frequency. 
 \par For planet-ring gears, the planet angular position error bring about the time shift. The time shift is the angular error divided by the relatively rotating velocity. Thus, the planet-ring meshing vibration can be written as
 \begin{equation}
     \xi_{{\rm r}i}(t)=A_{{\rm r}i}\operatorname{III}\left[f_{\rm m} \cdot (t-\frac{\epsilon_i+\Theta_i}{2 \pi f_{\rm c}})\right],\label{eq:planet-ring_meshing}
@@ -234,7 +231,7 @@ The path 4 is the sum of the diameter of the planet pitch circle and $l_{{\rm r}
     \centering
     (a) \includegraphics[scale=0.7,valign=t]{trangle_wave.pdf}\\
     (b) \includegraphics[scale=0.7,valign=t]{transfer_path_timedomain.pdf}
-    \caption{Transfer Path 1: (a). length function of time; (b). amplitude scaling effects.}
+    \caption{Transfer Path 1: (a) length function of time; (b) amplitude scaling effects.}
     \label{fig:transfer_path_effect}
 \end{figure}
 \par This attenuation effect with regard to the path length can be characterized as window functions such as Hanning window or Gaussian window \cite{Mark2009}. As demonstrated in Fig. \ref{fig:transfer_path_effect}(b), we apply the Gaussian window describing the time-varying transfer path effect,
@@ -343,7 +340,25 @@ where $\hat{\lambda}(f)$ is the Fourier transform of $\lambda(t)$:
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%% Numerical simulation %%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion on model factors\label{sec:factor_discussion}}
-\par We use MATLAB\textsuperscript \textregistered \ to simulate the proposed signal model. To validate the generality of the propose model, we take different planet pinhole position errors, planet numbers and input torques into account. The simulation parameters are listed in Table \ref{}.
+\par We use MATLAB\textsuperscript \textregistered \ to simulate the proposed signal model. To validate the generality of the propose model, we take different planet pinhole position errors, planet numbers and input torques into account. The simulation parameters are listed in Table \ref{tab:simulation_parameters}.
+\begin{table}
+    \centering
+    \caption{Parameters of simulated signals: (a) configuration parameters; (b) other parameters.\label{tab:simulation_parameters}}
+    (a) \begin{tabular}{*{5}{>{\centering\arraybackslash}m{8em}}}
+    \toprule
+    Ring gear teeth $Z_{\rm r}$  & Planet pitch radius $R_{\rm p}$ & Ring gear pitch radius $R_{\rm r}$ & Sun gear pitch radius $R_{\rm s}$  & Phase difference $\varphi$ \\
+    \midrule
+    61 & 15.75 mm & 48.60 mm & 16.20 mm &  $8.727\times 10^{-4}$ rad\\
+    \bottomrule
+    \end{tabular}\\
+    (b) \begin{tabular}{>{\centering\arraybackslash}m{6em}>{\centering\arraybackslash}m{3.4em}>{\centering\arraybackslash}m{6em}>{\centering\arraybackslash}m{6em}>{\centering\arraybackslash}m{4em}>{\centering\arraybackslash}m{6em}>{\centering\arraybackslash}m{6em}}
+        \toprule
+        Sampling frequency $F_{\rm s}$ &  Duration & Carrier frequency $f_{\rm c}$ & Input torque $T_{\rm s}$ (default) & Strength factor $F$ &  Attenuation factor $a$ & Support stiffness $k_{\rm e}$\\
+        \midrule
+        $10^4$ Hz & 10 s & 3 Hz & 300 N m & 1 & $7.634\times 10^{-3}$ & $2.975\times 10^{7}$ N/m \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 \par In general, if the planet locates the nominal position, only the planet number multiples of carrier harmonics appear (give more specific results in figures), which accords with the Eq. (\ref{eq:carrier_harmonic_ring}) and Eq. (\ref{eq:carrier_harmonic_sun}). When the planet center deviates from the nominal position, other carrier orders emerges. Differing from the conclusion in \cite{Mark2009}, the dominant planet number multiple peaks do not shrink too, because we also consider the phase modulation induced by the pinhole position errors. 
 \par Fig. \ref{fig:Shifted_natural_frequency} explain the mechanism of shifted natural frequency -- the resonance frequency shift from 300Hz to 400Hz. With the limited measurement conditions about natural frequency in industrial applications, the above natural frequency shift can only be validated qualitatively. The signal model in Eq. (\ref{eq:final_signal_model}) indicates the natural frequency affects the spectral envelope shape. As the load increases, the envelope peak shifting to a higher frequency signifies the unequal load sharing among planets. 
 
@@ -438,7 +453,7 @@ We implemented experiments to substantiate the proposed signal model and the abo
     8 & 1500 &  4 \\
     \bottomrule
     \end{tabular}
-    \end{table}
+\end{table}
 %%%%%%%%%%%%%%%%%%%%%%% gearbox configuration %%%%%%%%%%%%%%%%%
 \begin{table}
 \centering
