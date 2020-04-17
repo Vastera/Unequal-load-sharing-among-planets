@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2018/W32TeX)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: c:\Users\Lenovo\Documents\LaTeX_Papers\Unequal load sharing among planets\Unequal_load_sharing_among_planet.aux
+The style file: elsarticle-num.bst
+Database file #1: My_EndNote_Lib.bib
+You've used 16 entries,
+            2937 wiz_defined-function locations,
+            787 strings with 8088 characters,
+and the built_in function-call counts, 4324 in all, are:
+= -- 416
+> -- 115
+< -- 0
++ -- 49
+- -- 33
+* -- 314
+:= -- 616
+add.period$ -- 16
+call.type$ -- 16
+change.case$ -- 16
+chr.to.int$ -- 0
+cite$ -- 16
+duplicate$ -- 120
+empty$ -- 487
+format.name$ -- 45
+if$ -- 1126
+int.to.chr$ -- 0
+int.to.str$ -- 16
+missing$ -- 16
+newline$ -- 56
+num.names$ -- 16
+pop$ -- 78
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 272
+stack$ -- 0
+substring$ -- 288
+swap$ -- 14
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 30
+width$ -- 18
+write$ -- 134

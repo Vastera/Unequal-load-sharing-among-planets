@@ -11,7 +11,7 @@ F=T_s/300;
 %% unequal load sharing case
 %% perfect case
 % epsilon_i=[0,0,0,0];% position error of i-th planet
-epsilon_i=[0,0/180*pi,0/180*pi,0];% position error of i-th planet
+epsilon_i=[0,0,0,0/180*pi,0,0];% position error of i-th planet
 M=length(epsilon_i);%planet number
 a=0.1*2*pi*R_r/M;
 %% configuration parameters
